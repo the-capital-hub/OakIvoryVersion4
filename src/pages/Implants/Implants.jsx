@@ -1,0 +1,11 @@
+
+import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { Link } from "react-router-dom";
+import "../shared.css";
+export default function Implants(){
+ return <>
+  <section className="page-hero"><div className="page-hero-inner"><div><span className="kicker">Dental Implants</span><h1>Missing teeth shouldn't hold you <em>back.</em></h1><p>Dental implants can help restore your ability to eat, speak and smile confidently. Our team first assesses your oral health and discusses whether implants are suitable for you.</p><Link className="button-primary" to="/contact">Book an Implant Consultation <ArrowUpRight size={14}/></Link></div><div className="page-hero-photo"><img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=1200&q=85" alt="Dental implant care"/></div></div></section>
+  <section className="content-section"><span className="eyebrow">The Process</span><h2 className="section-title">From consultation to <em>confident smile.</em></h2><div className="process-grid" style={{marginTop:45}}>{[["01","Consultation","Understand your goals and review your oral health."],["02","Assessment","Clinical assessment and diagnostic planning."],["03","Treatment Planning","A clear plan covering timing, options and next steps."],["04","Implant Placement","Specialist treatment carried out with careful planning."],["05","Restoration","Your final restoration is designed for function and appearance."],["06","Follow-up","Ongoing review and maintenance to protect your result."]].map(([n,t,p])=><article className="process-card" key={n}><div className="process-number">{n}</div><h3>{t}</h3><p>{p}</p></article>)}</div></section>
+  <section className="dark-section"><div className="dark-inner split"><div><span className="eyebrow" style={{color:"#8ce7e1"}}>Not Sure Where To Start?</span><h2 className="section-title" style={{color:"white"}}>Let Ivy help you <em>take the first step.</em></h2><p className="section-copy">Ask about implant consultations, appointment availability or what to expect before you visit.</p><Link className="button-primary" to="/contact?assistant=ivy">Talk to Ivy <ArrowRight size={14}/></Link></div><div className="image-card"><img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1200&q=85" alt="Dental consultation"/></div></div></section>
+ </>;
+}

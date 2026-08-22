@@ -1,0 +1,1144 @@
+/* =========================================================
+   OAK & IVORY — IVY AI WIDGET
+   Premium / Animated / Responsive
+   ========================================================= */
+
+.ai-dock {
+  position: fixed;
+  left: 50%;
+  bottom: 18px;
+  z-index: 80;
+
+  transform: translateX(-50%);
+
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 8px 9px 8px 14px;
+
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 999px;
+
+  background: rgba(20, 62, 59, 0.96);
+  color: #fff;
+
+  box-shadow:
+    0 20px 55px rgba(0, 0, 0, 0.28),
+    0 5px 18px rgba(7, 91, 87, 0.18);
+
+  backdrop-filter: blur(18px);
+
+  font-size: 10px;
+
+  animation: ivyDockIn 0.6s ease both;
+}
+
+@keyframes ivyDockIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+.ai-live {
+  width: 7px;
+  height: 7px;
+
+  flex: none;
+
+  border-radius: 50%;
+
+  background: #43c9c3;
+
+  box-shadow:
+    0 0 0 4px rgba(67, 201, 195, 0.12),
+    0 0 12px rgba(67, 201, 195, 0.4);
+
+  animation: ivyPulse 2s ease-in-out infinite;
+}
+
+@keyframes ivyPulse {
+  0%,
+  100% {
+    box-shadow:
+      0 0 0 4px rgba(67, 201, 195, 0.12),
+      0 0 12px rgba(67, 201, 195, 0.35);
+  }
+
+  50% {
+    box-shadow:
+      0 0 0 7px rgba(67, 201, 195, 0.05),
+      0 0 18px rgba(67, 201, 195, 0.55);
+  }
+}
+
+.ai-dock strong {
+  white-space: nowrap;
+
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.ai-dock button {
+  border: 0;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+
+  padding: 9px 12px;
+
+  border-radius: 999px;
+
+  background: #fff;
+  color: #075b57;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.ai-dock button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.16);
+}
+
+.ai-dock button svg {
+  flex: none;
+}
+
+.ai-dock-book {
+  background: #38c4bd !important;
+  color: #fff !important;
+}
+
+.ai-dock-book:hover {
+  background: #2eb7b0 !important;
+}
+
+/* =========================================================
+   OVERLAY
+   ========================================================= */
+
+.ai-overlay {
+  position: fixed;
+  inset: 0;
+
+  z-index: 100;
+
+  display: grid;
+  place-items: center;
+
+  padding: 20px;
+
+  background:
+    rgba(2, 29, 27, 0.68);
+
+  backdrop-filter: blur(10px);
+
+  animation: ivyOverlayIn 0.25s ease both;
+}
+
+@keyframes ivyOverlayIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* =========================================================
+   MODAL
+   ========================================================= */
+
+.ai-modal {
+  position: relative;
+
+  width: min(540px, 100%);
+  max-height: min(720px, calc(100vh - 40px));
+
+  overflow: auto;
+
+  padding: 29px;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.65);
+
+  border-radius: 28px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #f9fffe,
+      #f1fbf9
+    );
+
+  color: #173e3b;
+
+  box-shadow:
+    0 45px 120px rgba(0, 0, 0, 0.38);
+
+  animation: ivyModalIn 0.35s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+
+  scrollbar-width: thin;
+  scrollbar-color: #b9ded9 transparent;
+}
+
+@keyframes ivyModalIn {
+  from {
+    opacity: 0;
+    transform: translateY(22px) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.ai-modal::-webkit-scrollbar {
+  width: 5px;
+}
+
+.ai-modal::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+
+  background: #b9ded9;
+}
+
+.ai-close {
+  position: absolute;
+
+  top: 15px;
+  right: 15px;
+
+  z-index: 5;
+
+  width: 34px;
+  height: 34px;
+
+  display: grid;
+  place-items: center;
+
+  border: 0;
+  border-radius: 50%;
+
+  background: #e5f1ef;
+  color: #2c5956;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+.ai-close:hover {
+  transform: rotate(8deg);
+
+  background: #d3ebe7;
+}
+
+.ai-close svg {
+  width: 17px;
+}
+
+/* =========================================================
+   CHAT HEADER
+   ========================================================= */
+
+.ai-header {
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  padding:
+    1px
+    42px
+    15px
+    1px;
+
+  border-bottom:
+    1px solid #deecea;
+}
+
+.ai-avatar {
+  width: 43px;
+  height: 43px;
+
+  flex: none;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      145deg,
+      #d9f8f4,
+      #c4efeb
+    );
+
+  color: #08736d;
+
+  box-shadow:
+    0 8px 20px rgba(7, 91, 87, 0.08);
+}
+
+.ai-avatar svg {
+  width: 21px;
+}
+
+.ai-header strong,
+.ai-header small {
+  display: block;
+}
+
+.ai-header strong {
+  color: #173e3b;
+
+  font:
+    800 14px Manrope,
+    sans-serif;
+}
+
+.ai-header small {
+  margin-top: 3px;
+
+  color: #78908d;
+
+  font-size: 9px;
+}
+
+.ai-online {
+  width: 8px;
+  height: 8px;
+
+  margin-left: auto;
+
+  border-radius: 50%;
+
+  background: #3dc5bd;
+
+  box-shadow:
+    0 0 0 4px rgba(61, 197, 189, 0.11);
+}
+
+/* =========================================================
+   CHAT
+   ========================================================= */
+
+.ai-chat {
+  min-height: 280px;
+
+  display: grid;
+  align-content: start;
+
+  gap: 11px;
+
+  padding:
+    20px
+    2px
+    17px;
+}
+
+.ai-bubble {
+  max-width: 84%;
+
+  padding: 12px 14px;
+
+  border-radius: 15px;
+
+  font-size: 10px;
+
+  line-height: 1.6;
+
+  animation: bubbleIn 0.35s ease both;
+}
+
+@keyframes bubbleIn {
+  from {
+    opacity: 0;
+    transform: translateY(7px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ai-bubble.bot {
+  background: #e5f6f3;
+
+  color: #315c58;
+
+  border-bottom-left-radius: 5px;
+}
+
+.ai-bubble.user {
+  margin-left: auto;
+
+  background: #38c4bd;
+
+  color: #fff;
+
+  border-bottom-right-radius: 5px;
+}
+
+.ai-quick {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 7px;
+
+  margin-top: 3px;
+}
+
+.ai-quick button {
+  border:
+    1px solid #cde9e6;
+
+  border-radius: 999px;
+
+  background: #f5fbfa;
+
+  color: #18716d;
+
+  padding: 9px 11px;
+
+  font-size: 8px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.ai-quick button:hover {
+  transform: translateY(-2px);
+
+  background: #dff6f3;
+
+  border-color: #a9dcd7;
+}
+
+.ai-input {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 10px;
+
+  padding: 13px 14px;
+
+  border:
+    1px solid #dcebe9;
+
+  border-radius: 12px;
+
+  background: #fff;
+
+  color: #9aaca9;
+
+  font-size: 10px;
+
+  box-shadow:
+    0 5px 18px rgba(7, 91, 87, 0.04);
+}
+
+.ai-input svg {
+  color: #35bdb6;
+}
+
+/* =========================================================
+   KICKER + HEADINGS
+   ========================================================= */
+
+.ai-kicker {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 7px;
+
+  margin-bottom: 10px;
+
+  color: #2eb8b2;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 0.04em;
+}
+
+.ai-kicker:before {
+  content: "";
+
+  width: 7px;
+  height: 7px;
+
+  flex: none;
+
+  border-radius: 50%;
+
+  background: #37c5bf;
+
+  box-shadow:
+    0 0 0 4px rgba(55, 197, 191, 0.1);
+}
+
+.ai-modal h2 {
+  margin: 0 0 21px;
+
+  color: #163f3b;
+
+  font:
+    800 clamp(34px, 6vw, 43px) / 0.98
+    Manrope,
+    sans-serif;
+
+  letter-spacing: -0.06em;
+}
+
+.ai-modal h2 em {
+  color: #2dbbb5;
+
+  font-style: normal;
+}
+
+/* =========================================================
+   BOOKING PROGRESS
+   ========================================================= */
+
+.booking-progress {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 6px;
+
+  margin-bottom: 14px;
+}
+
+.booking-progress span {
+  padding: 8px 7px;
+
+  border-radius: 999px;
+
+  background: #eaf1ef;
+
+  color: #78908d;
+
+  font-size: 8px;
+  font-weight: 800;
+
+  text-align: center;
+}
+
+.booking-progress .active {
+  background: #c9f3ef;
+
+  color: #08736d;
+}
+
+/* =========================================================
+   SELECT
+   ========================================================= */
+
+.ai-select {
+  width: 100%;
+
+  border:
+    1px solid #dcebe8;
+
+  border-radius: 11px;
+
+  outline: none;
+
+  background: #f1f7f5;
+
+  color: #54716d;
+
+  padding: 13px;
+
+  margin-bottom: 12px;
+
+  font-size: 10px;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.ai-select:focus {
+  border-color: #54c8c1;
+
+  box-shadow:
+    0 0 0 3px rgba(84, 200, 193, 0.1);
+}
+
+/* =========================================================
+   DATES + TIMES
+   ========================================================= */
+
+.booking-dates,
+.booking-times {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 8px;
+
+  margin: 9px 0;
+}
+
+.booking-dates button,
+.booking-times button {
+  min-height: 52px;
+
+  border:
+    1px solid #dcebe8;
+
+  border-radius: 11px;
+
+  background: #fff;
+
+  color: #67817d;
+
+  font-size: 9px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.booking-dates button:hover,
+.booking-times button:hover {
+  transform: translateY(-2px);
+
+  border-color: #8ed9d4;
+
+  box-shadow:
+    0 8px 18px rgba(7, 91, 87, 0.07);
+}
+
+.booking-dates button b {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #173e3b;
+
+  font-size: 16px;
+}
+
+.booking-dates .selected,
+.booking-times .selected {
+  border-color: #43c5bf;
+
+  background: #d4f7f3;
+
+  color: #08736d;
+
+  box-shadow:
+    0 7px 18px rgba(67, 197, 191, 0.13);
+}
+
+.booking-dates .selected b {
+  color: #08736d;
+}
+
+/* =========================================================
+   PRIMARY BUTTON
+   ========================================================= */
+
+.ai-primary {
+  border: 0;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  min-height: 43px;
+
+  padding: 12px 19px;
+
+  border-radius: 999px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #3ac8c0,
+      #2bb4ad
+    );
+
+  color: #fff;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 12px 25px rgba(54, 196, 189, 0.2);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.ai-primary:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 16px 32px rgba(54, 196, 189, 0.28);
+}
+
+.ai-primary.full {
+  width: 100%;
+
+  margin-top: 12px;
+}
+
+/* =========================================================
+   BOOKING SUCCESS
+   ========================================================= */
+
+.booking-success {
+  padding:
+    23px
+    5px
+    10px;
+
+  text-align: center;
+
+  animation: successIn 0.4s ease both;
+}
+
+@keyframes successIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.success-icon {
+  width: 68px;
+  height: 68px;
+
+  display: grid;
+  place-items: center;
+
+  margin: 0 auto 18px;
+
+  border-radius: 50%;
+
+  background: #d5f7f3;
+
+  color: #27b7b0;
+
+  box-shadow:
+    0 0 0 9px rgba(55, 197, 191, 0.05);
+}
+
+.success-icon svg {
+  width: 32px;
+  height: 32px;
+}
+
+.booking-success h2 {
+  margin-bottom: 13px;
+}
+
+.booking-success p {
+  margin:
+    0 auto
+    21px;
+
+  max-width: 320px;
+
+  color: #6d8783;
+
+  font-size: 11px;
+
+  line-height: 1.75;
+}
+
+/* =========================================================
+   VOICE MODE
+   ========================================================= */
+
+.call-modal {
+  text-align: center;
+}
+
+.voice-orb {
+  position: relative;
+
+  width: 115px;
+  height: 115px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 4px;
+
+  margin:
+    8px
+    auto
+    26px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      #e1faf7,
+      #c8f1ed
+    );
+
+  box-shadow:
+    0 20px 45px rgba(44, 189, 182, 0.14);
+
+  animation: voiceOrb 2.4s ease-in-out infinite;
+}
+
+@keyframes voiceOrb {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.04);
+  }
+}
+
+.voice-orb:before,
+.voice-orb:after {
+  content: "";
+
+  position: absolute;
+
+  border:
+    1px solid #44c6bf;
+
+  border-radius: 50%;
+
+  opacity: 0.32;
+
+  animation: voiceRing 2.4s ease-out infinite;
+}
+
+.voice-orb:before {
+  inset: -15px;
+}
+
+.voice-orb:after {
+  inset: -29px;
+
+  opacity: 0.15;
+
+  animation-delay: 0.5s;
+}
+
+@keyframes voiceRing {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.3;
+  }
+
+  70% {
+    transform: scale(1.05);
+    opacity: 0.08;
+  }
+
+  100% {
+    transform: scale(1.1);
+    opacity: 0;
+  }
+}
+
+.voice-orb span {
+  width: 6px;
+  height: 27px;
+
+  border-radius: 8px;
+
+  background: #39c5bf;
+
+  animation: voiceBars 0.9s ease-in-out infinite alternate;
+}
+
+.voice-orb span:nth-child(2) {
+  height: 40px;
+
+  animation-delay: 0.15s;
+}
+
+.voice-orb span:nth-child(3) {
+  height: 22px;
+
+  animation-delay: 0.3s;
+}
+
+@keyframes voiceBars {
+  from {
+    transform: scaleY(0.55);
+  }
+
+  to {
+    transform: scaleY(1.15);
+  }
+}
+
+.voice-copy {
+  max-width: 340px;
+
+  margin:
+    0 auto;
+
+  color: #6d8783;
+
+  font-size: 11px;
+
+  line-height: 1.7;
+}
+
+.voice-wave {
+  height: 78px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 3px;
+
+  margin: 8px 0;
+}
+
+.voice-wave i {
+  display: block;
+
+  width: 4px;
+
+  max-height: 55px;
+
+  border-radius: 5px;
+
+  background: #3bc5bf;
+
+  animation:
+    waveMove 0.9s ease-in-out infinite alternate;
+}
+
+.voice-wave i:nth-child(3n) {
+  animation-delay: 0.2s;
+}
+
+.voice-wave i:nth-child(4n) {
+  animation-delay: 0.4s;
+}
+
+@keyframes waveMove {
+  from {
+    transform: scaleY(0.45);
+    opacity: 0.55;
+  }
+
+  to {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .ai-dock {
+    width: calc(100% - 20px);
+
+    bottom: 10px;
+
+    justify-content: space-between;
+
+    padding:
+      7px
+      8px
+      7px
+      11px;
+
+    gap: 6px;
+  }
+
+  .ai-dock strong {
+    display: none;
+  }
+
+  .ai-dock button {
+    padding:
+      9px
+      10px;
+
+    font-size: 8px;
+  }
+
+  .ai-overlay {
+    padding: 10px;
+  }
+
+  .ai-modal {
+    width: 100%;
+
+    max-height:
+      calc(100vh - 20px);
+
+    padding: 22px;
+
+    border-radius: 23px;
+  }
+
+  .ai-close {
+    top: 12px;
+    right: 12px;
+  }
+
+  .ai-header {
+    padding-right: 40px;
+  }
+
+  .ai-chat {
+    min-height: 240px;
+
+    padding-top: 16px;
+  }
+
+  .ai-modal h2 {
+    font-size: 32px;
+
+    margin-bottom: 18px;
+  }
+
+  .booking-dates,
+  .booking-times {
+    gap: 6px;
+  }
+
+  .booking-dates button,
+  .booking-times button {
+    min-height: 49px;
+  }
+
+  .voice-orb {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 380px) {
+  .ai-dock {
+    width: calc(100% - 14px);
+  }
+
+  .ai-dock button {
+    padding:
+      8px
+      8px;
+  }
+
+  .ai-modal {
+    padding: 19px;
+  }
+
+  .ai-modal h2 {
+    font-size: 29px;
+  }
+
+  .booking-progress span {
+    padding:
+      7px
+      5px;
+
+    font-size: 7px;
+  }
+
+  .booking-dates button,
+  .booking-times button {
+    font-size: 8px;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .ai-dock,
+  .ai-overlay,
+  .ai-modal,
+  .ai-bubble,
+  .booking-success,
+  .voice-orb,
+  .voice-orb:before,
+  .voice-orb:after,
+  .voice-orb span,
+  .voice-wave i {
+    animation: none !important;
+  }
+
+  .ai-dock button,
+  .ai-close,
+  .ai-primary,
+  .ai-quick button,
+  .booking-dates button,
+  .booking-times button {
+    transition: none !important;
+  }
+}

@@ -1,0 +1,591 @@
+.about-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 35px;
+}
+.about-metrics div {
+  background: white;
+  border-radius: 15px;
+  padding: 22px;
+  text-align: center;
+}
+.about-metrics strong {
+  display: block;
+  font: 800 27px Manrope;
+  color: #075b57;
+}
+.about-metrics span {
+  font-size: 9px;
+  color: #728985;
+}
+.info-card.simple {
+  padding: 25px;
+  background: #0c6762;
+  color: white;
+}
+.info-card.simple h3 {
+  margin: 0 0 7px;
+  color: white;
+}
+.info-card.simple p {
+  color: #b9dfdc;
+  margin: 0;
+}
+.service-page-grid .info-card {
+  min-height: 330px;
+}
+@media (max-width: 650px) {
+  .about-metrics {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.about-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 35px;
+}
+.about-metrics div {
+  background: white;
+  border-radius: 15px;
+  padding: 22px;
+  text-align: center;
+}
+.about-metrics strong {
+  display: block;
+  font: 800 27px Manrope;
+  color: #075b57;
+}
+.about-metrics span {
+  font-size: 9px;
+  color: #728985;
+}
+.info-card.simple {
+  padding: 25px;
+  background: #0c6762;
+  color: white;
+}
+.info-card.simple h3 {
+  margin: 0 0 7px;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.info-card.simple p {
+  color: #b9dfdc;
+  margin: 0;
+}
+.service-page-grid .info-card {
+  min-height: 330px;
+}
+.faq-layout {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 70px;
+}
+.faq-list {
+  display: grid;
+  gap: 8px;
+}
+.faq-row {
+  background: white;
+  border: 1px solid #dfebe9;
+  border-radius: 12px;
+  padding: 17px 18px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.faq-row strong {
+  font-size: 11px;
+}
+.faq-row > span {
+  font-size: 18px;
+  color: #39bdb7;
+}
+.faq-row p {
+  font-size: 10px;
+  color: #718984;
+  line-height: 1.65;
+  max-width: 620px;
+  margin: 9px 0 0;
+}
+.simple h3 svg {
+  color: #55d2cc;
+}
+@media (max-width: 850px) {
+  .about-metrics {
+    grid-template-columns: 1fr 1fr;
+  }
+  .faq-layout {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 550px) {
+  .about-metrics {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.appointment-layout {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 70px;
+  align-items: start;
+}
+.booking-benefits {
+  display: grid;
+  gap: 15px;
+  margin-top: 30px;
+}
+.booking-benefits > div {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+.booking-benefits svg {
+  width: 18px;
+  color: #2dbab4;
+  margin-top: 2px;
+}
+.booking-benefits b,
+.booking-benefits small {
+  display: block;
+}
+.booking-benefits b {
+  font-size: 10px;
+}
+.booking-benefits small {
+  font-size: 8px;
+  color: #7b928e;
+  margin-top: 3px;
+}
+.appointment-form {
+  background: white;
+  border: 1px solid #dfebe9;
+  border-radius: 22px;
+  padding: 25px;
+  box-shadow: 0 16px 35px rgba(8, 75, 72, 0.07);
+  display: grid;
+  gap: 11px;
+}
+.appointment-form label {
+  font-size: 8px;
+  font-weight: 800;
+  color: #52716d;
+}
+.appointment-form input,
+.appointment-form select {
+  width: 100%;
+  margin-top: 5px;
+  border: 0;
+  background: #eff6f4;
+  border-radius: 9px;
+  padding: 12px;
+  font-size: 9px;
+  outline: none;
+  color: #355c58;
+}
+.appointment-two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9px;
+}
+.booking-success-page {
+  text-align: center;
+  max-width: 650px;
+  margin: auto;
+}
+.success-big {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background: #d9f8f5;
+  color: #2dbab4;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 18px;
+}
+.success-big svg {
+  width: 35px;
+}
+.booking-success-page .section-copy {
+  margin: 0 auto 20px;
+}
+.ivy-page-hero {
+  background: linear-gradient(135deg, #c5f4f0, #f5fcfb);
+}
+.ivy-page-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 20px;
+}
+.ivy-call-link {
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+  font-size: 9px;
+  font-weight: 800;
+  color: #075b57;
+}
+.ivy-demo-card {
+  background: #f8fffe;
+  border-radius: 24px;
+  padding: 18px;
+  box-shadow: 0 30px 65px rgba(5, 83, 79, 0.18);
+  max-width: 450px;
+}
+.ivy-demo-head {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding-bottom: 13px;
+  border-bottom: 1px solid #dcebe9;
+}
+.ivy-big-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #d6f7f4;
+  color: #08736d;
+  display: grid;
+  place-items: center;
+}
+.ivy-demo-head b,
+.ivy-demo-head small {
+  display: block;
+}
+.ivy-demo-head b {
+  font-size: 12px;
+}
+.ivy-demo-head small {
+  font-size: 8px;
+  color: #7b928e;
+  margin-top: 2px;
+}
+.ivy-dot {
+  margin-left: auto;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #38c6be;
+}
+.ivy-demo-chat {
+  display: grid;
+  gap: 9px;
+  padding: 17px 2px;
+  min-height: 235px;
+}
+.ivy-page-bubble {
+  max-width: 83%;
+  background: #e6f6f4;
+  border-radius: 13px;
+  padding: 10px 12px;
+  font-size: 9px;
+  line-height: 1.5;
+}
+.ivy-page-bubble.user {
+  margin-left: auto;
+  background: #38c4bd;
+  color: white;
+}
+.ivy-page-options {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+.ivy-page-options span {
+  background: #dff7f4;
+  color: #08736d;
+  padding: 7px 9px;
+  border-radius: 999px;
+  font-size: 7px;
+  font-weight: 800;
+}
+.ivy-demo-input {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #dcebe9;
+  border-radius: 10px;
+  padding: 11px;
+  color: #8ba19e;
+  font-size: 9px;
+}
+.ivy-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 35px;
+}
+.ivy-feature-grid article {
+  background: white;
+  border: 1px solid #dfebe9;
+  border-radius: 17px;
+  padding: 20px;
+}
+.ivy-feature-grid svg {
+  color: #2dbab4;
+  width: 22px;
+}
+.ivy-feature-grid h3 {
+  font: 800 14px Manrope;
+  margin: 16px 0 7px;
+}
+.ivy-feature-grid p {
+  font-size: 9px;
+  color: #748b87;
+  line-height: 1.6;
+}
+@media (max-width: 850px) {
+  .appointment-layout {
+    grid-template-columns: 1fr;
+  }
+  .ivy-feature-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 550px) {
+  .appointment-two {
+    grid-template-columns: 1fr;
+  }
+  .ivy-feature-grid {
+    grid-template-columns: 1fr;
+  }
+  .ivy-page-actions {
+    flex-wrap: wrap;
+  }
+}
+
+.appointment-layout {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 70px;
+  align-items: start;
+}
+.booking-benefits {
+  display: grid;
+  gap: 15px;
+  margin-top: 30px;
+}
+.booking-benefits > div {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+.booking-benefits svg {
+  width: 18px;
+  color: #2dbab4;
+  margin-top: 2px;
+}
+.booking-benefits b,
+.booking-benefits small {
+  display: block;
+}
+.booking-benefits b {
+  font-size: 10px;
+}
+.booking-benefits small {
+  font-size: 8px;
+  color: #7b928e;
+  margin-top: 3px;
+}
+.appointment-form {
+  background: white;
+  border: 1px solid #dfebe9;
+  border-radius: 22px;
+  padding: 25px;
+  box-shadow: 0 16px 35px rgba(8, 75, 72, 0.07);
+  display: grid;
+  gap: 11px;
+}
+.appointment-form label {
+  font-size: 8px;
+  font-weight: 800;
+  color: #52716d;
+}
+.appointment-form input,
+.appointment-form select {
+  width: 100%;
+  margin-top: 5px;
+  border: 0;
+  background: #eff6f4;
+  border-radius: 9px;
+  padding: 12px;
+  font-size: 9px;
+  outline: none;
+  color: #355c58;
+}
+.appointment-two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9px;
+}
+.booking-success-page {
+  text-align: center;
+  max-width: 650px;
+  margin: auto;
+}
+.success-big {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background: #d9f8f5;
+  color: #2dbab4;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 18px;
+}
+.success-big svg {
+  width: 35px;
+}
+.booking-success-page .section-copy {
+  margin: 0 auto 20px;
+}
+.ivy-page-hero {
+  background: linear-gradient(135deg, #c5f4f0, #f5fcfb);
+}
+.ivy-page-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 20px;
+}
+.ivy-call-link {
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+  font-size: 9px;
+  font-weight: 800;
+  color: #075b57;
+}
+.ivy-demo-card {
+  background: #f8fffe;
+  border-radius: 24px;
+  padding: 18px;
+  box-shadow: 0 30px 65px rgba(5, 83, 79, 0.18);
+  max-width: 450px;
+}
+.ivy-demo-head {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding-bottom: 13px;
+  border-bottom: 1px solid #dcebe9;
+}
+.ivy-big-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #d6f7f4;
+  color: #08736d;
+  display: grid;
+  place-items: center;
+}
+.ivy-demo-head b,
+.ivy-demo-head small {
+  display: block;
+}
+.ivy-demo-head b {
+  font-size: 12px;
+}
+.ivy-demo-head small {
+  font-size: 8px;
+  color: #7b928e;
+  margin-top: 2px;
+}
+.ivy-dot {
+  margin-left: auto;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #38c6be;
+}
+.ivy-demo-chat {
+  display: grid;
+  gap: 9px;
+  padding: 17px 2px;
+  min-height: 235px;
+}
+.ivy-page-bubble {
+  max-width: 83%;
+  background: #e6f6f4;
+  border-radius: 13px;
+  padding: 10px 12px;
+  font-size: 9px;
+  line-height: 1.5;
+}
+.ivy-page-bubble.user {
+  margin-left: auto;
+  background: #38c4bd;
+  color: white;
+}
+.ivy-page-options {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+.ivy-page-options span {
+  background: #dff7f4;
+  color: #08736d;
+  padding: 7px 9px;
+  border-radius: 999px;
+  font-size: 7px;
+  font-weight: 800;
+}
+.ivy-demo-input {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #dcebe9;
+  border-radius: 10px;
+  padding: 11px;
+  color: #8ba19e;
+  font-size: 9px;
+}
+.ivy-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 35px;
+}
+.ivy-feature-grid article {
+  background: white;
+  border: 1px solid #dfebe9;
+  border-radius: 17px;
+  padding: 20px;
+}
+.ivy-feature-grid svg {
+  color: #2dbab4;
+  width: 22px;
+}
+.ivy-feature-grid h3 {
+  font: 800 14px Manrope;
+  margin: 16px 0 7px;
+}
+.ivy-feature-grid p {
+  font-size: 9px;
+  color: #748b87;
+  line-height: 1.6;
+}
+@media (max-width: 850px) {
+  .appointment-layout {
+    grid-template-columns: 1fr;
+  }
+  .ivy-feature-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 550px) {
+  .appointment-two {
+    grid-template-columns: 1fr;
+  }
+  .ivy-feature-grid {
+    grid-template-columns: 1fr;
+  }
+  .ivy-page-actions {
+    flex-wrap: wrap;
+  }
+}

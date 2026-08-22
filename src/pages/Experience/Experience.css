@@ -1,0 +1,1972 @@
+/* =========================================================
+   OAK & IVORY — EXPERIENCE / PATIENT JOURNEY
+   Premium • Clear • Timeline • Animated
+   ========================================================= */
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.experience-hero {
+  position: relative;
+  overflow: hidden;
+
+  padding: 145px 6% 68px;
+
+  background:
+    radial-gradient(
+      circle at 78% 35%,
+      rgba(61, 201, 193, 0.15),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #d8f7f4,
+      #f8fcfb 68%,
+      #e8f8f6
+    );
+}
+
+.experience-hero-inner {
+  max-width: 1240px;
+  min-height: 475px;
+
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 1fr 0.82fr;
+
+  gap: 75px;
+
+  align-items: center;
+}
+
+.experience-hero-content {
+  animation:
+    experienceFadeUp
+    0.8s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    both;
+}
+
+.experience-kicker,
+.experience-eyebrow {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 8px;
+
+  color: #239d97;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 0.1em;
+}
+
+.experience-kicker i,
+.experience-eyebrow i {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #36c5be;
+
+  box-shadow:
+    0 0 0 4px rgba(54, 197, 190, 0.1);
+}
+
+.experience-hero h1 {
+  max-width: 700px;
+
+  margin: 18px 0 20px;
+
+  color: #123d39;
+
+  font:
+    800 clamp(48px, 5.7vw, 72px) / 0.99
+    Manrope,
+    sans-serif;
+
+  letter-spacing: -0.065em;
+}
+
+.experience-hero h1 em,
+.experience-intro h2 em,
+.experience-before-content h2 em,
+.experience-ivy h2 em,
+.experience-final h2 em {
+  color: #28bcb6;
+
+  font-style: normal;
+}
+
+.experience-hero-content > p {
+  max-width: 620px;
+
+  margin: 0;
+
+  color: #5d7773;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   HERO ACTIONS
+   ========================================================= */
+
+.experience-hero-actions {
+  display: flex;
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 15px;
+
+  margin-top: 29px;
+}
+
+.experience-primary-btn {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 13px 15px 13px 19px;
+
+  border-radius: 999px;
+
+  background: #075b57;
+
+  color: #fff;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  text-decoration: none;
+
+  box-shadow:
+    0 14px 30px rgba(7, 91, 87, 0.16);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.experience-primary-btn:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 18px 35px rgba(7, 91, 87, 0.23);
+}
+
+.experience-primary-btn span {
+  width: 29px;
+  height: 29px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: #fff;
+
+  color: #075b57;
+}
+
+.experience-text-btn {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 6px;
+
+  padding: 11px 4px;
+
+  border-bottom:
+    1px solid rgba(7, 91, 87, 0.3);
+
+  color: #075b57;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.25s ease;
+}
+
+.experience-text-btn:hover {
+  transform: translateX(4px);
+}
+
+.experience-trust {
+  display: flex;
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 20px;
+
+  margin-top: 30px;
+}
+
+.experience-trust span {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 7px;
+
+  color: #5d7773;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.experience-trust svg {
+  color: #28aaa4;
+}
+
+
+/* =========================================================
+   HERO IMAGE
+   ========================================================= */
+
+.experience-hero-visual {
+  position: relative;
+
+  min-height: 480px;
+
+  display: grid;
+  place-items: center;
+
+  animation:
+    experienceFadeIn
+    0.9s
+    ease
+    0.2s
+    both;
+}
+
+.experience-hero-image {
+  position: relative;
+  z-index: 2;
+
+  width: min(390px, 82%);
+  height: 475px;
+
+  overflow: hidden;
+
+  border:
+    7px solid rgba(255, 255, 255, 0.82);
+
+  border-radius:
+    210px
+    210px
+    30px
+    30px;
+
+  box-shadow:
+    0 28px 65px rgba(5, 83, 79, 0.19);
+}
+
+.experience-hero-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.8s
+    cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.experience-hero-image:hover img {
+  transform: scale(1.04);
+}
+
+.experience-hero-card {
+  position: absolute;
+
+  z-index: 5;
+
+  left: 0;
+  bottom: 9%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  max-width: 275px;
+
+  padding: 13px 15px;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.7);
+
+  border-radius: 16px;
+
+  background:
+    rgba(255, 255, 255, 0.95);
+
+  backdrop-filter: blur(15px);
+
+  box-shadow:
+    0 18px 40px rgba(5, 83, 79, 0.14);
+
+  animation:
+    experienceFloat
+    5s
+    ease-in-out
+    1s
+    infinite;
+}
+
+.experience-hero-card > span {
+  width: 35px;
+  height: 35px;
+
+  flex: none;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: #dff7f4;
+
+  color: #08736d;
+}
+
+.experience-hero-card strong,
+.experience-hero-card small {
+  display: block;
+}
+
+.experience-hero-card strong {
+  color: #123d39;
+
+  font-size: 11px;
+}
+
+.experience-hero-card small {
+  margin-top: 4px;
+
+  color: #7a928e;
+
+  font-size: 9px;
+
+  line-height: 1.4;
+}
+
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.experience-intro {
+  max-width: 1240px;
+
+  margin: auto;
+
+  padding: 78px 24px 35px;
+
+  display: grid;
+
+  grid-template-columns: 1fr 0.7fr;
+
+  gap: 70px;
+
+  align-items: end;
+}
+
+.experience-intro h2 {
+  margin: 15px 0 0;
+
+  color: #123d39;
+
+  font:
+    800 clamp(40px, 4.7vw, 58px) / 1
+    Manrope,
+    sans-serif;
+
+  letter-spacing: -0.06em;
+}
+
+.experience-intro-copy p {
+  max-width: 470px;
+
+  margin: 0;
+
+  color: #6c8581;
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+.experience-intro-line {
+  display: block;
+
+  width: 100%;
+
+  height: 1px;
+
+  margin-top: 20px;
+
+  background: #dcebe8;
+}
+
+
+/* =========================================================
+   JOURNEY TIMELINE
+   ========================================================= */
+
+.experience-journey {
+  position: relative;
+
+  max-width: 1240px;
+
+  margin: auto;
+
+  padding: 25px 24px 90px;
+}
+
+.experience-journey-line {
+  position: absolute;
+
+  top: 52px;
+  bottom: 110px;
+
+  left: 50%;
+
+  width: 1px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      transparent,
+      #b8d9d5 5%,
+      #b8d9d5 95%,
+      transparent
+    );
+}
+
+.experience-steps {
+  position: relative;
+
+  display: grid;
+
+  gap: 22px;
+}
+
+.experience-step {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns: 1fr 50px 1fr;
+
+  min-height: 175px;
+
+  align-items: center;
+}
+
+.experience-step-content {
+  position: relative;
+
+  width: min(440px, 100%);
+
+  padding: 25px;
+
+  border:
+    1px solid #dcebe8;
+
+  border-radius: 20px;
+
+  background: #fff;
+
+  box-shadow:
+    0 8px 25px rgba(8, 75, 72, 0.035);
+
+  transition:
+    transform 0.35s
+      cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s ease;
+}
+
+.experience-step.left .experience-step-content {
+  grid-column: 1;
+
+  justify-self: end;
+}
+
+.experience-step.right .experience-step-content {
+  grid-column: 3;
+
+  justify-self: start;
+}
+
+.experience-step-content:hover {
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 20px 40px rgba(8, 75, 72, 0.1);
+}
+
+.experience-step-number {
+  position: absolute;
+
+  top: 20px;
+  right: 21px;
+
+  color: #b4cfcc;
+
+  font:
+    800 11px
+    Manrope,
+    sans-serif;
+}
+
+.experience-step-icon {
+  width: 45px;
+  height: 45px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 14px;
+
+  background: #dff7f4;
+
+  color: #168d87;
+}
+
+.experience-step h3 {
+  margin: 20px 0 8px;
+
+  color: #153f3b;
+
+  font:
+    800 20px / 1.2
+    Manrope,
+    sans-serif;
+}
+
+.experience-step p {
+  max-width: 350px;
+
+  margin: 0;
+
+  color: #718681;
+
+  font-size: 13px;
+
+  line-height: 1.7;
+}
+
+.experience-step-link {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 5px;
+
+  margin-top: 17px;
+
+  color: #075b57;
+
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.experience-step-dot {
+  position: relative;
+
+  z-index: 3;
+
+  grid-column: 2;
+
+  grid-row: 1;
+
+  width: 50px;
+  height: 50px;
+
+  display: grid;
+  place-items: center;
+
+  border:
+    1px solid #c3dedb;
+
+  border-radius: 50%;
+
+  background: #f6fbfa;
+}
+
+.experience-step-dot span {
+  width: 11px;
+  height: 11px;
+
+  border-radius: 50%;
+
+  background: #35c5be;
+
+  box-shadow:
+    0 0 0 7px #dff7f4;
+}
+
+
+/* =========================================================
+   BEFORE VISIT
+   ========================================================= */
+
+.experience-before {
+  max-width: 1240px;
+
+  margin: auto;
+
+  padding: 15px 24px 88px;
+
+  display: grid;
+
+  grid-template-columns:
+    0.9fr
+    1fr;
+
+  gap: 78px;
+
+  align-items: center;
+}
+
+.experience-before-image {
+  position: relative;
+
+  height: 480px;
+
+  overflow: hidden;
+
+  border-radius:
+    28px
+    28px
+    28px
+    105px;
+}
+
+.experience-before-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.8s ease;
+}
+
+.experience-before-image:hover img {
+  transform: scale(1.04);
+}
+
+.experience-image-label {
+  position: absolute;
+
+  right: 18px;
+  bottom: 18px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 13px 15px;
+
+  border-radius: 15px;
+
+  background:
+    rgba(255, 255, 255, 0.95);
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.16);
+}
+
+.experience-image-label > span {
+  width: 32px;
+  height: 32px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: #dff7f4;
+
+  color: #075b57;
+
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.experience-image-label strong,
+.experience-image-label small {
+  display: block;
+}
+
+.experience-image-label strong {
+  color: #123d39;
+
+  font-size: 10px;
+}
+
+.experience-image-label small {
+  margin-top: 3px;
+
+  color: #78908c;
+
+  font-size: 8px;
+}
+
+.experience-before-content h2 {
+  margin: 15px 0 18px;
+
+  color: #123d39;
+
+  font:
+    800 clamp(40px, 4.5vw, 58px) / 1
+    Manrope,
+    sans-serif;
+
+  letter-spacing: -0.06em;
+}
+
+.experience-before-content > p {
+  max-width: 590px;
+
+  margin: 0;
+
+  color: #6c8581;
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+.experience-check-list {
+  display: grid;
+
+  gap: 11px;
+
+  margin: 27px 0;
+}
+
+.experience-check-list > div {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+}
+
+.experience-check-list span {
+  width: 27px;
+  height: 27px;
+
+  display: grid;
+  place-items: center;
+
+  flex: none;
+
+  border-radius: 50%;
+
+  background: #dff7f4;
+
+  color: #28aaa4;
+}
+
+.experience-check-list p {
+  margin: 0;
+
+  color: #365b57;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.experience-outline-btn {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 12px 16px;
+
+  border:
+    1px solid #cfe3e0;
+
+  border-radius: 999px;
+
+  color: #075b57;
+
+  background: #fff;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+.experience-outline-btn:hover {
+  transform: translateY(-3px);
+
+  background: #f2fbfa;
+}
+
+
+/* =========================================================
+   IVY
+   ========================================================= */
+
+.experience-ivy {
+  padding: 85px 6%;
+
+  background: #064e4b;
+
+  color: #fff;
+}
+
+.experience-ivy-inner {
+  max-width: 1240px;
+
+  min-height: 390px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    0.75fr;
+
+  gap: 70px;
+
+  align-items: center;
+}
+
+.experience-eyebrow.light {
+  color: #83dfd9;
+}
+
+.experience-ivy-content h2 {
+  max-width: 680px;
+
+  margin: 15px 0 18px;
+
+  color: #fff;
+
+  font:
+    800 clamp(40px, 4.7vw, 60px) / 1
+    Manrope,
+    sans-serif;
+
+  letter-spacing: -0.06em;
+}
+
+.experience-ivy-content > p {
+  max-width: 600px;
+
+  margin: 0;
+
+  color: #b9dfdc;
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+.experience-ivy-points {
+  display: grid;
+
+  gap: 10px;
+
+  margin: 25px 0;
+}
+
+.experience-ivy-points span {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  color: #d7eeec;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.experience-ivy-points svg {
+  color: #52d2ca;
+}
+
+.experience-ivy-btn {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 13px 17px;
+
+  border-radius: 999px;
+
+  background: #35c5be;
+
+  color: #fff;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.experience-ivy-btn:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 15px 30px rgba(53, 197, 190, 0.2);
+}
+
+
+/* IVY VISUAL */
+
+.experience-ivy-visual {
+  position: relative;
+
+  height: 370px;
+
+  display: grid;
+  place-items: center;
+}
+
+.experience-ivy-orbit {
+  width: 230px;
+  height: 230px;
+
+  display: grid;
+  place-items: center;
+
+  border:
+    1px solid rgba(92, 218, 210, 0.35);
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(57, 200, 193, 0.23),
+      rgba(57, 200, 193, 0.04) 60%,
+      transparent 70%
+    );
+
+  box-shadow:
+    0 0 0 25px rgba(57, 200, 193, 0.035),
+    0 0 0 55px rgba(57, 200, 193, 0.02);
+
+  animation:
+    experiencePulse
+    4s
+    ease-in-out
+    infinite;
+}
+
+.experience-ivy-orbit::before,
+.experience-ivy-orbit::after {
+  content: "";
+
+  position: absolute;
+
+  width: 12px;
+  height: 12px;
+
+  border-radius: 50%;
+
+  background: #5bd8d1;
+
+  box-shadow:
+    0 0 18px rgba(91, 216, 209, 0.7);
+}
+
+.experience-ivy-orbit::before {
+  transform:
+    translate(105px, -75px);
+}
+
+.experience-ivy-orbit::after {
+  transform:
+    translate(-105px, 75px);
+}
+
+.experience-ivy-orbit span {
+  width: 100px;
+  height: 100px;
+
+  display: grid;
+  place-items: center;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.15);
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      145deg,
+      #39c8c1,
+      #168c87
+    );
+
+  color: #fff;
+
+  font:
+    800 24px
+    Manrope,
+    sans-serif;
+
+  letter-spacing: -0.05em;
+
+  box-shadow:
+    0 20px 45px rgba(0, 0, 0, 0.2);
+}
+
+.experience-ivy-floating {
+  position: absolute;
+
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 10px 12px;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.12);
+
+  border-radius: 999px;
+
+  background:
+    rgba(255, 255, 255, 0.08);
+
+  color: #d9efed;
+
+  backdrop-filter: blur(10px);
+
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.experience-ivy-floating svg {
+  color: #62d9d2;
+}
+
+.experience-ivy-floating.one {
+  top: 13%;
+
+  left: 2%;
+
+  animation:
+    experienceFloat
+    4s
+    ease-in-out
+    infinite;
+}
+
+.experience-ivy-floating.two {
+  right: 0;
+
+  bottom: 14%;
+
+  animation:
+    experienceFloat
+    4s
+    ease-in-out
+    1.2s
+    infinite;
+}
+
+
+/* =========================================================
+   FINAL CTA
+   ========================================================= */
+
+.experience-final {
+  max-width: 1240px;
+
+  margin: 0 auto;
+
+  padding: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 45px;
+
+  border-radius:
+    30px
+    30px
+    0
+    0;
+
+  background:
+    linear-gradient(
+      135deg,
+      #39c8c1,
+      #22b2ac
+    );
+}
+
+.experience-final h2 {
+  max-width: 700px;
+
+  margin: 13px 0;
+
+  color: #fff;
+
+  font:
+    800 clamp(38px, 4.4vw, 56px) / 1
+    Manrope,
+    sans-serif;
+
+  letter-spacing: -0.06em;
+}
+
+.experience-final h2 em {
+  color: #064e4b;
+}
+
+.experience-final p {
+  max-width: 540px;
+
+  margin: 0;
+
+  color: #def8f5;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+.experience-final-actions {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 9px;
+
+  flex: none;
+}
+
+.experience-final-primary,
+.experience-final-secondary {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 13px 16px;
+
+  border-radius: 999px;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  text-decoration: none;
+}
+
+.experience-final-primary {
+  background: #fff;
+
+  color: #075b57;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.experience-final-primary:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 12px 25px rgba(0, 60, 57, 0.15);
+}
+
+.experience-final-secondary {
+  border:
+    1px solid rgba(255, 255, 255, 0.45);
+
+  color: #fff;
+}
+
+
+/* =========================================================
+   ANIMATIONS
+   ========================================================= */
+
+@keyframes experienceFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes experienceFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes experienceFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes experiencePulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.035);
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1050px) {
+  .experience-hero-inner,
+  .experience-before,
+  .experience-ivy-inner {
+    gap: 45px;
+  }
+
+  .experience-final {
+    padding: 60px 45px;
+  }
+}
+
+
+@media (max-width: 850px) {
+  .experience-hero {
+    padding:
+      130px
+      22px
+      60px;
+  }
+
+  .experience-hero-inner,
+  .experience-before,
+  .experience-ivy-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-hero-inner {
+    gap: 50px;
+  }
+
+  .experience-hero-visual {
+    min-height: 430px;
+  }
+
+  .experience-hero-image {
+    width: 320px;
+    height: 420px;
+  }
+
+  .experience-intro {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+
+    padding:
+      65px
+      20px
+      30px;
+  }
+
+  .experience-journey {
+    padding:
+      20px
+      20px
+      70px;
+  }
+
+  .experience-journey-line {
+    left: 25px;
+
+    top: 35px;
+    bottom: 85px;
+  }
+
+  .experience-step {
+    display: grid;
+
+    grid-template-columns: 50px 1fr;
+
+    min-height: auto;
+
+    gap: 18px;
+
+    align-items: start;
+
+    margin-bottom: 18px;
+  }
+
+  .experience-step-content,
+  .experience-step.left .experience-step-content,
+  .experience-step.right .experience-step-content {
+    grid-column: 2;
+
+    grid-row: 1;
+
+    width: 100%;
+
+    justify-self: stretch;
+  }
+
+  .experience-step-dot {
+    grid-column: 1;
+
+    grid-row: 1;
+  }
+
+  .experience-before-image {
+    height: 430px;
+  }
+
+  .experience-ivy-visual {
+    min-height: 350px;
+  }
+
+  .experience-final {
+    margin: 0 20px;
+
+    padding: 55px 35px;
+
+    display: grid;
+
+    border-radius: 25px;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .experience-hero {
+    padding:
+      115px
+      18px
+      45px;
+  }
+
+  .experience-hero h1 {
+    font-size: 44px;
+  }
+
+  .experience-hero-content > p,
+  .experience-before-content > p,
+  .experience-ivy-content > p,
+  .experience-final p {
+    font-size: 14px;
+  }
+
+  .experience-hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .experience-primary-btn {
+    justify-content: center;
+  }
+
+  .experience-text-btn {
+    align-self: flex-start;
+  }
+
+  .experience-trust {
+    display: grid;
+
+    gap: 9px;
+  }
+
+  .experience-hero-visual {
+    min-height: 380px;
+  }
+
+  .experience-hero-image {
+    width: 275px;
+    height: 365px;
+  }
+
+  .experience-hero-card {
+    left: 0;
+
+    bottom: 4%;
+
+    max-width: 230px;
+  }
+
+  .experience-intro {
+    padding:
+      60px
+      18px
+      25px;
+  }
+
+  .experience-intro h2,
+  .experience-before-content h2,
+  .experience-ivy-content h2 {
+    font-size: 39px;
+  }
+
+  .experience-step-content {
+    padding: 21px;
+  }
+
+  .experience-step h3 {
+    font-size: 18px;
+  }
+
+  .experience-step p {
+    font-size: 13px;
+  }
+
+  .experience-before {
+    padding:
+      15px
+      18px
+      65px;
+  }
+
+  .experience-before-image {
+    height: 380px;
+
+    border-radius:
+      24px
+      24px
+      24px
+      75px;
+  }
+
+  .experience-ivy {
+    padding:
+      65px
+      18px;
+  }
+
+  .experience-ivy-visual {
+    min-height: 310px;
+  }
+
+  .experience-ivy-orbit {
+    width: 190px;
+    height: 190px;
+  }
+
+  .experience-ivy-orbit span {
+    width: 82px;
+    height: 82px;
+
+    font-size: 20px;
+  }
+
+  .experience-ivy-floating {
+    font-size: 8px;
+  }
+
+  .experience-ivy-floating.one {
+    left: -3%;
+  }
+
+  .experience-ivy-floating.two {
+    right: -3%;
+  }
+
+  .experience-final {
+    margin: 0 12px;
+
+    padding:
+      50px
+      22px;
+  }
+
+  .experience-final h2 {
+    font-size: 39px;
+  }
+
+  .experience-final-actions {
+    display: grid;
+  }
+
+  .experience-final-primary,
+  .experience-final-secondary {
+    justify-content: center;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+
+
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+/* =========================================================
+   FINAL UX POLISH — EXPERIENCE PAGE
+   ========================================================= */
+
+.experience-hero {
+  padding-top: 125px;
+  padding-bottom: 55px;
+}
+
+.experience-hero-inner {
+  min-height: 430px;
+  gap: 55px;
+}
+
+.experience-hero h1 {
+  font-size: clamp(46px, 5.2vw, 68px);
+  line-height: 1.02;
+}
+
+.experience-hero-content > p {
+  font-size: 15px;
+  line-height: 1.75;
+  max-width: 590px;
+}
+
+/* Hero image */
+.experience-hero-visual {
+  min-height: 430px;
+}
+
+.experience-hero-image {
+  height: 430px;
+  width: min(360px, 82%);
+}
+
+/* =========================================================
+   INTRO — REDUCE EMPTY SPACE
+   ========================================================= */
+
+.experience-intro {
+  padding-top: 58px;
+  padding-bottom: 22px;
+  gap: 55px;
+}
+
+.experience-intro h2 {
+  font-size: clamp(38px, 4.2vw, 54px);
+}
+
+.experience-intro-copy p {
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   TIMELINE
+   ========================================================= */
+
+.experience-journey {
+  padding-top: 18px;
+  padding-bottom: 65px;
+}
+
+.experience-steps {
+  gap: 15px;
+}
+
+.experience-step {
+  min-height: 155px;
+}
+
+.experience-step-content {
+  padding: 22px;
+}
+
+.experience-step h3 {
+  font-size: 18px;
+  margin-top: 17px;
+}
+
+.experience-step p {
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+.experience-step-link {
+  margin-top: 13px;
+}
+
+/* =========================================================
+   BEFORE VISIT
+   ========================================================= */
+
+.experience-before {
+  padding-top: 5px;
+  padding-bottom: 70px;
+  gap: 58px;
+}
+
+.experience-before-image {
+  height: 420px;
+}
+
+.experience-before-content h2 {
+  font-size: clamp(38px, 4.2vw, 54px);
+}
+
+.experience-before-content > p {
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+.experience-check-list {
+  margin: 21px 0;
+  gap: 9px;
+}
+
+/* =========================================================
+   IVY SECTION
+   ========================================================= */
+
+.experience-ivy {
+  padding-top: 68px;
+  padding-bottom: 68px;
+}
+
+.experience-ivy-inner {
+  min-height: 340px;
+  gap: 50px;
+}
+
+.experience-ivy-content h2 {
+  font-size: clamp(38px, 4.3vw, 56px);
+}
+
+.experience-ivy-content > p {
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+.experience-ivy-points {
+  margin: 20px 0;
+}
+
+.experience-ivy-visual {
+  height: 320px;
+}
+
+/* =========================================================
+   FINAL CTA
+   ========================================================= */
+
+.experience-final {
+  padding: 55px 60px;
+}
+
+.experience-final h2 {
+  font-size: clamp(36px, 4vw, 52px);
+}
+
+.experience-final p {
+  font-size: 13px;
+}
+
+/* =========================================================
+   HOVER POLISH
+   ========================================================= */
+
+.experience-step-content {
+  will-change: transform;
+}
+
+.experience-step-content:hover {
+  transform: translateY(-5px);
+  border-color: #c8e4e1;
+}
+
+.experience-before-image,
+.experience-hero-image {
+  will-change: transform;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 850px) {
+  .experience-hero {
+    padding-top: 120px;
+    padding-bottom: 50px;
+  }
+
+  .experience-hero-inner {
+    gap: 38px;
+  }
+
+  .experience-hero-visual {
+    min-height: 390px;
+  }
+
+  .experience-hero-image {
+    height: 390px;
+  }
+
+  .experience-intro {
+    padding-top: 52px;
+  }
+
+  .experience-journey {
+    padding-bottom: 55px;
+  }
+
+  .experience-before {
+    padding-bottom: 60px;
+  }
+
+  .experience-ivy {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .experience-final {
+    padding: 48px 35px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .experience-hero {
+    padding:
+      105px
+      18px
+      42px;
+  }
+
+  .experience-hero h1 {
+    font-size: 42px;
+    line-height: 1.04;
+  }
+
+  .experience-hero-content > p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .experience-hero-actions {
+    margin-top: 22px;
+  }
+
+  .experience-trust {
+    margin-top: 22px;
+  }
+
+  .experience-hero-visual {
+    min-height: 355px;
+  }
+
+  .experience-hero-image {
+    width: 270px;
+    height: 350px;
+  }
+
+  .experience-hero-card {
+    max-width: 225px;
+    padding: 11px 12px;
+  }
+
+  .experience-intro {
+    padding:
+      48px
+      18px
+      20px;
+  }
+
+  .experience-intro h2,
+  .experience-before-content h2,
+  .experience-ivy-content h2 {
+    font-size: 36px;
+    line-height: 1.05;
+  }
+
+  .experience-journey {
+    padding:
+      15px
+      18px
+      50px;
+  }
+
+  .experience-step {
+    grid-template-columns: 44px 1fr;
+    gap: 13px;
+    margin-bottom: 12px;
+  }
+
+  .experience-step-dot {
+    width: 44px;
+    height: 44px;
+  }
+
+  .experience-step-content {
+    padding: 18px;
+    border-radius: 17px;
+  }
+
+  .experience-step-number {
+    top: 15px;
+    right: 16px;
+  }
+
+  .experience-step-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .experience-step h3 {
+    font-size: 17px;
+    margin-top: 14px;
+  }
+
+  .experience-step p {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .experience-before {
+    padding:
+      10px
+      18px
+      55px;
+    gap: 35px;
+  }
+
+  .experience-before-image {
+    height: 340px;
+  }
+
+  .experience-before-content > p {
+    font-size: 13px;
+  }
+
+  .experience-check-list {
+    margin: 19px 0;
+  }
+
+  .experience-check-list p {
+    font-size: 11px;
+  }
+
+  .experience-ivy {
+    padding:
+      55px
+      18px;
+  }
+
+  .experience-ivy-content > p {
+    font-size: 13px;
+  }
+
+  .experience-ivy-visual {
+    min-height: 285px;
+  }
+
+  .experience-ivy-orbit {
+    width: 175px;
+    height: 175px;
+  }
+
+  .experience-ivy-orbit span {
+    width: 76px;
+    height: 76px;
+    font-size: 18px;
+  }
+
+  .experience-final {
+    margin: 0 10px;
+    padding:
+      42px
+      20px;
+    border-radius: 22px;
+    gap: 25px;
+  }
+
+  .experience-final h2 {
+    font-size: 36px;
+  }
+
+  .experience-final p {
+    font-size: 13px;
+  }
+}
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .experience-hero-content,
+  .experience-hero-visual,
+  .experience-hero-card,
+  .experience-ivy-orbit,
+  .experience-ivy-floating {
+    animation: none !important;
+  }
+
+  .experience-step-content,
+  .experience-hero-image img,
+  .experience-before-image img {
+    transition: none !important;
+  }
+}
+
+

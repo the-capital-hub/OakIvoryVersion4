@@ -1,0 +1,1363 @@
+/* =========================================================
+   OAK & IVORY — TEAM PAGE
+   Premium • Readable • Spacious • Animated
+   ========================================================= */
+
+.team-hero {
+  position: relative;
+  overflow: hidden;
+
+  padding: 145px 6% 68px;
+
+  background:
+    radial-gradient(
+      circle at 78% 35%,
+      rgba(61, 201, 193, 0.15),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #d8f7f4,
+      #f8fcfb 68%,
+      #e8f8f6
+    );
+}
+
+.team-hero-inner {
+  max-width: 1240px;
+  min-height: 475px;
+
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 1fr 0.82fr;
+
+  gap: 75px;
+
+  align-items: center;
+}
+
+.team-hero-content {
+  animation:
+    teamFadeUp
+    0.8s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    both;
+}
+
+.team-kicker,
+.team-eyebrow {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 8px;
+
+  color: #239d97;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 0.1em;
+}
+
+.team-kicker i,
+.team-eyebrow i {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #36c5be;
+
+  box-shadow:
+    0 0 0 4px rgba(54, 197, 190, 0.1);
+}
+
+.team-hero h1 {
+  max-width: 700px;
+
+  margin: 18px 0 20px;
+
+  color: #123d39;
+
+  font:
+    800 clamp(48px, 5.7vw, 72px) / 0.99
+    Manrope,
+    sans-serif;
+
+  letter-spacing: -0.065em;
+}
+
+.team-hero h1 em,
+.team-section-heading h2 em,
+.team-doctors-heading h2 em,
+.team-approach-content h2 em,
+.team-final-cta h2 em {
+  color: #28bcb6;
+
+  font-style: normal;
+}
+
+.team-hero-content > p {
+  max-width: 620px;
+
+  margin: 0;
+
+  color: #5d7773;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+}
+
+
+/* HERO BUTTONS */
+
+.team-hero-actions {
+  display: flex;
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 15px;
+
+  margin-top: 29px;
+}
+
+.team-primary-btn {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 13px 15px 13px 19px;
+
+  border-radius: 999px;
+
+  background: #075b57;
+
+  color: #fff;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  text-decoration: none;
+
+  box-shadow:
+    0 14px 30px rgba(7, 91, 87, 0.16);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.team-primary-btn:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 18px 35px rgba(7, 91, 87, 0.23);
+}
+
+.team-primary-btn span {
+  width: 29px;
+  height: 29px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: #fff;
+
+  color: #075b57;
+}
+
+.team-text-btn {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 6px;
+
+  padding: 11px 4px;
+
+  border-bottom:
+    1px solid rgba(7, 91, 87, 0.3);
+
+  color: #075b57;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.25s ease;
+}
+
+.team-text-btn:hover {
+  transform: translateX(4px);
+}
+
+.team-trust-row {
+  display: flex;
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 20px;
+
+  margin-top: 30px;
+}
+
+.team-trust-row span {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  color: #5d7773;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.team-trust-row svg {
+  color: #28aaa4;
+}
+
+
+/* HERO IMAGE */
+
+.team-hero-visual {
+  position: relative;
+
+  min-height: 480px;
+
+  display: grid;
+  place-items: center;
+
+  animation:
+    teamFadeIn
+    0.9s
+    ease
+    0.2s
+    both;
+}
+
+.team-hero-image {
+  position: relative;
+  z-index: 2;
+
+  width: min(390px, 82%);
+  height: 475px;
+
+  overflow: hidden;
+
+  border:
+    7px solid rgba(255, 255, 255, 0.82);
+
+  border-radius:
+    210px
+    210px
+    30px
+    30px;
+
+  box-shadow:
+    0 28px 65px rgba(5, 83, 79, 0.19);
+}
+
+.team-hero-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.8s
+    cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.team-hero-image:hover img {
+  transform: scale(1.04);
+}
+
+.team-hero-card {
+  position: absolute;
+
+  z-index: 5;
+
+  left: 0;
+  bottom: 9%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  max-width: 260px;
+
+  padding: 13px 15px;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.7);
+
+  border-radius: 16px;
+
+  background:
+    rgba(255, 255, 255, 0.95);
+
+  backdrop-filter: blur(15px);
+
+  box-shadow:
+    0 18px 40px rgba(5, 83, 79, 0.14);
+
+  animation:
+    teamFloat
+    5s
+    ease-in-out
+    1s
+    infinite;
+}
+
+.team-hero-card-icon {
+  width: 35px;
+  height: 35px;
+
+  flex: none;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: #dff7f4;
+
+  color: #08736d;
+}
+
+.team-hero-card strong,
+.team-hero-card small {
+  display: block;
+}
+
+.team-hero-card strong {
+  color: #123d39;
+
+  font-size: 11px;
+}
+
+.team-hero-card small {
+  margin-top: 4px;
+
+  color: #7a928e;
+
+  font-size: 9px;
+}
+
+
+/* =========================================================
+   PATIENT SECTION
+   ========================================================= */
+
+.team-patients-section {
+  max-width: 1240px;
+
+  margin: auto;
+
+  padding: 78px 24px 85px;
+}
+
+.team-section-heading {
+  display: grid;
+
+  grid-template-columns: 1fr 400px;
+
+  gap: 60px;
+
+  align-items: end;
+
+  margin-bottom: 38px;
+}
+
+.team-section-heading h2 {
+  margin: 15px 0 0;
+
+  color: #123d39;
+
+  font:
+    800 clamp(40px, 4.5vw, 58px) / 1
+    Manrope,
+    sans-serif;
+
+  letter-spacing: -0.06em;
+}
+
+.team-section-heading > p {
+  margin: 0 0 4px;
+
+  color: #6c8581;
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+.team-patient-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 15px;
+}
+
+.team-patient-card {
+  position: relative;
+
+  min-height: 245px;
+
+  padding: 25px;
+
+  border:
+    1px solid #dcebe8;
+
+  border-radius: 20px;
+
+  background: #fff;
+
+  box-shadow:
+    0 8px 25px rgba(8, 75, 72, 0.035);
+
+  transition:
+    transform 0.35s
+      cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s ease;
+}
+
+.team-patient-card:hover {
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 20px 40px rgba(8, 75, 72, 0.1);
+}
+
+.team-patient-number {
+  color: #27aaa4;
+
+  font:
+    800 11px
+    Manrope,
+    sans-serif;
+}
+
+.team-patient-card h3 {
+  margin: 38px 0 10px;
+
+  color: #153f3b;
+
+  font:
+    800 21px / 1.2
+    Manrope,
+    sans-serif;
+}
+
+.team-patient-card p {
+  max-width: 330px;
+
+  margin: 0;
+
+  color: #6b8380;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+.team-patient-card a {
+  position: absolute;
+
+  left: 25px;
+  bottom: 23px;
+
+  display: inline-flex;
+  align-items: center;
+
+  gap: 6px;
+
+  color: #075b57;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  text-decoration: none;
+
+  transition:
+    gap 0.25s ease;
+}
+
+.team-patient-card a:hover {
+  gap: 10px;
+}
+
+
+/* =========================================================
+   DOCTORS
+   ========================================================= */
+
+.team-doctors-section {
+  padding: 82px 6% 92px;
+
+  background: #f4faf9;
+}
+
+.team-doctors-heading {
+  max-width: 1240px;
+
+  margin: auto;
+}
+
+.team-doctors-heading h2 {
+  margin: 15px 0 16px;
+
+  color: #123d39;
+
+  font:
+    800 clamp(40px, 4.7vw, 60px) / 1
+    Manrope,
+    sans-serif;
+
+  letter-spacing: -0.06em;
+}
+
+.team-doctors-heading p {
+  max-width: 590px;
+
+  margin: 0;
+
+  color: #6c8581;
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+.team-doctors-grid {
+  max-width: 1240px;
+
+  margin: 38px auto 0;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 17px;
+}
+
+.team-doctor-card {
+  overflow: hidden;
+
+  border:
+    1px solid #dcebe8;
+
+  border-radius: 22px;
+
+  background: #fff;
+
+  box-shadow:
+    0 8px 25px rgba(8, 75, 72, 0.045);
+
+  transition:
+    transform 0.35s
+      cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s ease;
+
+  animation:
+    teamCardReveal
+    0.7s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    both;
+}
+
+.team-doctor-card:nth-child(1) {
+  animation-delay: 0.08s;
+}
+
+.team-doctor-card:nth-child(2) {
+  animation-delay: 0.16s;
+}
+
+.team-doctor-card:nth-child(3) {
+  animation-delay: 0.24s;
+}
+
+.team-doctor-card:hover {
+  transform: translateY(-7px);
+
+  box-shadow:
+    0 22px 48px rgba(8, 75, 72, 0.11);
+}
+
+.team-doctor-image {
+  position: relative;
+
+  height: 390px;
+
+  overflow: hidden;
+}
+
+.team-doctor-image::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      transparent 55%,
+      rgba(4, 60, 56, 0.35)
+    );
+
+  pointer-events: none;
+}
+
+.team-doctor-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.75s
+    cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.team-doctor-card:hover .team-doctor-image img {
+  transform: scale(1.05);
+}
+
+.team-doctor-number {
+  position: absolute;
+
+  z-index: 3;
+
+  top: 14px;
+  left: 14px;
+
+  padding: 7px 9px;
+
+  border-radius: 999px;
+
+  background:
+    rgba(255, 255, 255, 0.93);
+
+  color: #075b57;
+
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.team-doctor-overlay {
+  position: absolute;
+
+  z-index: 5;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  display: flex;
+  justify-content: center;
+
+  padding: 17px;
+
+  opacity: 0;
+
+  transform: translateY(8px);
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.team-doctor-card:hover .team-doctor-overlay {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+.team-doctor-overlay a {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 10px 14px;
+
+  border-radius: 999px;
+
+  background: #fff;
+
+  color: #075b57;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  text-decoration: none;
+}
+
+.team-doctor-content {
+  padding: 20px;
+}
+
+.team-doctor-content h3 {
+  margin: 0 0 5px;
+
+  color: #153f3b;
+
+  font:
+    800 20px / 1.2
+    Manrope,
+    sans-serif;
+}
+
+.team-doctor-role {
+  display: block;
+
+  color: #27aaa4;
+
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.team-doctor-content p {
+  margin: 9px 0 18px;
+
+  color: #738984;
+
+  font-size: 12px;
+}
+
+.team-doctor-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-top: 13px;
+
+  border-top:
+    1px solid #e1ecea;
+}
+
+.team-doctor-meta span,
+.team-doctor-meta a {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 5px;
+
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.team-doctor-meta span {
+  color: #7b918d;
+}
+
+.team-doctor-meta a {
+  color: #075b57;
+
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   APPROACH
+   ========================================================= */
+
+.team-approach-section {
+  padding: 82px 6%;
+
+  background: #064e4b;
+
+  color: #fff;
+}
+
+.team-approach-inner {
+  max-width: 1240px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    0.9fr
+    1fr;
+
+  gap: 78px;
+
+  align-items: center;
+}
+
+.team-approach-image {
+  position: relative;
+
+  height: 500px;
+
+  overflow: hidden;
+
+  border-radius:
+    28px
+    28px
+    28px
+    105px;
+}
+
+.team-approach-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.8s ease;
+}
+
+.team-approach-image:hover img {
+  transform: scale(1.04);
+}
+
+.team-approach-badge {
+  position: absolute;
+
+  right: 18px;
+  bottom: 18px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 13px 15px;
+
+  border-radius: 15px;
+
+  background:
+    rgba(255, 255, 255, 0.95);
+
+  color: #123d39;
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.18);
+}
+
+.team-approach-badge strong {
+  width: 32px;
+  height: 32px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: #dff7f4;
+
+  color: #075b57;
+
+  font-size: 9px;
+}
+
+.team-approach-badge span {
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.team-approach-badge small {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #78908c;
+
+  font-size: 8px;
+}
+
+.team-eyebrow.light {
+  color: #83dfd9;
+}
+
+.team-approach-content h2 {
+  max-width: 650px;
+
+  margin: 15px 0 18px;
+
+  color: #fff;
+
+  font:
+    800 clamp(40px, 4.6vw, 58px) / 1
+    Manrope,
+    sans-serif;
+
+  letter-spacing: -0.06em;
+}
+
+.team-approach-content > p {
+  max-width: 590px;
+
+  margin: 0;
+
+  color: #b9dfdc;
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+.team-approach-points {
+  display: grid;
+
+  gap: 12px;
+
+  margin: 27px 0;
+}
+
+.team-approach-points div {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  color: #d8eeec;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.team-approach-points svg {
+  color: #52d2ca;
+}
+
+.team-approach-btn {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 13px 17px;
+
+  border-radius: 999px;
+
+  background: #35c5be;
+
+  color: #fff;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.team-approach-btn:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 14px 28px rgba(53, 197, 190, 0.2);
+}
+
+
+/* =========================================================
+   FINAL CTA
+   ========================================================= */
+
+.team-final-cta {
+  max-width: 1240px;
+
+  margin: 0 auto;
+
+  padding: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 45px;
+
+  border-radius:
+    30px
+    30px
+    0
+    0;
+
+  background:
+    linear-gradient(
+      135deg,
+      #39c8c1,
+      #22b2ac
+    );
+}
+
+.team-final-cta h2 {
+  max-width: 700px;
+
+  margin: 13px 0;
+
+  color: #fff;
+
+  font:
+    800 clamp(38px, 4.4vw, 56px) / 1
+    Manrope,
+    sans-serif;
+
+  letter-spacing: -0.06em;
+}
+
+.team-final-cta h2 em {
+  color: #064e4b;
+}
+
+.team-final-cta p {
+  max-width: 530px;
+
+  margin: 0;
+
+  color: #def8f5;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+.team-final-actions {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 9px;
+
+  flex: none;
+}
+
+.team-final-primary,
+.team-final-secondary {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 13px 16px;
+
+  border-radius: 999px;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  text-decoration: none;
+}
+
+.team-final-primary {
+  background: #fff;
+
+  color: #075b57;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.team-final-primary:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 12px 25px rgba(0, 60, 57, 0.15);
+}
+
+.team-final-secondary {
+  border:
+    1px solid rgba(255, 255, 255, 0.45);
+
+  color: #fff;
+}
+
+
+/* =========================================================
+   ANIMATIONS
+   ========================================================= */
+
+@keyframes teamFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes teamFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes teamCardReveal {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes teamFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1050px) {
+  .team-hero-inner,
+  .team-approach-inner {
+    gap: 45px;
+  }
+
+  .team-section-heading {
+    gap: 35px;
+  }
+
+  .team-doctor-image {
+    height: 350px;
+  }
+
+  .team-final-cta {
+    padding: 60px 45px;
+  }
+}
+
+
+@media (max-width: 850px) {
+  .team-hero {
+    padding:
+      130px
+      22px
+      60px;
+  }
+
+  .team-hero-inner,
+  .team-approach-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .team-hero-inner {
+    gap: 50px;
+  }
+
+  .team-hero-visual {
+    min-height: 430px;
+  }
+
+  .team-hero-image {
+    width: 320px;
+    height: 420px;
+  }
+
+  .team-section-heading {
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+  }
+
+  .team-patient-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .team-doctors-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .team-approach-image {
+    height: 430px;
+  }
+
+  .team-final-cta {
+    margin: 0 20px;
+
+    padding: 55px 35px;
+
+    display: grid;
+
+    border-radius: 25px;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .team-hero {
+    padding:
+      115px
+      18px
+      45px;
+  }
+
+  .team-hero h1 {
+    font-size: 44px;
+  }
+
+  .team-hero-content > p,
+  .team-section-heading > p,
+  .team-doctors-heading p,
+  .team-approach-content > p,
+  .team-final-cta p {
+    font-size: 14px;
+  }
+
+  .team-hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .team-primary-btn {
+    justify-content: center;
+  }
+
+  .team-text-btn {
+    align-self: flex-start;
+  }
+
+  .team-trust-row {
+    display: grid;
+
+    gap: 9px;
+  }
+
+  .team-hero-visual {
+    min-height: 380px;
+  }
+
+  .team-hero-image {
+    width: 275px;
+    height: 365px;
+  }
+
+  .team-hero-card {
+    left: 0;
+    bottom: 4%;
+
+    max-width: 225px;
+  }
+
+  .team-patients-section {
+    padding:
+      62px
+      18px
+      68px;
+  }
+
+  .team-section-heading h2,
+  .team-doctors-heading h2,
+  .team-approach-content h2 {
+    font-size: 39px;
+  }
+
+  .team-patient-grid,
+  .team-doctors-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-patient-card {
+    min-height: 220px;
+  }
+
+  .team-doctors-section {
+    padding:
+      65px
+      18px
+      70px;
+  }
+
+  .team-doctors-grid {
+    margin-top: 30px;
+  }
+
+  .team-doctor-image {
+    height: 390px;
+  }
+
+  .team-approach-section {
+    padding:
+      65px
+      18px;
+  }
+
+  .team-approach-image {
+    height: 380px;
+
+    border-radius:
+      24px
+      24px
+      24px
+      75px;
+  }
+
+  .team-final-cta {
+    margin: 0 12px;
+
+    padding:
+      50px
+      22px;
+  }
+
+  .team-final-cta h2 {
+    font-size: 39px;
+  }
+
+  .team-final-actions {
+    display: grid;
+  }
+
+  .team-final-primary,
+  .team-final-secondary {
+    justify-content: center;
+  }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

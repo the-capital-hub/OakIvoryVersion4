@@ -1,0 +1,176 @@
+/* =========================================================
+   OAK & IVORY DENTAL — DOCTORS PAGE
+   ========================================================= */
+
+.doctor-profile-card {
+  position: relative;
+  overflow: hidden;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.doctor-profile-card:hover {
+  transform: translateY(-7px);
+
+  box-shadow:
+    0 22px 45px rgba(7, 91, 87, 0.12);
+}
+
+.doctor-profile-card .card-image {
+  position: relative;
+  height: 245px;
+
+  overflow: hidden;
+
+  border-radius: 14px;
+}
+
+.doctor-profile-card .card-image::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      transparent 60%,
+      rgba(5, 63, 60, 0.14)
+    );
+
+  pointer-events: none;
+}
+
+.doctor-profile-card .card-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.65s ease;
+}
+
+.doctor-profile-card:hover .card-image img {
+  transform: scale(1.055);
+}
+
+.doctor-profile-card h3 {
+  margin-top: 16px;
+  margin-bottom: 6px;
+
+  font:
+    800 18px Manrope,
+    sans-serif;
+
+  color: #143e3b;
+}
+
+.doctor-profile-card p {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.doctor-profile-card p:first-of-type {
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.doctor-profile-card p:nth-of-type(2) {
+  color: #718984;
+
+  font-size: 10px;
+  line-height: 1.55;
+}
+
+/* experience row */
+
+.doctor-profile-card > div:last-child > div {
+  transition:
+    background 0.25s ease;
+}
+
+.doctor-profile-card:hover > div:last-child > div {
+  color: #075b57;
+}
+
+/* appointment link */
+
+.doctor-profile-card a {
+  transition:
+    transform 0.25s ease,
+    color 0.25s ease;
+}
+
+.doctor-profile-card a:hover {
+  color: #2cbdb6 !important;
+
+  transform: translateX(4px);
+}
+
+/* =========================================================
+   DOCTOR HERO
+   ========================================================= */
+
+.doctor-profile-card + * {
+  scroll-margin-top: 100px;
+}
+
+/* =========================================================
+   CLINICAL PHILOSOPHY
+   ========================================================= */
+
+.doctors-philosophy {
+  position: relative;
+}
+
+.doctors-philosophy .image-card {
+  box-shadow:
+    0 25px 55px rgba(7, 91, 87, 0.12);
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 850px) {
+  .doctor-profile-card .card-image {
+    height: 230px;
+  }
+
+  .doctor-profile-card h3 {
+    font-size: 17px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 550px) {
+  .doctor-profile-card .card-image {
+    height: 260px;
+  }
+
+  .doctor-profile-card h3 {
+    font-size: 18px;
+  }
+
+  .doctor-profile-card p {
+    font-size: 10px;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .doctor-profile-card,
+  .doctor-profile-card .card-image img,
+  .doctor-profile-card a {
+    transition: none !important;
+  }
+}
