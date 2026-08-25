@@ -28,14 +28,7 @@ const doctors = [
     image:
       "https://images.pexels.com/photos/5327585/pexels-photo-5327585.jpeg?auto=compress&cs=tinysrgb&w=1000",
   },
-  {
-    name: "Priya Nair",
-    role: "Clinic Manager",
-    specialty: "Patient Experience & Care",
-    experience: "8+ Years Experience",
-    image:
-      "https://images.pexels.com/photos/7659574/pexels-photo-7659574.jpeg?auto=compress&cs=tinysrgb&w=1000",
-  },
+  
 ];
 
 export default function Doctors() {

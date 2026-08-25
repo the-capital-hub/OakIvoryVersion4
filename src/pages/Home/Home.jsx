@@ -101,18 +101,9 @@ const journey = [
 ];
 
 const testimonials = [
-  [
-    "“I finally stopped being nervous about the dentist.”",
-    "Sneha R.",
-  ],
-  [
-    "“The entire process was so smooth and reassuring.”",
-    "Rahul M.",
-  ],
-  [
-    "“My smile has completely changed my confidence.”",
-    "Priya S.",
-  ],
+  ["Amazing experience and very professional treatment.", "Rahul Sharma", "4.8"],
+  ["The doctors were caring and the entire experience was excellent.", "Priya Singh", "4.5"],
+  ["Highly recommended. The clinic has a very comfortable environment.", "Aman Kumar", "4.9"],
 ];
 
 export default function Home() {
@@ -137,7 +128,7 @@ export default function Home() {
 
             <p>
               Experienced dentists, modern technology and a calmer patient
-              experience — from your first consultation to long-term care.
+              experience from your first consultation to long-term care.
             </p>
 
             <div className="hero-actions">
@@ -534,7 +525,7 @@ export default function Home() {
 
           <p>
             Ivy answers questions, helps patients choose a service, supports
-            appointment requests and collects callback requests — 24/7.
+            appointment requests and collects callback requests 24/7.
           </p>
 
           <div className="ivy-actions">
@@ -621,24 +612,24 @@ export default function Home() {
             <ArrowUpRight size={14} />
           </Link>
         </div>
-
         <div className="testimonial-row">
-          {testimonials.map(([quote, name]) => (
-            <article key={name}>
-              <div className="stars">
-                ★★★★★
-              </div>
+  {testimonials.map(([quote, name, rating]) => (
+    <article key={name}>
+      <div className="stars">
+        ★★★★★ <span>{rating}</span>
+      </div>
 
-              <p>{quote}</p>
+      <p>{quote}</p>
 
-              <b>— {name}</b>
+      <b>— {name}</b>
 
-              <small>
-                Oak & Ivory patient
-              </small>
-            </article>
-          ))}
-        </div>
+      <small>
+        Oak & Ivory patient
+      </small>
+    </article>
+  ))}
+</div>
+
       </section>
 
       {/* ================= FINAL CTA ================= */}

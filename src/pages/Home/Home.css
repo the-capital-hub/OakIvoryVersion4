@@ -1152,6 +1152,7 @@
 
 .journey-line {
   display: grid;
+  
 
   grid-template-columns:
     repeat(5, minmax(0, 1fr));
@@ -1164,6 +1165,7 @@
 
 .journey-line article {
   min-height: 130px;
+  margin: 10px;
 
   padding: 17px 15px 0 0;
 
@@ -1767,7 +1769,21 @@
 
   color: #8a9e9b;
 
-  font-size: 8px;
+  font-size: 11px;
+}
+
+.stars {
+  display: flex;
+  color: black;
+  align-items: right;
+  gap: 10px;
+}
+
+.stars span {
+  display: flex;
+  color: black;
+  font-size: 15px;
+  font-weight: 600;
 }
 
 /* =========================================================
@@ -1848,7 +1864,7 @@
 
   border-radius: 999px;
 
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 800;
 
   transition:

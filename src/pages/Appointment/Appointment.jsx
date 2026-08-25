@@ -150,7 +150,7 @@ export default function Appointment() {
             <p>
               Book a consultation in a few simple steps.
               Choose your service, preferred time and share
-              your details — we'll take care of the rest.
+              your details we'll take care of the rest.
             </p>
 
             <div className="appointment-hero-trust">
