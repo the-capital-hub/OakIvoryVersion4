@@ -18,12 +18,14 @@ import FAQ from "./pages/FAQ/FAQ";
 import Appointment from "./pages/Appointment/Appointment";
 import Ivy from "./pages/Ivy/Ivy";
 import "./styles/global.css";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
 export default function App() {
   return (
     <BrowserRouter>
       <div className="app-shell">
         <Navbar />
+        <ScrollToTop/>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

@@ -291,42 +291,7 @@ export default function About() {
           FINAL CTA
       ===================================================== */}
 
-      <section className="about-final-cta">
-        <div>
-          <span className="about-eyebrow">
-            <i></i>
-            YOUR CARE JOURNEY
-          </span>
-
-          <h2>
-            Let’s make your next dental visit{" "}
-            <em>feel different.</em>
-          </h2>
-
-          <p>
-            Have a question, concern or treatment in mind?
-            Our team is here to help you find the right next
-            step.
-          </p>
-        </div>
-
-        <div className="about-final-actions">
-          <Link
-            to="/appointment"
-            className="about-final-primary"
-          >
-            Schedule Appointment
-            <ArrowUpRight size={16} />
-          </Link>
-
-          <Link
-            to="/contact"
-            className="about-final-secondary"
-          >
-            Contact our team
-          </Link>
-        </div>
-      </section>
+      
     </>
   );
 }

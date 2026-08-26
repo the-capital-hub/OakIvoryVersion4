@@ -367,41 +367,7 @@ export default function Experience() {
           FINAL CTA
       ===================================================== */}
 
-      <section className="experience-final">
-        <div>
-          <span className="experience-eyebrow">
-            <i></i>
-            READY WHEN YOU ARE
-          </span>
-
-          <h2>
-            Your next step can start{" "}
-            <em>today.</em>
-          </h2>
-
-          <p>
-            Take the first step toward healthier oral health
-            with a consultation designed around you.
-          </p>
-        </div>
-
-        <div className="experience-final-actions">
-          <Link
-            to="/appointment"
-            className="experience-final-primary"
-          >
-            Schedule Appointment
-            <ArrowUpRight size={16} />
-          </Link>
-
-          <Link
-            to="/contact"
-            className="experience-final-secondary"
-          >
-            Contact our team
-          </Link>
-        </div>
-      </section>
+      
     </>
   );
 }

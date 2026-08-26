@@ -128,7 +128,7 @@ export default function Home() {
 
             <p>
               Experienced dentists, modern technology and a calmer patient
-              experience from your first consultation to long-term care.
+              experience from your first consultation to long term care.
             </p>
 
             <div className="hero-actions">
@@ -621,7 +621,7 @@ export default function Home() {
 
       <p>{quote}</p>
 
-      <b>— {name}</b>
+      <b>{name}</b>
 
       <small>
         Oak & Ivory patient

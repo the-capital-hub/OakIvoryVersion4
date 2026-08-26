@@ -595,49 +595,7 @@ export default function Contact() {
           FINAL CTA
       ===================================================== */}
 
-      <section className="contact-final">
-
-        <div>
-
-          <span className="contact-eyebrow">
-            <i></i>
-            YOUR NEXT STEP
-          </span>
-
-          <h2>
-            Ready to start your{" "}
-            <em>smile journey?</em>
-          </h2>
-
-          <p>
-            Book a consultation and let our team help you
-            find the right path forward.
-          </p>
-
-        </div>
-
-
-        <div className="contact-final-actions">
-
-          <a
-            href="#appointment-form"
-            className="contact-final-primary"
-          >
-            Schedule Appointment
-            <ArrowUpRight size={16} />
-          </a>
-
-          <a
-            href="tel:+918041234567"
-            className="contact-final-secondary"
-          >
-            <Phone size={14} />
-            Call Now
-          </a>
-
-        </div>
-
-      </section>
+      
     </>
   );
 }
