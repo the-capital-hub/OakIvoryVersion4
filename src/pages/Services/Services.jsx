@@ -67,7 +67,7 @@ export default function Services() {
 
             <p>
               From gum health and implants to ongoing prevention,
-              our services are designed around long-term outcomes
+              our services are designed around long term outcomes
               and an exceptional patient experience.
             </p>
 

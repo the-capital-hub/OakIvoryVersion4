@@ -50,7 +50,7 @@ export default function Doctors() {
 
             <p>
               Our clinicians combine specialist training, modern dentistry
-              and a calm, patient-first approach. Every recommendation begins
+              and a calm, patient first approach. Every recommendation begins
               with understanding what matters to you.
             </p>
 
