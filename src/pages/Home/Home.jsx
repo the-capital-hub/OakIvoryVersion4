@@ -11,68 +11,74 @@ import {
 import { Link } from "react-router-dom";
 import "./Home.css";
 
-const IMG = {
+const images = {
   hero:
-    "https://images.pexels.com/photos/5355903/pexels-photo-5355903.jpeg?auto=compress&cs=tinysrgb&w=1400",
+    "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=1400&q=85",
 
-  consultation:
-    "https://images.pexels.com/photos/5355894/pexels-photo-5355894.jpeg?auto=compress&cs=tinysrgb&w=1200",
+  treatment:
+    "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=1200&q=85",
 
-  patient:
-    "https://images.pexels.com/photos/5622003/pexels-photo-5622003.jpeg?auto=compress&cs=tinysrgb&w=1000",
+  doctorOne:
+    "https://images.unsplash.com/photo-1550831107-1553da8c8464?auto=format&fit=crop&w=900&q=85",
 
-  clinic:
-    "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1200&q=85",
+  doctorTwo:
+    "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=900&q=85",
+
+  experience:
+    "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=85",
 };
 
 const treatments = [
   {
     number: "01",
     title: "Complete Dental Check up",
-    text: "A clear starting point for understanding your oral health.",
+    text: "A clear starting point for understanding your dental needs.",
   },
   {
     number: "02",
     title: "Teeth Cleaning and Polishing",
-    text: "Professional cleaning focused on everyday oral care.",
+    text: "Professional care for a cleaner and healthier smile.",
   },
   {
     number: "03",
     title: "Cavity Treatment",
-    text: "Focused care for teeth affected by decay.",
+    text: "Focused treatment for teeth affected by cavities.",
   },
   {
     number: "04",
-    title: "Root Canal Treatment",
-    text: "Treatment that helps preserve affected natural teeth.",
+    title: "Tooth Colored Fillings",
+    text: "A natural looking approach to restoring affected teeth.",
   },
   {
     number: "05",
-    title: "Dental Implants",
-    text: "A considered option for replacing missing teeth.",
+    title: "Root Canal Treatment",
+    text: "Care focused on preserving affected natural teeth.",
   },
   {
     number: "06",
-    title: "Teeth Whitening",
-    text: "A brighter smile with treatment planned around you.",
+    title: "Crowns and Bridges",
+    text: "Solutions for restoring the function of your smile.",
   },
 ];
 
-const carePrinciples = [
+const principles = [
   {
     number: "01",
-    title: "Listen first",
-    text: "Your concerns and expectations begin the conversation.",
+    title: "Listen",
+    text: "We start by understanding your concerns and expectations.",
+    icon: <Stethoscope size={20} />,
   },
   {
     number: "02",
-    title: "Explain clearly",
-    text: "Treatment information is shared in a simple and understandable way.",
+    title: "Explain",
+    text: "We keep treatment conversations clear and easy to understand.",
+    icon: <Sparkles size={20} />,
   },
   {
     number: "03",
-    title: "Plan thoughtfully",
-    text: "Your dental needs guide the discussion around treatment.",
+    title: "Care",
+    text: "Your treatment journey stays centred around your needs.",
+    icon: <Check size={20} />,
   },
 ];
 
@@ -82,450 +88,607 @@ const doctors = [
     qualification: "BDS, FGD, FCE",
     role: "Dental Care",
     phone: "+91 84317 88571",
+    image: images.doctorOne,
   },
   {
     name: "Dr. Abdul Rahim",
     qualification: "BDS",
     role: "Director and Head of Candy Advanced Dental Care",
     phone: "+91 99001 76558",
+    image: images.doctorTwo,
   },
 ];
 
-function Image({ src, alt, className = "" }) {
-  return (
-    <img
-      src={src}
-      alt={alt}
-      className={className}
-      loading="lazy"
-      onError={(event) => {
-        event.currentTarget.style.opacity = "0";
-      }}
-    />
-  );
-}
+const journey = [
+  "Start with a conversation",
+  "Meet your dental specialist",
+  "Understand your treatment options",
+  "Move forward with clarity",
+];
 
 export default function Home() {
   return (
     <main className="vasu-home">
+
       {/* HERO */}
 
-      <section className="home-hero">
-        <div className="home-hero-orb orb-one" />
-        <div className="home-hero-orb orb-two" />
+      <section className="vh-hero">
 
-        <div className="home-container hero-layout">
-          <div className="hero-content">
-            <span className="home-label">
+        <div className="vh-hero-decoration vh-decoration-one" />
+        <div className="vh-hero-decoration vh-decoration-two" />
+
+        <div className="vh-container vh-hero-grid">
+
+          <div className="vh-hero-copy">
+
+            <div className="vh-label">
               <i />
               VASU AESTHETICS AND DENTAL CARE
-            </span>
+            </div>
 
             <h1>
-              Dentistry with
-              <span> clarity, care</span>
-              and confidence.
+              A healthier smile
+              <span> starts with care.</span>
             </h1>
 
-            <p className="hero-description">
-              Personalised dental care in Rajajinagar with clear
-              communication, thoughtful treatment planning and a patient
-              focused approach.
+            <p>
+              Thoughtful dental care in Rajajinagar with clear
+              communication, personalised treatment and a
+              comfortable patient experience.
             </p>
 
-            <div className="hero-buttons">
-              <Link to="/appointment" className="primary-button">
+            <div className="vh-hero-buttons">
+
+              <Link to="/appointment" className="vh-primary">
                 Book an Appointment
                 <ArrowUpRight size={16} />
               </Link>
 
-              <Link to="/services" className="outline-button">
+              <Link to="/services" className="vh-secondary">
                 Explore Treatments
-                <ArrowUpRight size={15} />
               </Link>
+
             </div>
 
-            <div className="hero-location">
-              <span className="location-icon">
-                <MapPin size={15} />
-              </span>
+            <div className="vh-hero-address">
+
+              <div className="vh-address-icon">
+                <MapPin size={16} />
+              </div>
 
               <div>
                 <strong>Rajajinagar, Bengaluru</strong>
-                <small>Vasu Aesthetics and Dental Care</small>
+                <span>Vasu Aesthetics and Dental Care</span>
               </div>
+
             </div>
+
           </div>
 
-          <div className="hero-visual">
-            <div className="hero-image">
-              <Image
-                src={IMG.hero}
-                alt="Dental professional caring for a patient"
+          <div className="vh-hero-visual">
+
+            <div className="vh-hero-photo">
+
+              <img
+                src={images.hero}
+                alt="Dental care at Vasu Aesthetics and Dental Care"
               />
+
+              <div className="vh-photo-overlay" />
+
             </div>
 
-            <div className="hero-image-caption">
-              <span className="caption-icon">
+            <div className="vh-hero-note">
+
+              <div className="vh-note-icon">
                 <Sparkles size={16} />
-              </span>
+              </div>
 
               <div>
-                <strong>Thoughtful dental care</strong>
-                <span>Designed around your needs</span>
+                <strong>Thoughtful care</strong>
+                <span>Built around your needs</span>
               </div>
+
             </div>
 
-            <div className="hero-number">
+            <div className="vh-hero-badge">
               <strong>14</strong>
-              <span>Dental<br />services</span>
+              <span>
+                Dental
+                <br />
+                services
+              </span>
             </div>
+
+            <div className="vh-hero-stamp">
+              <strong>VASU</strong>
+              <span>DENTAL CARE</span>
+            </div>
+
           </div>
+
         </div>
 
-        <div className="hero-bottom">
-          <span>PERSONALISED CARE</span>
-          <span className="hero-bottom-line" />
+        <div className="vh-hero-footer">
+
+          <span>
+            <i />
+            PERSONALISED CARE
+          </span>
+
+          <b />
+
           <span>CLEAR GUIDANCE</span>
-          <span className="hero-bottom-line" />
+
+          <b />
+
           <span>RAJAJINAGAR</span>
+
         </div>
+
       </section>
+
 
       {/* INTRO */}
 
-      <section className="home-intro">
-        <div className="home-container intro-layout">
-          <div className="intro-heading">
-            <span className="home-label">
-              <i />
-              A DIFFERENT APPROACH
-            </span>
+      <section className="vh-intro">
 
-            <h2>
-              Your dental care should feel
-              <span> understandable.</span>
-            </h2>
+        <div className="vh-container vh-intro-grid">
+
+          <div className="vh-intro-index">
+            <strong>01</strong>
+            <span />
+            <small>OUR APPROACH</small>
           </div>
 
-          <div className="intro-copy">
+          <div className="vh-intro-title">
+
+            <div className="vh-label">
+              <i />
+              THE VASU APPROACH
+            </div>
+
+            <h2>
+              Dental care should feel
+              <span> clear and comfortable.</span>
+            </h2>
+
+          </div>
+
+          <div className="vh-intro-copy">
+
             <p>
-              At Vasu Aesthetics and Dental Care, we believe good dental care
-              starts with listening. Every conversation gives you an
-              opportunity to understand your dental needs and the options
-              available to you.
+              Every patient is different. That is why we focus
+              on understanding your concerns first, then helping
+              you understand the care that comes next.
             </p>
 
-            <Link to="/about" className="underlined-link">
+            <Link to="/about" className="vh-text-link">
               Discover Vasu
               <ArrowUpRight size={15} />
             </Link>
+
           </div>
+
         </div>
+
       </section>
 
-      {/* CARE PRINCIPLES */}
 
-      <section className="care-section">
-        <div className="home-container">
-          <div className="care-top">
+      {/* PRINCIPLES */}
+
+      <section className="vh-principles">
+
+        <div className="vh-container">
+
+          <div className="vh-principles-head">
+
             <div>
-              <span className="home-label light">
+
+              <div className="vh-label vh-label-light">
                 <i />
-                THE VASU APPROACH
-              </span>
+                WHAT MATTERS TO US
+              </div>
 
               <h2>
-                Three things that shape
-                <span> every conversation.</span>
+                Three ideas behind
+                <span> your experience.</span>
               </h2>
+
             </div>
 
             <p>
-              From your first enquiry to your treatment discussion, the
-              experience should remain clear and comfortable.
+              From your first question to your treatment
+              discussion, we keep the experience simple.
             </p>
+
           </div>
 
-          <div className="care-grid">
-            {carePrinciples.map((item) => (
-              <article className="care-card" key={item.number}>
-                <span className="care-number">{item.number}</span>
+          <div className="vh-principles-grid">
 
-                <div className="care-card-icon">
-                  {item.number === "01" && <Stethoscope size={21} />}
-                  {item.number === "02" && <Check size={21} />}
-                  {item.number === "03" && <Sparkles size={21} />}
+            {principles.map((item) => (
+              <article
+                className="vh-principle-card"
+                key={item.number}
+              >
+
+                <div className="vh-principle-top">
+                  <span>{item.number}</span>
+
+                  <div className="vh-principle-icon">
+                    {item.icon}
+                  </div>
                 </div>
 
-                <h3>{item.title}</h3>
-                <p>{item.text}</p>
+                <div className="vh-principle-content">
+                  <h3>{item.title}</h3>
+                  <p>{item.text}</p>
+                </div>
 
-                <span className="care-card-line" />
+                <div className="vh-principle-line" />
+
               </article>
             ))}
+
           </div>
+
         </div>
+
       </section>
+
 
       {/* TREATMENTS */}
 
-      <section className="treatment-section">
-        <div className="home-container">
-          <div className="treatment-heading">
+      <section className="vh-treatments">
+
+        <div className="vh-container">
+
+          <div className="vh-section-head">
+
             <div>
-              <span className="home-label">
+
+              <div className="vh-label">
                 <i />
                 DENTAL TREATMENTS
-              </span>
+              </div>
 
               <h2>
-                Care for every stage of
-                <span> your smile.</span>
+                One place for your
+                <span> dental needs.</span>
               </h2>
+
             </div>
 
-            <Link to="/services" className="round-arrow">
-              <ArrowUpRight size={19} />
+            <Link
+              to="/services"
+              className="vh-round-link"
+              aria-label="View all treatments"
+            >
+              <ArrowUpRight size={18} />
             </Link>
+
           </div>
 
-          <div className="treatment-layout">
-            <div className="treatment-feature">
-              <Image
-                src={IMG.consultation}
+          <div className="vh-treatment-layout">
+
+            <div className="vh-treatment-feature">
+
+              <img
+                src={images.treatment}
                 alt="Dental consultation"
               />
 
-              <div className="feature-overlay">
-                <span>01</span>
+              <div className="vh-treatment-feature-content">
+
+                <div className="vh-feature-number">
+                  01
+                </div>
 
                 <div>
-                  <h3>Complete Dental Check up</h3>
+                  <span>START HERE</span>
+
+                  <h3>
+                    Complete Dental Check up
+                  </h3>
+
                   <p>
-                    Begin with a clear understanding of your oral health.
+                    Begin with a clear understanding
+                    of your dental needs.
                   </p>
                 </div>
 
-                <Link to="/services">
-                  <ArrowUpRight size={17} />
+                <Link to="/services" className="vh-feature-arrow">
+                  <ArrowUpRight size={16} />
                 </Link>
+
               </div>
+
             </div>
 
-            <div className="treatment-list">
+            <div className="vh-treatment-list">
+
               {treatments.slice(1).map((item) => (
                 <Link
                   to="/services"
-                  className="treatment-row"
+                  className="vh-treatment-card"
                   key={item.number}
                 >
-                  <span className="treatment-number">{item.number}</span>
+
+                  <span className="vh-treatment-number">
+                    {item.number}
+                  </span>
 
                   <div>
                     <h3>{item.title}</h3>
                     <p>{item.text}</p>
                   </div>
 
-                  <span className="treatment-arrow">
+                  <span className="vh-treatment-arrow">
                     <ArrowUpRight size={15} />
                   </span>
+
                 </Link>
               ))}
+
             </div>
+
           </div>
 
-          <div className="treatment-footer">
-            <span>14 dental services available</span>
+          <div className="vh-treatment-footer">
+            <span>14 dental services</span>
 
             <Link to="/services">
               View all treatments
               <ArrowUpRight size={14} />
             </Link>
           </div>
+
         </div>
+
       </section>
+
 
       {/* DOCTORS */}
 
-      <section className="doctors-preview">
-        <div className="home-container">
-          <div className="doctors-heading">
+      <section className="vh-doctors">
+
+        <div className="vh-container">
+
+          <div className="vh-section-head">
+
             <div>
-              <span className="home-label">
+
+              <div className="vh-label">
                 <i />
                 OUR DENTISTS
-              </span>
+              </div>
 
               <h2>
                 Meet the people behind
-                <span> your dental care.</span>
+                <span> your care.</span>
               </h2>
+
             </div>
 
-            <Link to="/doctors" className="underlined-link">
+            <Link
+              to="/doctors"
+              className="vh-text-link vh-doctors-desktop-link"
+            >
               Meet our dentists
               <ArrowUpRight size={15} />
             </Link>
+
           </div>
 
-          <div className="doctors-grid">
+          <div className="vh-doctors-grid">
+
             {doctors.map((doctor, index) => (
-              <article className="doctor-preview-card" key={doctor.name}>
-                <div className="doctor-image">
-                  <Image
-                    src={index === 0 ? IMG.patient : IMG.clinic}
+              <article
+                className="vh-doctor-card"
+                key={doctor.name}
+              >
+
+                <div className="vh-doctor-photo">
+
+                  <img
+                    src={doctor.image}
                     alt={doctor.name}
                   />
 
-                  <span className="doctor-index">0{index + 1}</span>
+                  <span>
+                    0{index + 1}
+                  </span>
+
                 </div>
 
-                <div className="doctor-info">
+                <div className="vh-doctor-info">
+
                   <div>
-                    <span className="doctor-role">{doctor.role}</span>
+
+                    <small>{doctor.role}</small>
+
                     <h3>{doctor.name}</h3>
+
                     <p>{doctor.qualification}</p>
+
                   </div>
 
                   <a
                     href={`tel:${doctor.phone.replace(/\s/g, "")}`}
-                    className="doctor-phone"
+                    className="vh-doctor-phone"
                   >
                     <Phone size={14} />
                     {doctor.phone}
                   </a>
+
                 </div>
+
               </article>
             ))}
+
           </div>
+
+          <Link
+            to="/doctors"
+            className="vh-text-link vh-doctors-mobile-link"
+          >
+            Meet our dentists
+            <ArrowUpRight size={15} />
+          </Link>
+
         </div>
+
       </section>
+
 
       {/* IVY */}
 
-      <section className="ivy-section">
-        <div className="home-container ivy-layout">
-          <div className="ivy-copy">
-            <span className="home-label light">
+      <section className="vh-ivy">
+
+        <div className="vh-ivy-decoration" />
+
+        <div className="vh-container vh-ivy-grid">
+
+          <div className="vh-ivy-copy">
+
+            <div className="vh-label vh-label-light">
               <i />
               MEET IVY
-            </span>
+            </div>
 
             <h2>
-              A simpler way to
-              <span> connect with Vasu.</span>
+              Your first step can be
+              <span> a simple conversation.</span>
             </h2>
 
             <p>
-              Ivy is the digital dental assistant for Vasu Aesthetics and
-              Dental Care. Use Ivy to explore dental information and begin an
-              appointment enquiry.
+              Ivy is the digital dental assistant for Vasu.
+              Explore dental information and begin an
+              appointment enquiry through a simple conversation.
             </p>
 
-            <Link to="/ivy" className="ivy-button">
+            <Link to="/ivy" className="vh-ivy-button">
               Talk to Ivy
-              <Bot size={16} />
+              <Bot size={17} />
             </Link>
+
           </div>
 
-          <div className="ivy-orbit">
-            <div className="ivy-orbit-ring" />
+          <div className="vh-ivy-visual">
 
-            <div className="ivy-center">
-              <div className="ivy-icon-large">
-                <Bot size={31} />
+            <div className="vh-ivy-ring vh-ring-large" />
+            <div className="vh-ivy-ring vh-ring-small" />
+
+            <div className="vh-ivy-core">
+
+              <div>
+                <Bot size={28} />
               </div>
 
               <strong>Ivy</strong>
+
               <span>Digital Dental Assistant</span>
+
             </div>
 
-            <div className="ivy-point point-one">
-              <span />
+            <div className="vh-ivy-pill vh-pill-one">
+              <i />
               Dental information
             </div>
 
-            <div className="ivy-point point-two">
-              <span />
+            <div className="vh-ivy-pill vh-pill-two">
+              <i />
               Appointment enquiry
             </div>
 
-            <div className="ivy-point point-three">
-              <span />
+            <div className="vh-ivy-pill vh-pill-three">
+              <i />
               Clinic connection
             </div>
+
           </div>
+
         </div>
+
       </section>
 
-      {/* EXPERIENCE */}
 
-      <section className="experience-section">
-        <div className="home-container experience-layout">
-          <div className="experience-image">
-            <Image
-              src={IMG.clinic}
-              alt="Vasu dental care environment"
+      {/* PATIENT JOURNEY */}
+
+      <section className="vh-journey">
+
+        <div className="vh-container vh-journey-grid">
+
+          <div className="vh-journey-image">
+
+            <img
+              src={images.experience}
+              alt="Vasu patient experience"
             />
 
-            <div className="experience-label">
-              <span />
-              THE VASU EXPERIENCE
+            <div className="vh-journey-tag">
+              <i />
+              THE PATIENT JOURNEY
             </div>
+
           </div>
 
-          <div className="experience-content">
-            <span className="home-label">
+          <div className="vh-journey-copy">
+
+            <div className="vh-label">
               <i />
               BEYOND THE PROCEDURE
-            </span>
+            </div>
 
             <h2>
-              Good dental care is also about
-              <span> how you feel.</span>
+              Know what comes
+              <span> next.</span>
             </h2>
 
             <p>
-              A comfortable experience begins with clear communication,
-              thoughtful guidance and enough space to understand what comes
-              next.
+              A good experience is about more than treatment.
+              It is about knowing what to expect and having
+              clear information along the way.
             </p>
 
-            <div className="experience-points">
-              <div>
-                <span>01</span>
-                <strong>Feel heard</strong>
-              </div>
+            <div className="vh-journey-list">
 
-              <div>
-                <span>02</span>
-                <strong>Understand your options</strong>
-              </div>
+              {journey.map((item, index) => (
+                <div key={item}>
 
-              <div>
-                <span>03</span>
-                <strong>Move forward with clarity</strong>
-              </div>
+                  <span>0{index + 1}</span>
+
+                  <strong>{item}</strong>
+
+                </div>
+              ))}
+
             </div>
 
-            <Link to="/experience" className="underlined-link">
+            <Link to="/experience" className="vh-text-link">
               Explore the patient journey
               <ArrowUpRight size={15} />
             </Link>
+
           </div>
+
         </div>
+
       </section>
+
 
       {/* LOCATION */}
 
-      <section className="location-section">
-        <div className="home-container location-layout">
-          <div className="location-content">
-            <span className="home-label">
+      <section className="vh-location">
+
+        <div className="vh-container vh-location-grid">
+
+          <div className="vh-location-copy">
+
+            <div className="vh-label">
               <i />
               VISIT VASU
-            </span>
+            </div>
 
             <h2>
               Find us in
@@ -533,29 +696,46 @@ export default function Home() {
             </h2>
 
             <p>
-              No. 211, 50th Cross, 3rd Block, Rajajinagar, Bengaluru 560010.
+              No. 211, 50th Cross, 3rd Block,
+              Rajajinagar, Bengaluru 560010.
             </p>
 
-            <div className="location-actions">
-              <Link to="/contact" className="primary-button">
+            <div className="vh-location-actions">
+
+              <Link
+                to="/contact"
+                className="vh-location-button"
+              >
                 Contact the clinic
                 <ArrowUpRight size={15} />
               </Link>
 
-              <a href="tel:+918431788571" className="location-call">
+              <a
+                href="tel:+918431788571"
+                className="vh-location-phone"
+              >
                 <Phone size={15} />
                 +91 84317 88571
               </a>
+
             </div>
+
           </div>
 
-          <div className="location-card">
-            <div className="location-card-top">
-              <div className="location-pin">
-                <MapPin size={20} />
+          <div className="vh-address-card">
+
+            <div className="vh-address-head">
+
+              <div>
+                <MapPin size={19} />
               </div>
 
-              <span>VASU AESTHETICS AND DENTAL CARE</span>
+              <span>
+                VASU AESTHETICS
+                <br />
+                AND DENTAL CARE
+              </span>
+
             </div>
 
             <strong>
@@ -570,19 +750,26 @@ export default function Home() {
               View contact details
               <ArrowUpRight size={14} />
             </Link>
+
           </div>
+
         </div>
+
       </section>
+
 
       {/* FINAL CTA */}
 
-      <section className="home-final">
-        <div className="home-container final-layout">
+      <section className="vh-final">
+
+        <div className="vh-container vh-final-grid">
+
           <div>
-            <span className="home-label light">
+
+            <div className="vh-label vh-label-light">
               <i />
               YOUR NEXT STEP
-            </span>
+            </div>
 
             <h2>
               Start with a
@@ -590,25 +777,37 @@ export default function Home() {
             </h2>
 
             <p>
-              Tell us what you need and take the next step towards
-              personalised dental care.
+              Tell us what you need and take the next step
+              towards personalised dental care.
             </p>
+
           </div>
 
-          <div className="final-actions">
-            <Link to="/appointment" className="final-button">
+          <div className="vh-final-actions">
+
+            <Link
+              to="/appointment"
+              className="vh-final-button"
+            >
               <CalendarDays size={17} />
               Book an Appointment
               <ArrowUpRight size={16} />
             </Link>
 
-            <a href="tel:+918431788571" className="final-phone">
+            <a
+              href="tel:+918431788571"
+              className="vh-final-phone"
+            >
               <Phone size={15} />
               +91 84317 88571
             </a>
+
           </div>
+
         </div>
+
       </section>
+
     </main>
   );
 }

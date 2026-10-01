@@ -3,7 +3,6 @@ import {
   Bot,
   CalendarDays,
   CheckCircle2,
-  Clock3,
   MapPin,
   MessageCircle,
   Phone,
@@ -11,7 +10,6 @@ import {
   ShieldCheck,
   Sparkles,
 } from "lucide-react";
-
 import { Link, useSearchParams } from "react-router-dom";
 import { useState } from "react";
 
@@ -55,48 +53,39 @@ export default function Contact() {
 
   const ivyActive = params.get("assistant") === "ivy";
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = (event) => {
+    event.preventDefault();
     setSent(true);
   };
 
   return (
     <main className="vasu-contact">
 
-      {/* =====================================================
-          HERO
-      ===================================================== */}
-
+      {/* HERO */}
       <section className="contact-hero">
-
-        <div className="contact-hero-glow" />
+        <div className="contact-hero-pattern" />
 
         <div className="contact-hero-inner">
 
-          <div className="contact-hero-content">
-
-            <span className="contact-kicker">
+          <div className="contact-hero-copy">
+            <span className="contact-label">
               <i />
               VASU AESTHETICS AND DENTAL CARE
             </span>
 
             <h1>
-              Your next visit
-              <em> starts here.</em>
+              Let us make your
+              <em> next visit simple.</em>
             </h1>
 
             <p>
-              Whether you want to book a consultation, ask about
-              a treatment or simply speak with our team, we are
-              here to help you take the next step with confidence.
+              Have a question, need treatment information or want to
+              request an appointment? Share your details and take the
+              next step with Vasu.
             </p>
 
-            <div className="contact-hero-actions">
-
-              <a
-                href="#appointment-form"
-                className="contact-primary-btn"
-              >
+            <div className="contact-actions">
+              <a href="#appointment-form" className="contact-main-btn">
                 Book an Appointment
                 <span>
                   <ArrowUpRight size={16} />
@@ -105,149 +94,121 @@ export default function Contact() {
 
               <a
                 href="tel:+918431788571"
-                className="contact-secondary-btn"
+                className="contact-call-btn"
               >
                 <Phone size={15} />
                 Call the clinic
               </a>
-
             </div>
 
-            <div className="contact-hero-meta">
-
+            <div className="contact-trust-row">
               <div>
-                <CheckCircle2 size={17} />
-                <span>
-                  <strong>Personalised care</strong>
-                  <small>Built around your needs</small>
+                <span className="trust-icon">
+                  <CheckCircle2 size={16} />
                 </span>
+                <div>
+                  <strong>Personalised care</strong>
+                  <small>Focused on your needs</small>
+                </div>
               </div>
 
               <div>
-                <MapPin size={17} />
-                <span>
+                <span className="trust-icon">
+                  <MapPin size={16} />
+                </span>
+                <div>
                   <strong>Rajajinagar</strong>
                   <small>Bengaluru</small>
-                </span>
+                </div>
               </div>
-
             </div>
-
           </div>
 
-
-          <div className="contact-hero-visual">
-
-            <div className="contact-hero-ring" />
-
-            <div className="contact-hero-image">
-
-              <img
-                src="https://images.pexels.com/photos/3845983/pexels-photo-3845983.jpeg?auto=compress&cs=tinysrgb&w=1200"
-                alt="Dental consultation at Vasu Aesthetics and Dental Care"
-              />
-
+          <div className="contact-hero-card">
+            <div className="hero-card-top">
+              <span>01</span>
+              <div>
+                <small>YOUR NEXT VISIT</small>
+                <strong>Start with a conversation</strong>
+              </div>
             </div>
 
-            <div className="contact-floating-card">
+            <div className="hero-card-visual">
+              <div className="hero-circle hero-circle-one" />
+              <div className="hero-circle hero-circle-two" />
 
-              <span>
-                <CalendarDays size={18} />
-              </span>
-
-              <div>
-                <strong>Ready for your visit?</strong>
-                <small>Send an appointment request</small>
+              <div className="hero-icon">
+                <CalendarDays size={38} />
               </div>
 
+              <div className="hero-mini-card">
+                <CheckCircle2 size={16} />
+                <span>Appointment request</span>
+              </div>
             </div>
 
+            <div className="hero-card-bottom">
+              <span>
+                <MapPin size={15} />
+              </span>
+              <p>
+                No. 211, 50th Cross, 3rd Block,
+                Rajajinagar, Bengaluru 560010
+              </p>
+            </div>
           </div>
 
         </div>
-
       </section>
 
-
-      {/* =====================================================
-          CONTACT INTRO
-      ===================================================== */}
-
+      {/* INTRO */}
       <section className="contact-intro">
-
-        <div className="contact-intro-inner">
-
+        <div className="contact-container contact-intro-inner">
           <div>
-
-            <span className="contact-eyebrow">
+            <span className="contact-label">
               <i />
               LET'S CONNECT
             </span>
 
             <h2>
-              Tell us what
-              <em> you need.</em>
+              One message can be the
+              <em> beginning of better care.</em>
             </h2>
-
           </div>
 
           <p>
-            Share a few details with us and we can understand
-            your requirement before your visit.
+            Tell us what you are looking for and our team can guide
+            you towards the appropriate next step.
           </p>
-
         </div>
-
       </section>
 
-
-      {/* =====================================================
-          APPOINTMENT + CONTACT
-      ===================================================== */}
-
+      {/* APPOINTMENT */}
       <section className="contact-booking">
+        <div className="contact-container booking-grid">
 
-        <div className="contact-booking-inner">
-
-          {/* FORM */}
-
-          <div
-            className="contact-form-card"
-            id="appointment-form"
-          >
+          <div className="contact-form-card" id="appointment-form">
 
             {!sent ? (
               <>
-
-                <div className="contact-form-top">
-
+                <div className="form-heading">
                   <div>
-
-                    <span className="contact-form-label">
-                      APPOINTMENT REQUEST
-                    </span>
-
-                    <h3>
-                      Plan your visit
-                    </h3>
-
+                    <span>APPOINTMENT REQUEST</span>
+                    <h3>Plan your visit</h3>
                     <p>
-                      Tell us a little about yourself and the
-                      dental care you are looking for.
+                      Share a few details so the dental care team
+                      can understand what you need.
                     </p>
-
                   </div>
 
-                  <div className="contact-form-icon">
-                    <CalendarDays size={20} />
+                  <div className="form-heading-icon">
+                    <CalendarDays size={21} />
                   </div>
-
                 </div>
-
 
                 <form onSubmit={handleSubmit}>
 
-                  <div className="contact-fields">
+                  <div className="form-grid">
 
                     <label>
                       <span>
@@ -261,7 +222,6 @@ export default function Contact() {
                       />
                     </label>
 
-
                     <label>
                       <span>
                         Phone Number <b>*</b>
@@ -274,7 +234,6 @@ export default function Contact() {
                       />
                     </label>
 
-
                     <label>
                       <span>Email Address</span>
 
@@ -284,15 +243,13 @@ export default function Contact() {
                       />
                     </label>
 
-
                     <label>
                       <span>Preferred Date</span>
 
                       <input type="date" />
                     </label>
 
-
-                    <label className="contact-field-wide">
+                    <label className="full-field">
                       <span>
                         Dental Service <b>*</b>
                       </span>
@@ -303,33 +260,27 @@ export default function Contact() {
                         </option>
 
                         {services.map((service) => (
-                          <option
-                            value={service}
-                            key={service}
-                          >
+                          <option value={service} key={service}>
                             {service}
                           </option>
                         ))}
                       </select>
                     </label>
 
-
-                    <label className="contact-field-wide">
+                    <label className="full-field">
                       <span>Preferred Time</span>
 
                       <select defaultValue="">
                         <option value="" disabled>
                           Select a preferred time
                         </option>
-
                         <option>Morning</option>
                         <option>Afternoon</option>
                         <option>Evening</option>
                       </select>
                     </label>
 
-
-                    <label className="contact-field-wide">
+                    <label className="full-field">
                       <span>Tell us a little more</span>
 
                       <textarea
@@ -340,45 +291,29 @@ export default function Contact() {
 
                   </div>
 
-
-                  <div className="contact-form-footer">
-
-                    <div className="contact-private">
-
+                  <div className="form-bottom">
+                    <div className="privacy-note">
                       <ShieldCheck size={16} />
-
-                      <span>
-                        Your information stays private
-                      </span>
-
+                      <span>Your information stays private</span>
                     </div>
 
-                    <button
-                      type="submit"
-                      className="contact-submit"
-                    >
+                    <button type="submit" className="submit-btn">
                       Send Request
                       <Send size={15} />
                     </button>
-
                   </div>
 
                 </form>
-
               </>
             ) : (
-
-              <div className="contact-success">
-
-                <div className="contact-success-icon">
+              <div className="success-state">
+                <div className="success-icon">
                   <CheckCircle2 size={38} />
                 </div>
 
                 <span>REQUEST RECEIVED</span>
 
-                <h3>
-                  Thank you for reaching out.
-                </h3>
+                <h3>Thank you for reaching out.</h3>
 
                 <p>
                   Your appointment request has been received.
@@ -388,89 +323,69 @@ export default function Contact() {
 
                 <button
                   type="button"
-                  className="contact-submit"
+                  className="submit-btn"
                   onClick={() => setSent(false)}
                 >
                   Send Another Request
                   <ArrowUpRight size={15} />
                 </button>
-
               </div>
-
             )}
 
           </div>
 
+          {/* CONTACT SIDE */}
+          <aside className="contact-info-card">
 
-          {/* CONTACT PANEL */}
-
-          <aside className="contact-side-card">
-
-            <div className="contact-side-heading">
-
-              <span className="contact-eyebrow light">
+            <div className="info-card-header">
+              <span className="contact-label light">
                 <i />
                 SPEAK WITH US
               </span>
 
               <h3>
-                A simple way to
-                <em> reach Vasu.</em>
+                Reach the team
+                <em> directly.</em>
               </h3>
 
               <p>
-                Connect directly with the dental care team or
-                visit us at our Rajajinagar clinic.
+                Connect with the dental care team or visit the
+                clinic in Rajajinagar.
               </p>
-
             </div>
 
-
-            <div className="contact-doctors">
+            <div className="doctor-list">
 
               {doctors.map((doctor) => (
-
                 <a
                   href={`tel:+91${doctor.phone}`}
-                  className="contact-doctor"
+                  className="doctor-contact"
                   key={doctor.name}
                 >
-
-                  <div className="contact-doctor-icon">
+                  <span className="doctor-phone-icon">
                     <Phone size={16} />
-                  </div>
+                  </span>
 
-                  <div className="contact-doctor-info">
-
+                  <div>
                     <small>{doctor.name}</small>
-
-                    <strong>
-                      +91 {doctor.phone}
-                    </strong>
-
+                    <strong>+91 {doctor.phone}</strong>
                     <span>
                       {doctor.role || doctor.qualification}
                     </span>
-
                   </div>
 
                   <ArrowUpRight size={15} />
-
                 </a>
-
               ))}
 
             </div>
 
-
-            <div className="contact-side-address">
-
-              <div className="contact-address-icon">
-                <MapPin size={18} />
-              </div>
+            <div className="clinic-address">
+              <span className="address-icon">
+                <MapPin size={17} />
+              </span>
 
               <div>
-
                 <small>VISIT THE CLINIC</small>
 
                 <strong>
@@ -482,82 +397,63 @@ export default function Contact() {
                   <br />
                   Rajajinagar, Bengaluru 560010
                 </p>
-
               </div>
-
             </div>
 
-
             <Link
-              to="/contact?assistant=ivy"
-              className="contact-ivy-mini"
+              to="/ivy"
+              className="ivy-small-card"
             >
-
               <span>
                 <Bot size={18} />
               </span>
 
               <div>
                 <strong>Talk to Ivy</strong>
-                <small>
-                  Get help before your appointment
-                </small>
+                <small>Get help before your appointment</small>
               </div>
 
               <ArrowUpRight size={15} />
-
             </Link>
 
           </aside>
 
         </div>
-
       </section>
 
-
-      {/* =====================================================
-          MAP
-      ===================================================== */}
-
+      {/* LOCATION */}
       <section className="contact-location">
+        <div className="contact-container">
 
-        <div className="contact-location-inner">
-
-          <div className="contact-location-heading">
-
+          <div className="location-heading">
             <div>
-
-              <span className="contact-eyebrow">
+              <span className="contact-label">
                 <i />
                 FIND VASU
               </span>
 
               <h2>
-                Your dental care,
-                <em> close to you.</em>
+                Come visit us in
+                <em> Rajajinagar.</em>
               </h2>
-
             </div>
 
             <p>
-              Find Vasu Aesthetics and Dental Care in
-              Rajajinagar, Bengaluru and plan your visit
-              using the map.
+              Find Vasu Aesthetics and Dental Care at our
+              Rajajinagar location in Bengaluru.
             </p>
-
           </div>
 
+          <div className="location-grid">
 
-          <div className="contact-location-grid">
+            <div className="location-info">
 
-            <div className="contact-location-info">
-
-              <div className="contact-location-number">
+              <div className="location-number">
                 01
               </div>
 
-              <div className="contact-location-pin">
-                <MapPin size={21} />
+              <div className="location-icon">
+                <MapPin size={22} />
               </div>
 
               <span>CLINIC ADDRESS</span>
@@ -576,7 +472,7 @@ export default function Contact() {
                 href="https://www.google.com/maps/search/?api=1&query=Vasu+Aesthetics+and+Dental+Care%2C+No.+211%2C+50th+Cross%2C+3rd+Block%2C+Rajajinagar%2C+Bengaluru+560010"
                 target="_blank"
                 rel="noreferrer"
-                className="contact-map-button"
+                className="direction-btn"
               >
                 Get Directions
                 <ArrowUpRight size={15} />
@@ -584,8 +480,7 @@ export default function Contact() {
 
             </div>
 
-
-            <div className="contact-map">
+            <div className="map-wrapper">
 
               <iframe
                 title="Vasu Aesthetics and Dental Care location"
@@ -594,8 +489,7 @@ export default function Contact() {
                 referrerPolicy="no-referrer-when-downgrade"
               />
 
-              <div className="contact-map-label">
-
+              <div className="map-caption">
                 <span>
                   <MapPin size={14} />
                 </span>
@@ -604,7 +498,6 @@ export default function Contact() {
                   <strong>Vasu Aesthetics and Dental Care</strong>
                   <small>Rajajinagar, Bengaluru</small>
                 </div>
-
               </div>
 
             </div>
@@ -612,47 +505,38 @@ export default function Contact() {
           </div>
 
         </div>
-
       </section>
 
-
-      {/* =====================================================
-          IVY
-      ===================================================== */}
-
+      {/* IVY */}
       <section className="contact-ivy">
+        <div className="contact-container ivy-inner">
 
-        <div className="contact-ivy-inner">
+          <div className="ivy-copy">
 
-          <div className="contact-ivy-copy">
-
-            <span className="contact-eyebrow light">
+            <span className="contact-label light">
               <i />
               AI PATIENT EXPERIENCE
             </span>
 
             <h2>
-
               {ivyActive
                 ? "Ivy is ready to help."
-                : "Have a question before you book?"}
+                : "Need some help before booking?"}
 
               <em>
                 {ivyActive
                   ? " Let's get started."
                   : " Ask Ivy."}
               </em>
-
             </h2>
 
             <p>
-              Ivy can help you understand our services,
-              explore appointment options and find useful
-              information before you speak with the team.
+              Ivy can help you understand services, explore
+              appointment guidance and find useful information
+              before you speak with the team.
             </p>
 
-            <div className="contact-ivy-points">
-
+            <div className="ivy-points">
               <span>
                 <CheckCircle2 size={15} />
                 Understand your options
@@ -667,88 +551,69 @@ export default function Contact() {
                 <CheckCircle2 size={15} />
                 Get appointment guidance
               </span>
-
             </div>
 
-            <Link
-              to="/ivy"
-              className="contact-ivy-button"
-            >
+            <Link to="/ivy" className="ivy-button">
               Talk to Ivy
               <Bot size={16} />
             </Link>
 
           </div>
 
-
-          <div className="contact-ivy-visual">
+          <div className="ivy-visual">
 
             <div className="ivy-glow" />
+            <div className="ivy-ring ring-one" />
+            <div className="ivy-ring ring-two" />
 
-            <div className="ivy-orbit orbit-one" />
-            <div className="ivy-orbit orbit-two" />
-
-            <div className="ivy-core">
-
+            <div className="ivy-center">
               <Bot size={34} />
-
               <strong>IVY</strong>
-
               <span>AI Receptionist</span>
-
             </div>
 
-            <div className="ivy-float ivy-float-one">
+            <div className="ivy-floating ivy-one">
               <MessageCircle size={15} />
             </div>
 
-            <div className="ivy-float ivy-float-two">
+            <div className="ivy-floating ivy-two">
               <CalendarDays size={15} />
             </div>
 
-            <div className="ivy-float ivy-float-three">
+            <div className="ivy-floating ivy-three">
               <Sparkles size={15} />
             </div>
 
           </div>
 
         </div>
-
       </section>
 
-
-      {/* =====================================================
-          FINAL CTA
-      ===================================================== */}
-
+      {/* FINAL CTA */}
       <section className="contact-final">
-
-        <div className="contact-final-inner">
+        <div className="contact-container final-inner">
 
           <div>
-
-            <span className="contact-eyebrow light">
+            <span className="contact-label light">
               <i />
               YOUR NEXT VISIT
             </span>
 
             <h2>
-              Ready to take the next
-              <em> step?</em>
+              Ready to take the
+              <em> next step?</em>
             </h2>
 
             <p>
-              Book your appointment with Vasu Aesthetics
-              and Dental Care.
+              Book your appointment with Vasu Aesthetics and
+              Dental Care.
             </p>
-
           </div>
 
-          <div className="contact-final-actions">
-
+          <div className="final-actions">
             <a
               href="#appointment-form"
-              className="contact-final-primary"
+              className="final-primary"
             >
               Book an Appointment
               <ArrowUpRight size={15} />
@@ -756,16 +621,14 @@ export default function Contact() {
 
             <a
               href="tel:+918431788571"
-              className="contact-final-secondary"
+              className="final-secondary"
             >
               <Phone size={14} />
               Call the clinic
             </a>
-
           </div>
 
         </div>
-
       </section>
 
     </main>

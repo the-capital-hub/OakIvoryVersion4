@@ -1,0 +1,45 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 128 128"
+  fill="none"
+>
+  <!-- Background -->
+  <rect
+    width="128"
+    height="128"
+    rx="28"
+    fill="#075B57"
+  />
+
+  <!-- Outer accent ring -->
+  <circle
+    cx="64"
+    cy="64"
+    r="47"
+    stroke="#28BCB6"
+    stroke-width="3"
+    opacity="0.5"
+  />
+
+  <!-- V Logo -->
+  <path
+    d="M32 34
+       L53 88
+       L64 104
+       L75 88
+       L96 34
+       L79 34
+       L64 76
+       L49 34
+       Z"
+    fill="#FFFFFF"
+  />
+
+  <!-- Teal accent -->
+  <circle
+    cx="64"
+    cy="64"
+    r="5"
+    fill="#28BCB6"
+  />
+</svg>

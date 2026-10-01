@@ -189,6 +189,7 @@
   align-items: center;
   justify-content: center;
   animation: doctorVisual 0.9s 0.1s ease both;
+  padding-top: 40px;
 }
 
 .hero-image-wrap {
@@ -952,6 +953,7 @@
     right: 0;
     top: 25px;
     width: 160px;
+    display: none;
   }
 
   .doctors-intro-inner {
@@ -1041,6 +1043,7 @@
   }
 
   .hero-side-info {
+    display: none;
     width: 145px;
     padding: 12px;
   }

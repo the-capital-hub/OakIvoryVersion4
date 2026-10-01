@@ -164,62 +164,72 @@ export default function Services() {
       {/* HERO */}
 
       <section className="services-hero">
-        <div className="services-hero-circle circle-one" />
-        <div className="services-hero-circle circle-two" />
+
+        <div className="services-hero-glow glow-one" />
+        <div className="services-hero-glow glow-two" />
 
         <div className="services-container services-hero-grid">
 
           <div className="services-hero-content">
 
-            <span className="services-label">
+            <div className="services-label">
               <i />
               VASU AESTHETICS AND DENTAL CARE
-            </span>
+            </div>
+
+            <div className="hero-kicker">
+              <span>14</span>
+              Dental services
+            </div>
 
             <h1>
-              Dental care with
-              <span> a clearer approach.</span>
+              Care for your
+              <span> complete smile.</span>
             </h1>
 
             <p>
-              Explore the dental treatments available at Vasu Aesthetics and
-              Dental Care. From preventive care to restorative, smile and
-              replacement treatments, every service begins with understanding
-              your individual needs.
+              Explore the dental treatments available at Vasu
+              Aesthetics and Dental Care. Every treatment begins
+              with understanding your individual needs.
             </p>
 
             <div className="services-hero-actions">
 
-              <Link to="/appointment" className="services-primary">
+              <Link
+                to="/appointment"
+                className="services-primary"
+              >
                 Book an Appointment
-
                 <span>
                   <ArrowUpRight size={16} />
                 </span>
               </Link>
 
-              <Link to="/contact" className="services-secondary">
+              <Link
+                to="/contact"
+                className="services-secondary"
+              >
                 Contact our team
                 <ArrowUpRight size={15} />
               </Link>
 
             </div>
 
-            <div className="services-stats">
+            <div className="services-hero-meta">
 
               <div>
                 <strong>14</strong>
-                <span>Dental services</span>
+                <span>Services</span>
+              </div>
+
+              <div>
+                <strong>04</strong>
+                <span>Care areas</span>
               </div>
 
               <div>
                 <strong>01</strong>
-                <span>Care destination</span>
-              </div>
-
-              <div>
-                <strong>03</strong>
-                <span>Care principles</span>
+                <span>Dental destination</span>
               </div>
 
             </div>
@@ -228,135 +238,170 @@ export default function Services() {
 
           <div className="services-hero-visual">
 
-            <div className="services-hero-panel">
+            <div className="hero-main-card">
 
-              <div className="hero-panel-top">
+              <div className="hero-card-header">
                 <span>VASU</span>
+                <span>RAJAJINAGAR</span>
+              </div>
+
+              <div className="hero-card-body">
+
+                <div className="hero-orbit orbit-one" />
+                <div className="hero-orbit orbit-two" />
+
+                <div className="hero-center">
+
+                  <div className="hero-center-icon">
+                    <Sparkles size={25} />
+                  </div>
+
+                  <span>YOUR SMILE</span>
+
+                  <h2>
+                    Care that
+                    <em> begins</em>
+                    <br />
+                    with you.
+                  </h2>
+
+                </div>
+
+              </div>
+
+              <div className="hero-card-footer">
+                <span>PERSONALISED CARE</span>
                 <span>01</span>
               </div>
 
-              <div className="hero-panel-center">
-
-                <div className="hero-panel-icon">
-                  <Sparkles size={27} />
-                </div>
-
-                <span>YOUR DENTAL CARE</span>
-
-                <h2>
-                  Starts with
-                  <em> understanding.</em>
-                </h2>
-
-                <p>
-                  Clear care.
-                  <br />
-                  Thoughtful treatment.
-                </p>
-
-              </div>
-
-              <div className="hero-panel-bottom">
-                <span>Dental Care</span>
-                <span>Rajajinagar</span>
-              </div>
-
             </div>
 
-            <div className="hero-floating-card hero-card-one">
-              <span className="floating-number">14</span>
+            <div className="hero-info-card hero-info-top">
+
+              <span className="hero-info-number">
+                14
+              </span>
 
               <div>
-                <strong>Dental Services</strong>
+                <strong>Dental treatments</strong>
                 <small>Across different care needs</small>
               </div>
+
             </div>
 
-            <div className="hero-floating-card hero-card-two">
-              <span className="floating-check">
+            <div className="hero-info-card hero-info-bottom">
+
+              <span className="hero-check">
                 <Check size={15} />
               </span>
 
               <div>
-                <strong>Personalised care</strong>
-                <small>Planned around you</small>
+                <strong>Clear treatment planning</strong>
+                <small>Understand your next step</small>
               </div>
+
             </div>
 
           </div>
 
         </div>
+
       </section>
+
 
       {/* INTRO */}
 
       <section className="services-intro">
+
         <div className="services-container services-intro-grid">
 
-          <div>
-            <span className="services-label">
-              <i />
-              OUR TREATMENT PHILOSOPHY
+          <div className="intro-side">
+
+            <span className="intro-number">
+              01
             </span>
+
+            <div className="intro-line" />
+
+            <span className="intro-side-text">
+              TREATMENT PHILOSOPHY
+            </span>
+
           </div>
 
-          <div>
+          <div className="intro-content">
+
+            <div className="services-label">
+              <i />
+              A CLEARER APPROACH
+            </div>
 
             <h2>
-              One place for
-              <span> different dental needs.</span>
+              Different needs.
+              <span> One thoughtful approach.</span>
             </h2>
 
             <p>
-              Dental care is not the same for everyone. Our treatment range
-              brings different areas of dental care together so your next step
-              can begin with a clear understanding of what you need.
+              Dental care is not the same for everyone. Our
+              treatment range brings different areas of dental
+              care together so your next step can begin with a
+              clear understanding of what you need.
             </p>
 
           </div>
 
         </div>
+
       </section>
+
 
       {/* CARE AREAS */}
 
-      <section className="services-care-areas">
+      <section className="services-care">
 
         <div className="services-container">
 
-          <div className="services-heading">
+          <div className="services-section-head">
 
             <div>
-              <span className="services-label">
+
+              <div className="services-label">
                 <i />
                 EXPLORE BY CARE AREA
-              </span>
+              </div>
 
               <h2>
                 Find your
                 <span> starting point.</span>
               </h2>
+
             </div>
 
             <p>
-              Browse the main areas of care before exploring the individual
-              treatments available at Vasu.
+              Explore the main areas of dental care before
+              choosing an individual treatment.
             </p>
 
           </div>
 
-          <div className="care-area-grid">
+          <div className="care-grid">
 
             {careAreas.map((area) => (
-              <article className="care-area-card" key={area.number}>
+              <a
+                href="#all-treatments"
+                className="care-card"
+                key={area.number}
+              >
 
-                <div className="care-area-top">
+                <div className="care-card-top">
+
                   <span>{area.number}</span>
 
                   <strong>{area.count}</strong>
+
                 </div>
 
-                <div className="care-area-content">
+                <div className="care-card-body">
 
                   <h3>{area.title}</h3>
 
@@ -364,12 +409,17 @@ export default function Services() {
 
                 </div>
 
-                <a href="#all-treatments">
-                  Explore care
-                  <ArrowUpRight size={15} />
-                </a>
+                <div className="care-card-link">
 
-              </article>
+                  <span>Explore care</span>
+
+                  <span className="care-arrow">
+                    <ArrowUpRight size={14} />
+                  </span>
+
+                </div>
+
+              </a>
             ))}
 
           </div>
@@ -378,31 +428,42 @@ export default function Services() {
 
       </section>
 
+
       {/* ALL TREATMENTS */}
 
-      <section className="services-all" id="all-treatments">
+      <section
+        className="services-all"
+        id="all-treatments"
+      >
 
         <div className="services-container">
 
-          <div className="services-all-heading">
+          <div className="all-heading">
 
             <div>
 
-              <span className="services-label">
+              <div className="services-label">
                 <i />
                 COMPLETE TREATMENT DIRECTORY
-              </span>
+              </div>
 
               <h2>
-                Treatments designed around
-                <span> real dental needs.</span>
+                Explore our
+                <span> treatments.</span>
               </h2>
 
             </div>
 
-            <div className="service-count">
+            <div className="all-count">
+
               <strong>14</strong>
-              <span>services available</span>
+
+              <span>
+                dental
+                <br />
+                services
+              </span>
+
             </div>
 
           </div>
@@ -415,21 +476,23 @@ export default function Services() {
 
               return (
                 <article
-                  className="treatment-row"
+                  className="treatment-card"
                   key={service.number}
                 >
 
-                  <span className="treatment-number">
+                  <div className="treatment-number">
                     {service.number}
-                  </span>
+                  </div>
 
                   <div className="treatment-icon">
                     <Icon size={18} />
                   </div>
 
-                  <div className="treatment-content">
+                  <div className="treatment-main">
 
-                    <span>{service.category}</span>
+                    <span className="treatment-category">
+                      {service.category}
+                    </span>
 
                     <h3>{service.title}</h3>
 
@@ -439,14 +502,14 @@ export default function Services() {
 
                   <Link
                     to="/contact"
-                    className="treatment-arrow"
+                    className="treatment-link"
+                    aria-label={`Learn more about ${service.title}`}
                   >
                     <ArrowUpRight size={17} />
                   </Link>
 
                 </article>
               );
-
             })}
 
           </div>
@@ -455,17 +518,21 @@ export default function Services() {
 
       </section>
 
+
       {/* APPROACH */}
 
       <section className="services-approach">
 
-        <div className="services-container services-approach-grid">
+        <div className="approach-glow" />
+
+        <div className="services-container approach-grid">
 
           <div className="approach-visual">
 
-            <div className="approach-circle" />
+            <div className="approach-orbit approach-orbit-one" />
+            <div className="approach-orbit approach-orbit-two" />
 
-            <div className="approach-card">
+            <div className="approach-main-card">
 
               <span>VASU APPROACH</span>
 
@@ -479,26 +546,32 @@ export default function Services() {
               </h3>
 
               <p>
-                Your concerns, comfort and understanding remain part of the
-                treatment journey.
+                Your concerns, comfort and understanding remain
+                part of the treatment journey.
               </p>
 
             </div>
 
-            <div className="approach-tags">
-              <span>LISTEN</span>
-              <span>EXPLAIN</span>
-              <span>CARE</span>
+            <div className="approach-tag tag-one">
+              LISTEN
+            </div>
+
+            <div className="approach-tag tag-two">
+              EXPLAIN
+            </div>
+
+            <div className="approach-tag tag-three">
+              CARE
             </div>
 
           </div>
 
           <div className="approach-content">
 
-            <span className="services-label light">
+            <div className="services-label light">
               <i />
               OUR APPROACH
-            </span>
+            </div>
 
             <h2>
               Treatment should feel
@@ -506,9 +579,10 @@ export default function Services() {
             </h2>
 
             <p>
-              Good dental care starts with communication. We believe patients
-              should understand what is being recommended and why it matters
-              to their dental health.
+              Good dental care starts with communication. We
+              believe patients should understand what is being
+              recommended and why it matters to their dental
+              health.
             </p>
 
             <div className="care-points">
@@ -543,6 +617,7 @@ export default function Services() {
 
       </section>
 
+
       {/* IVY */}
 
       <section className="services-ivy">
@@ -551,22 +626,26 @@ export default function Services() {
 
           <div className="ivy-content">
 
-            <span className="services-label">
+            <div className="services-label">
               <i />
               MEET IVY
-            </span>
+            </div>
 
             <h2>
-              Have a question
-              <span> before you visit?</span>
+              A simple way to
+              <span> start the conversation.</span>
             </h2>
 
             <p>
-              Ivy is the digital dental assistant for Vasu. Use Ivy to explore
-              treatments, understand your options and find your next step.
+              Ivy is the digital dental assistant for Vasu.
+              Explore treatments, understand your options and
+              find your next step through a simple conversation.
             </p>
 
-            <Link to="/ivy" className="ivy-button">
+            <Link
+              to="/ivy"
+              className="ivy-button"
+            >
               Talk to Ivy
               <ArrowUpRight size={16} />
             </Link>
@@ -596,8 +675,8 @@ export default function Services() {
             <div className="ivy-chat">
 
               <div className="ivy-message">
-                Hi, I am Ivy. What would you like to know about your dental
-                care?
+                Hi, I am Ivy. What would you like to know about
+                your dental care?
               </div>
 
               <div className="ivy-user-message">
@@ -605,8 +684,8 @@ export default function Services() {
               </div>
 
               <div className="ivy-message">
-                You can explore the treatments available at Vasu and choose
-                what you would like to know more about.
+                You can explore the treatments available at Vasu
+                and choose what you would like to know more about.
               </div>
 
               <div className="ivy-options">
@@ -627,18 +706,19 @@ export default function Services() {
 
       </section>
 
-      {/* CTA */}
+
+      {/* FINAL CTA */}
 
       <section className="services-final">
 
-        <div className="services-container services-final-inner">
+        <div className="services-container final-inner">
 
           <div>
 
-            <span className="services-label light">
+            <div className="services-label light">
               <i />
               YOUR NEXT STEP
-            </span>
+            </div>
 
             <h2>
               Not sure where
@@ -646,8 +726,8 @@ export default function Services() {
             </h2>
 
             <p>
-              Start with a conversation and let our team understand what you
-              need.
+              Start with a conversation and let our team
+              understand what you need.
             </p>
 
           </div>
