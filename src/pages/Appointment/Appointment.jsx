@@ -15,34 +15,74 @@ import "./Appointment.css";
 
 const services = [
   {
-    id: "consultation",
-    title: "New Patient Consultation",
-    desc: "A complete first visit to understand your needs.",
-  },
-  {
     id: "checkup",
-    title: "Routine Dental Check-up",
-    desc: "Regular examination and preventive care.",
+    title: "Complete Dental Check up",
+    desc: "Regular check ups and personalised treatment planning.",
   },
   {
     id: "cleaning",
-    title: "Teeth Cleaning",
-    desc: "Professional cleaning for a healthier smile.",
+    title: "Teeth Cleaning and Polishing",
+    desc: "Professional cleaning for a fresh and healthy smile.",
   },
   {
-    id: "cosmetic",
-    title: "Cosmetic Dentistry",
-    desc: "Discuss options for a more confident smile.",
+    id: "cavity",
+    title: "Cavity Treatment",
+    desc: "Gentle care for cavities and tooth decay.",
   },
   {
-    id: "implant",
-    title: "Dental Implant Consultation",
-    desc: "Explore implant treatment and suitability.",
+    id: "root-canal",
+    title: "Root Canal Treatment",
+    desc: "Treatment to save and restore painful teeth.",
   },
   {
-    id: "emergency",
-    title: "Emergency Consultation",
-    desc: "For urgent pain, swelling or dental concerns.",
+    id: "implants",
+    title: "Dental Implants",
+    desc: "A durable solution for missing teeth.",
+  },
+  {
+    id: "whitening",
+    title: "Teeth Whitening",
+    desc: "Brighten your smile with professional care.",
+  },
+  {
+    id: "smile",
+    title: "Smile Makeover",
+    desc: "Improve the appearance of your smile.",
+  },
+  {
+    id: "aligners",
+    title: "Braces and Clear Aligners",
+    desc: "Straighten teeth with suitable treatment options.",
+  },
+  {
+    id: "wisdom",
+    title: "Wisdom Tooth Treatment",
+    desc: "Comfortable care for troublesome wisdom teeth.",
+  },
+  {
+    id: "gum",
+    title: "Gum Care",
+    desc: "Care for bleeding and unhealthy gums.",
+  },
+  {
+    id: "children",
+    title: "Children’s Dentistry",
+    desc: "Gentle and friendly dental care for children.",
+  },
+  {
+    id: "dentures",
+    title: "Dentures",
+    desc: "Comfortable solutions for missing teeth.",
+  },
+  {
+    id: "crowns",
+    title: "Crowns and Bridges",
+    desc: "Restore damaged or missing teeth.",
+  },
+  {
+    id: "fillings",
+    title: "Tooth Colored Fillings",
+    desc: "Natural looking fillings for damaged teeth.",
   },
 ];
 
@@ -59,11 +99,8 @@ const timeSlots = [
 
 export default function Appointment() {
   const [step, setStep] = useState(1);
-
   const [service, setService] = useState("");
-
   const [date, setDate] = useState("");
-
   const [time, setTime] = useState("");
 
   const [patient, setPatient] = useState({
@@ -129,143 +166,174 @@ export default function Appointment() {
   };
 
   return (
-    <>
-      {/* =====================================================
-          HERO
-      ===================================================== */}
+    <main className="appointment-page">
+
+      {/* HERO */}
 
       <section className="appointment-hero">
+
         <div className="appointment-hero-inner">
+
           <div className="appointment-hero-content">
+
             <span className="appointment-kicker">
-              <i></i>
-              AI APPOINTMENT BOOKING
+              <i />
+              VASU APPOINTMENTS
             </span>
 
             <h1>
-              Choose a time that{" "}
-              <em>works for you.</em>
+              Your visit starts with
+              <em> one simple step.</em>
             </h1>
 
             <p>
-              Book a consultation in a few simple steps.
-              Choose your service, preferred time and share
-              your details we'll take care of the rest.
+              Choose the dental service you need, select a convenient
+              appointment time and share your details with us.
             </p>
 
             <div className="appointment-hero-trust">
+
               <span>
-                <CheckCircle2 size={15} />
+                <CheckCircle2 size={16} />
                 Simple booking
               </span>
 
               <span>
-                <CheckCircle2 size={15} />
+                <CheckCircle2 size={16} />
                 Personalised care
               </span>
 
               <span>
-                <CheckCircle2 size={15} />
-                24/7 Ivy support
+                <CheckCircle2 size={16} />
+                Clear communication
               </span>
+
             </div>
+
           </div>
 
+
           <div className="appointment-hero-visual">
+
             <div className="appointment-hero-image">
+
               <img
                 src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=1200&q=85"
-                alt="Dental appointment"
+                alt="Dental consultation at Vasu Aesthetics and Dental Care"
               />
+
             </div>
 
+            <div className="appointment-hero-orbit" />
+
             <div className="appointment-hero-card">
+
               <span>
-                <CalendarDays size={17} />
+                <CalendarDays size={18} />
               </span>
 
               <div>
-                <strong>Find your appointment</strong>
-                <small>
-                  A few simple steps to get started
-                </small>
+                <strong>Plan your visit</strong>
+                <small>Choose your preferred service and time</small>
               </div>
+
             </div>
+
           </div>
+
         </div>
+
       </section>
 
-      {/* =====================================================
-          BOOKING AREA
-      ===================================================== */}
+
+      {/* BOOKING */}
 
       <section className="appointment-section">
+
         <div className="appointment-section-heading">
+
           <div>
+
             <span className="appointment-eyebrow">
-              <i></i>
+              <i />
               SCHEDULE YOUR VISIT
             </span>
 
             <h2>
-              Simple booking.
-              <br />
-              <em>No waiting on hold.</em>
+              A calmer way to
+              <em> book dental care.</em>
             </h2>
+
           </div>
 
           <p>
-            Tell us what you need, choose a convenient time
-            and confirm your details. The whole process takes
-            just a few moments.
+            Tell us what you need, choose your preferred time and
+            provide your contact details.
           </p>
+
         </div>
 
+
         {!done ? (
+
           <div className="appointment-booking-card">
-            {/* =================================================
-                STEPPER
-            ================================================= */}
+
+            {/* STEPPER */}
 
             <div className="appointment-stepper">
+
               <div
                 className={`appointment-step ${
                   step >= 1 ? "active" : ""
                 }`}
               >
+
                 <span>01</span>
+
                 <div>
                   <strong>Service</strong>
-                  <small>What do you need?</small>
+                  <small>Select your treatment</small>
                 </div>
+
               </div>
+
 
               <div
                 className={`appointment-step ${
                   step >= 2 ? "active" : ""
                 }`}
               >
+
                 <span>02</span>
+
                 <div>
-                  <strong>Date & Time</strong>
-                  <small>Choose your slot</small>
+                  <strong>Date and Time</strong>
+                  <small>Choose your preferred slot</small>
                 </div>
+
               </div>
+
 
               <div
                 className={`appointment-step ${
                   step >= 3 ? "active" : ""
                 }`}
               >
+
                 <span>03</span>
+
                 <div>
                   <strong>Your Details</strong>
-                  <small>Confirm information</small>
+                  <small>Share your information</small>
                 </div>
+
               </div>
+
             </div>
 
+
             <div className="appointment-progress">
+
               <span
                 style={{
                   width:
@@ -275,21 +343,21 @@ export default function Appointment() {
                       ? "66.66%"
                       : "100%",
                 }}
-              ></span>
+              />
+
             </div>
 
-            {/* =================================================
-                CONTENT
-            ================================================= */}
 
             <div className="appointment-booking-body">
+
               <div className="appointment-form-area">
-                {/* =============================================
-                    STEP 1
-                ============================================= */}
+
+                {/* STEP 1 */}
 
                 {step === 1 && (
+
                   <div className="appointment-step-content">
+
                     <span className="appointment-form-label">
                       STEP 01
                     </span>
@@ -299,43 +367,56 @@ export default function Appointment() {
                     </h3>
 
                     <p className="appointment-form-description">
-                      Choose the service that best matches
-                      what you need today.
+                      Select the service that best matches your
+                      current dental needs.
                     </p>
 
+
                     <div className="appointment-service-grid">
+
                       {services.map((item) => (
+
                         <button
                           type="button"
                           key={item.id}
                           className={`appointment-service-card ${
-                            service === item.id
-                              ? "selected"
-                              : ""
+                            service === item.id ? "selected" : ""
                           }`}
-                          onClick={() =>
-                            setService(item.id)
-                          }
+                          onClick={() => setService(item.id)}
                         >
+
                           <div className="appointment-service-icon">
-                            <CalendarDays size={18} />
+                            <CalendarDays size={19} />
                           </div>
 
-                          <div>
-                            <strong>{item.title}</strong>
+                          <div className="appointment-service-content">
 
-                            <p>{item.desc}</p>
+                            <strong>
+                              {item.title}
+                            </strong>
+
+                            <p>
+                              {item.desc}
+                            </p>
+
                           </div>
 
                           <span className="appointment-select-circle">
-                            <CheckCircle2 size={14} />
+
+                            <CheckCircle2 size={15} />
+
                           </span>
+
                         </button>
+
                       ))}
+
                     </div>
 
+
                     <div className="appointment-navigation">
-                      <span></span>
+
+                      <span />
 
                       <button
                         type="button"
@@ -344,18 +425,22 @@ export default function Appointment() {
                         onClick={goNext}
                       >
                         Continue
-                        <ChevronRight size={16} />
+                        <ChevronRight size={17} />
                       </button>
+
                     </div>
+
                   </div>
+
                 )}
 
-                {/* =============================================
-                    STEP 2
-                ============================================= */}
+
+                {/* STEP 2 */}
 
                 {step === 2 && (
+
                   <div className="appointment-step-content">
+
                     <span className="appointment-form-label">
                       STEP 02
                     </span>
@@ -365,14 +450,18 @@ export default function Appointment() {
                     </h3>
 
                     <p className="appointment-form-description">
-                      Select your preferred date and one of
-                      the available appointment times.
+                      Select your preferred date and appointment time.
                     </p>
 
+
                     <div className="appointment-date-box">
+
                       <label>
-                        <CalendarDays size={16} />
-                        Preferred date
+
+                        <span className="appointment-date-label">
+                          <CalendarDays size={17} />
+                          Preferred date
+                        </span>
 
                         <input
                           type="date"
@@ -386,55 +475,64 @@ export default function Appointment() {
                             setDate(e.target.value)
                           }
                         />
+
                       </label>
+
                     </div>
 
-                    <div className="appointment-time-section">
-                      <div className="appointment-time-heading">
-                        <div>
-                          <Clock3 size={16} />
 
-                          <strong>
-                            Available times
-                          </strong>
+                    <div className="appointment-time-section">
+
+                      <div className="appointment-time-heading">
+
+                        <div>
+                          <Clock3 size={17} />
+                          <strong>Available times</strong>
                         </div>
 
                         <small>
-                          Clinic hours · 9 AM – 7 PM
+                          Select a suitable appointment slot
                         </small>
+
                       </div>
 
+
                       <div className="appointment-time-grid">
+
                         {timeSlots.map((slot) => (
+
                           <button
                             type="button"
                             key={slot}
                             className={
-                              time === slot
-                                ? "selected"
-                                : ""
+                              time === slot ? "selected" : ""
                             }
-                            onClick={() =>
-                              setTime(slot)
-                            }
+                            onClick={() => setTime(slot)}
                           >
+
                             {slot}
 
                             {time === slot && (
-                              <CheckCircle2 size={13} />
+                              <CheckCircle2 size={14} />
                             )}
+
                           </button>
+
                         ))}
+
                       </div>
+
                     </div>
 
+
                     <div className="appointment-navigation">
+
                       <button
                         type="button"
                         className="appointment-back-btn"
                         onClick={goBack}
                       >
-                        <ArrowLeft size={15} />
+                        <ArrowLeft size={16} />
                         Back
                       </button>
 
@@ -445,21 +543,25 @@ export default function Appointment() {
                         onClick={goNext}
                       >
                         Continue
-                        <ChevronRight size={16} />
+                        <ChevronRight size={17} />
                       </button>
+
                     </div>
+
                   </div>
+
                 )}
 
-                {/* =============================================
-                    STEP 3
-                ============================================= */}
+
+                {/* STEP 3 */}
 
                 {step === 3 && (
+
                   <form
                     className="appointment-step-content"
                     onSubmit={handleSubmit}
                   >
+
                     <span className="appointment-form-label">
                       STEP 03
                     </span>
@@ -469,17 +571,21 @@ export default function Appointment() {
                     </h3>
 
                     <p className="appointment-form-description">
-                      We'll use these details to confirm
-                      your appointment.
+                      We will use these details to contact you
+                      regarding your appointment request.
                     </p>
 
+
                     <div className="appointment-fields">
+
                       <label>
+
                         Full name
                         <span>*</span>
 
                         <div className="appointment-input">
-                          <UserRound size={16} />
+
+                          <UserRound size={17} />
 
                           <input
                             type="text"
@@ -493,14 +599,19 @@ export default function Appointment() {
                             }
                             required
                           />
+
                         </div>
+
                       </label>
 
+
                       <label>
+
                         Phone number
                         <span>*</span>
 
                         <div className="appointment-input">
+
                           <PhoneIcon />
 
                           <input
@@ -515,13 +626,18 @@ export default function Appointment() {
                             }
                             required
                           />
+
                         </div>
+
                       </label>
 
+
                       <label>
+
                         Email address
 
                         <div className="appointment-input">
+
                           <MailIcon />
 
                           <input
@@ -535,17 +651,22 @@ export default function Appointment() {
                               )
                             }
                           />
+
                         </div>
+
                       </label>
+
                     </div>
 
+
                     <div className="appointment-navigation">
+
                       <button
                         type="button"
                         className="appointment-back-btn"
                         onClick={goBack}
                       >
-                        <ArrowLeft size={15} />
+                        <ArrowLeft size={16} />
                         Back
                       </button>
 
@@ -553,36 +674,42 @@ export default function Appointment() {
                         type="submit"
                         className="appointment-confirm-btn"
                       >
-                        Confirm Appointment
-                        <ArrowUpRight size={15} />
+                        Submit Request
+                        <ArrowUpRight size={16} />
                       </button>
+
                     </div>
+
                   </form>
+
                 )}
+
               </div>
 
-              {/* =================================================
-                  SUMMARY
-              ================================================= */}
+
+              {/* SUMMARY */}
 
               <aside className="appointment-summary">
+
                 <div className="appointment-summary-top">
+
                   <span>
-                    <CalendarDays size={17} />
+                    <CalendarDays size={18} />
                   </span>
 
                   <div>
-                    <small>YOUR APPOINTMENT</small>
-
-                    <strong>
-                      Booking summary
-                    </strong>
+                    <small>YOUR VISIT</small>
+                    <strong>Booking overview</strong>
                   </div>
+
                 </div>
 
-                <div className="appointment-summary-line"></div>
+
+                <div className="appointment-summary-line" />
+
 
                 <div className="appointment-summary-item">
+
                   <small>SERVICE</small>
 
                   <strong>
@@ -594,9 +721,12 @@ export default function Appointment() {
                   {selectedService && (
                     <p>{selectedService.desc}</p>
                   )}
+
                 </div>
 
+
                 <div className="appointment-summary-item">
+
                   <small>DATE</small>
 
                   <strong>
@@ -610,54 +740,66 @@ export default function Appointment() {
                         })
                       : "Choose a date"}
                   </strong>
+
                 </div>
 
+
                 <div className="appointment-summary-item">
+
                   <small>TIME</small>
 
                   <strong>
                     {time || "Choose a time"}
                   </strong>
+
                 </div>
+
 
                 <div className="appointment-summary-note">
-                  <ShieldCheck size={15} />
+
+                  <ShieldCheck size={16} />
 
                   <p>
-                    This is a frontend booking demo.
-                    Production availability would be
-                    connected to the clinic system.
+                    Your request will be reviewed by the clinic
+                    before the appointment is confirmed.
                   </p>
+
                 </div>
+
               </aside>
+
             </div>
+
           </div>
+
         ) : (
-          /* ===================================================
-             SUCCESS
-          =================================================== */
+
+          /* SUCCESS */
 
           <div className="appointment-success">
+
             <div className="appointment-success-icon">
               <CheckCircle2 size={42} />
             </div>
 
             <span className="appointment-eyebrow">
-              <i></i>
-              BOOKING COMPLETE
+              <i />
+              REQUEST RECEIVED
             </span>
 
             <h2>
-              You're all <em>set.</em>
+              You are all
+              <em> set.</em>
             </h2>
 
             <p>
-              Your demo appointment request has been
-              captured. Here's what the appointment looks
-              like:
+              Your appointment request has been captured.
+              Here is a quick overview of the details you selected.
             </p>
 
+
             <div className="appointment-success-card">
+
               <div>
                 <small>SERVICE</small>
 
@@ -690,25 +832,31 @@ export default function Appointment() {
                   {time || "Selected time"}
                 </strong>
               </div>
+
             </div>
+
 
             <div className="appointment-success-message">
-              <CheckCircle2 size={16} />
+
+              <CheckCircle2 size={17} />
 
               <span>
-                In production, Ivy would confirm this
-                appointment through the clinic system.
+                The clinic team can contact you using the details
+                provided in the form.
               </span>
+
             </div>
 
+
             <div className="appointment-success-actions">
+
               <button
                 type="button"
                 className="appointment-confirm-btn"
                 onClick={resetBooking}
               >
-                Book Another
-                <ArrowUpRight size={15} />
+                Book Another Visit
+                <ArrowUpRight size={16} />
               </button>
 
               <Link
@@ -717,55 +865,63 @@ export default function Appointment() {
               >
                 Back to Home
               </Link>
+
             </div>
+
           </div>
+
         )}
+
       </section>
 
-      {/* =====================================================
-          HELP CTA
-      ===================================================== */}
+
+      {/* HELP */}
 
       <section className="appointment-help">
+
         <div className="appointment-help-inner">
+
           <div>
+
             <span className="appointment-eyebrow">
-              <i></i>
-              NEED HELP?
+              <i />
+              NEED HELP
             </span>
 
             <h2>
-              Not sure which service{" "}
-              <em>you need?</em>
+              Not sure which service
+              <em> you need?</em>
             </h2>
 
             <p>
-              Ivy can help you understand the options before
-              you book your appointment.
+              Explore the available dental services before
+              choosing your appointment.
             </p>
+
           </div>
 
           <Link
-            to="/ivy"
+            to="/services"
             className="appointment-help-btn"
           >
-            Ask Ivy
-            <ArrowUpRight size={15} />
+            Explore Services
+            <ArrowUpRight size={16} />
           </Link>
+
         </div>
+
       </section>
-    </>
+
+    </main>
   );
 }
 
 
-/* Small inline icon helpers */
-
 function PhoneIcon() {
   return (
     <svg
-      width="16"
-      height="16"
+      width="17"
+      height="17"
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
@@ -778,11 +934,12 @@ function PhoneIcon() {
   );
 }
 
+
 function MailIcon() {
   return (
     <svg
-      width="16"
-      height="16"
+      width="17"
+      height="17"
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"

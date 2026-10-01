@@ -2,7 +2,7 @@ import "../shared.css";
 const quotes = [
   [
     "“I finally stopped being nervous about the dentist.”",
-    "I had avoided going to the dentist for years because I was anxious. Everyone at Oak & Ivory was incredibly patient and never made me feel uncomfortable.",
+    "I had avoided going to the dentist for years because I was anxious. Everyone at Vasu Aesthetics & Dental Care was incredibly patient and never made me feel uncomfortable.",
     "Sneha R.",
   ],
   [
@@ -12,12 +12,12 @@ const quotes = [
   ],
   [
     "“My smile has completely changed my confidence.”",
-    "I had been thinking about improving my smile for years. Dr. Meera understood exactly what I wanted and helped me choose a treatment that looked natural.",
+    "I had been thinking about improving my smile for years. our dental team understood exactly what I wanted and helped me choose a treatment that looked natural.",
     "Priya S.",
   ],
   [
     "“Excellent experience from start to finish.”",
-    "The clinic is modern, the staff is friendly and the doctors take the time to actually listen. I would definitely recommend Oak & Ivory.",
+    "The clinic is modern, the staff is friendly and the doctors take the time to actually listen. I would definitely recommend Vasu Aesthetics & Dental Care.",
     "Arjun K.",
   ],
 ];

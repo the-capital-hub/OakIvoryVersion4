@@ -104,7 +104,7 @@ export default function Ivy() {
 
               <a
                 className="ivy-call-link"
-                href="tel:+918041234567"
+                href="tel:+918431788571"
               >
                 <Phone size={14} />
                 Call the clinic

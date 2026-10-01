@@ -1,7 +1,7 @@
 /* =========================================================
-   OAK & IVORY — IVY AI WIDGET
-   Premium / Animated / Responsive
-   ========================================================= */
+   VASU AESTHETICS AND DENTAL CARE
+   IVY AI WIDGET
+========================================================= */
 
 .ai-dock {
   position: fixed;
@@ -20,16 +20,16 @@
   border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 999px;
 
-  background: rgba(20, 62, 59, 0.96);
-  color: #fff;
+  background: rgba(6, 78, 75, 0.96);
+  color: #ffffff;
 
   box-shadow:
-    0 20px 55px rgba(0, 0, 0, 0.28),
+    0 20px 55px rgba(0, 0, 0, 0.24),
     0 5px 18px rgba(7, 91, 87, 0.18);
 
   backdrop-filter: blur(18px);
 
-  font-size: 10px;
+  font-size: 12px;
 
   animation: ivyDockIn 0.6s ease both;
 }
@@ -46,19 +46,20 @@
   }
 }
 
+/* LIVE DOT */
+
 .ai-live {
   width: 7px;
   height: 7px;
-
   flex: none;
 
   border-radius: 50%;
 
-  background: #43c9c3;
+  background: #5ed8d1;
 
   box-shadow:
-    0 0 0 4px rgba(67, 201, 195, 0.12),
-    0 0 12px rgba(67, 201, 195, 0.4);
+    0 0 0 4px rgba(94, 216, 209, 0.12),
+    0 0 12px rgba(94, 216, 209, 0.4);
 
   animation: ivyPulse 2s ease-in-out infinite;
 }
@@ -67,23 +68,24 @@
   0%,
   100% {
     box-shadow:
-      0 0 0 4px rgba(67, 201, 195, 0.12),
-      0 0 12px rgba(67, 201, 195, 0.35);
+      0 0 0 4px rgba(94, 216, 209, 0.12),
+      0 0 12px rgba(94, 216, 209, 0.35);
   }
 
   50% {
     box-shadow:
-      0 0 0 7px rgba(67, 201, 195, 0.05),
-      0 0 18px rgba(67, 201, 195, 0.55);
+      0 0 0 7px rgba(94, 216, 209, 0.05),
+      0 0 18px rgba(94, 216, 209, 0.55);
   }
 }
 
 .ai-dock strong {
   white-space: nowrap;
-
-  font-size: 10px;
-  font-weight: 800;
+  font-size: 12px;
+  font-weight: 700;
 }
+
+/* DOCK BUTTONS */
 
 .ai-dock button {
   border: 0;
@@ -94,15 +96,15 @@
 
   gap: 6px;
 
-  padding: 9px 12px;
+  padding: 9px 13px;
 
   border-radius: 999px;
 
-  background: #fff;
+  background: #ffffff;
   color: #075b57;
 
-  font-size: 9px;
-  font-weight: 800;
+  font-size: 12px;
+  font-weight: 700;
 
   cursor: pointer;
 
@@ -124,17 +126,18 @@
 }
 
 .ai-dock-book {
-  background: #38c4bd !important;
-  color: #fff !important;
+  background: #28bcb6 !important;
+  color: #064e4b !important;
 }
 
 .ai-dock-book:hover {
-  background: #2eb7b0 !important;
+  background: #5ed8d1 !important;
 }
+
 
 /* =========================================================
    OVERLAY
-   ========================================================= */
+========================================================= */
 
 .ai-overlay {
   position: fixed;
@@ -147,8 +150,7 @@
 
   padding: 20px;
 
-  background:
-    rgba(2, 29, 27, 0.68);
+  background: rgba(2, 29, 27, 0.68);
 
   backdrop-filter: blur(10px);
 
@@ -165,9 +167,10 @@
   }
 }
 
+
 /* =========================================================
    MODAL
-   ========================================================= */
+========================================================= */
 
 .ai-modal {
   position: relative;
@@ -179,24 +182,23 @@
 
   padding: 29px;
 
-  border:
-    1px solid rgba(255, 255, 255, 0.65);
-
-  border-radius: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 26px;
 
   background:
     linear-gradient(
       145deg,
-      #f9fffe,
-      #f1fbf9
+      #ffffff 0%,
+      #f3fbfa 100%
     );
 
-  color: #173e3b;
+  color: #123d39;
 
   box-shadow:
-    0 45px 120px rgba(0, 0, 0, 0.38);
+    0 45px 120px rgba(0, 0, 0, 0.34);
 
-  animation: ivyModalIn 0.35s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  animation:
+    ivyModalIn 0.35s cubic-bezier(0.2, 0.8, 0.2, 1) both;
 
   scrollbar-width: thin;
   scrollbar-color: #b9ded9 transparent;
@@ -220,9 +222,11 @@
 
 .ai-modal::-webkit-scrollbar-thumb {
   border-radius: 999px;
-
   background: #b9ded9;
 }
+
+
+/* CLOSE */
 
 .ai-close {
   position: absolute;
@@ -232,38 +236,40 @@
 
   z-index: 5;
 
-  width: 34px;
-  height: 34px;
+  width: 35px;
+  height: 35px;
 
   display: grid;
   place-items: center;
 
-  border: 0;
+  border: 1px solid #d9ebe8;
   border-radius: 50%;
 
-  background: #e5f1ef;
-  color: #2c5956;
+  background: #edf8f6;
+  color: #245651;
 
   cursor: pointer;
 
   transition:
     transform 0.25s ease,
-    background 0.25s ease;
+    background 0.25s ease,
+    border-color 0.25s ease;
 }
 
 .ai-close:hover {
   transform: rotate(8deg);
-
-  background: #d3ebe7;
+  background: #dff5f2;
+  border-color: #b9ded9;
 }
 
 .ai-close svg {
   width: 17px;
 }
 
+
 /* =========================================================
    CHAT HEADER
-   ========================================================= */
+========================================================= */
 
 .ai-header {
   display: flex;
@@ -277,13 +283,12 @@
     15px
     1px;
 
-  border-bottom:
-    1px solid #deecea;
+  border-bottom: 1px solid #deecea;
 }
 
 .ai-avatar {
-  width: 43px;
-  height: 43px;
+  width: 44px;
+  height: 44px;
 
   flex: none;
 
@@ -295,8 +300,8 @@
   background:
     linear-gradient(
       145deg,
-      #d9f8f4,
-      #c4efeb
+      #dff8f5,
+      #c7efeb
     );
 
   color: #08736d;
@@ -315,19 +320,18 @@
 }
 
 .ai-header strong {
-  color: #173e3b;
+  color: #123d39;
 
-  font:
-    800 14px Manrope,
-    sans-serif;
+  font-size: 15px;
+  font-weight: 800;
 }
 
 .ai-header small {
-  margin-top: 3px;
+  margin-top: 4px;
 
-  color: #78908d;
+  color: #708b87;
 
-  font-size: 9px;
+  font-size: 12px;
 }
 
 .ai-online {
@@ -344,9 +348,10 @@
     0 0 0 4px rgba(61, 197, 189, 0.11);
 }
 
+
 /* =========================================================
    CHAT
-   ========================================================= */
+========================================================= */
 
 .ai-chat {
   min-height: 280px;
@@ -369,7 +374,7 @@
 
   border-radius: 15px;
 
-  font-size: 10px;
+  font-size: 12px;
 
   line-height: 1.6;
 
@@ -399,9 +404,9 @@
 .ai-bubble.user {
   margin-left: auto;
 
-  background: #38c4bd;
+  background: #28bcb6;
 
-  color: #fff;
+  color: #ffffff;
 
   border-bottom-right-radius: 5px;
 }
@@ -417,8 +422,7 @@
 }
 
 .ai-quick button {
-  border:
-    1px solid #cde9e6;
+  border: 1px solid #cde9e6;
 
   border-radius: 999px;
 
@@ -426,10 +430,10 @@
 
   color: #18716d;
 
-  padding: 9px 11px;
+  padding: 9px 12px;
 
-  font-size: 8px;
-  font-weight: 800;
+  font-size: 12px;
+  font-weight: 700;
 
   cursor: pointer;
 
@@ -447,6 +451,9 @@
   border-color: #a9dcd7;
 }
 
+
+/* INPUT */
+
 .ai-input {
   display: flex;
 
@@ -457,46 +464,46 @@
 
   padding: 13px 14px;
 
-  border:
-    1px solid #dcebe9;
+  border: 1px solid #dcebe9;
 
   border-radius: 12px;
 
-  background: #fff;
+  background: #ffffff;
 
-  color: #9aaca9;
+  color: #8b9f9c;
 
-  font-size: 10px;
+  font-size: 12px;
 
   box-shadow:
     0 5px 18px rgba(7, 91, 87, 0.04);
 }
 
 .ai-input svg {
-  color: #35bdb6;
+  color: #28bcb6;
 }
+
 
 /* =========================================================
    KICKER + HEADINGS
-   ========================================================= */
+========================================================= */
 
 .ai-kicker {
   display: inline-flex;
   align-items: center;
 
-  gap: 7px;
+  gap: 8px;
 
   margin-bottom: 10px;
 
   color: #2eb8b2;
 
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 800;
 
   letter-spacing: 0.04em;
 }
 
-.ai-kicker:before {
+.ai-kicker::before {
   content: "";
 
   width: 7px;
@@ -506,34 +513,35 @@
 
   border-radius: 50%;
 
-  background: #37c5bf;
+  background: #28bcb6;
 
   box-shadow:
-    0 0 0 4px rgba(55, 197, 191, 0.1);
+    0 0 0 4px rgba(40, 188, 182, 0.1);
 }
 
 .ai-modal h2 {
   margin: 0 0 21px;
 
-  color: #163f3b;
+  color: #123d39;
 
-  font:
-    800 clamp(34px, 6vw, 43px) / 0.98
-    Manrope,
-    sans-serif;
+  font-size: clamp(32px, 6vw, 43px);
 
-  letter-spacing: -0.06em;
+  line-height: 0.98;
+
+  font-weight: 800;
+
+  letter-spacing: -0.05em;
 }
 
 .ai-modal h2 em {
   color: #2dbbb5;
-
   font-style: normal;
 }
 
+
 /* =========================================================
    BOOKING PROGRESS
-   ========================================================= */
+========================================================= */
 
 .booking-progress {
   display: grid;
@@ -547,16 +555,16 @@
 }
 
 .booking-progress span {
-  padding: 8px 7px;
+  padding: 9px 7px;
 
   border-radius: 999px;
 
   background: #eaf1ef;
 
-  color: #78908d;
+  color: #718985;
 
-  font-size: 8px;
-  font-weight: 800;
+  font-size: 12px;
+  font-weight: 700;
 
   text-align: center;
 }
@@ -567,15 +575,15 @@
   color: #08736d;
 }
 
+
 /* =========================================================
    SELECT
-   ========================================================= */
+========================================================= */
 
 .ai-select {
   width: 100%;
 
-  border:
-    1px solid #dcebe8;
+  border: 1px solid #dcebe8;
 
   border-radius: 11px;
 
@@ -589,7 +597,7 @@
 
   margin-bottom: 12px;
 
-  font-size: 10px;
+  font-size: 12px;
 
   cursor: pointer;
 
@@ -605,9 +613,10 @@
     0 0 0 3px rgba(84, 200, 193, 0.1);
 }
 
+
 /* =========================================================
    DATES + TIMES
-   ========================================================= */
+========================================================= */
 
 .booking-dates,
 .booking-times {
@@ -625,16 +634,15 @@
 .booking-times button {
   min-height: 52px;
 
-  border:
-    1px solid #dcebe8;
+  border: 1px solid #dcebe8;
 
   border-radius: 11px;
 
-  background: #fff;
+  background: #ffffff;
 
   color: #67817d;
 
-  font-size: 9px;
+  font-size: 12px;
 
   cursor: pointer;
 
@@ -681,9 +689,10 @@
   color: #08736d;
 }
 
+
 /* =========================================================
    PRIMARY BUTTON
-   ========================================================= */
+========================================================= */
 
 .ai-primary {
   border: 0;
@@ -694,7 +703,7 @@
 
   gap: 7px;
 
-  min-height: 43px;
+  min-height: 45px;
 
   padding: 12px 19px;
 
@@ -707,9 +716,9 @@
       #2bb4ad
     );
 
-  color: #fff;
+  color: #ffffff;
 
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 800;
 
   cursor: pointer;
@@ -735,9 +744,10 @@
   margin-top: 12px;
 }
 
+
 /* =========================================================
    BOOKING SUCCESS
-   ========================================================= */
+========================================================= */
 
 .booking-success {
   padding:
@@ -799,14 +809,15 @@
 
   color: #6d8783;
 
-  font-size: 11px;
+  font-size: 12px;
 
   line-height: 1.75;
 }
 
+
 /* =========================================================
    VOICE MODE
-   ========================================================= */
+========================================================= */
 
 .call-modal {
   text-align: center;
@@ -855,14 +866,13 @@
   }
 }
 
-.voice-orb:before,
-.voice-orb:after {
+.voice-orb::before,
+.voice-orb::after {
   content: "";
 
   position: absolute;
 
-  border:
-    1px solid #44c6bf;
+  border: 1px solid #44c6bf;
 
   border-radius: 50%;
 
@@ -871,11 +881,11 @@
   animation: voiceRing 2.4s ease-out infinite;
 }
 
-.voice-orb:before {
+.voice-orb::before {
   inset: -15px;
 }
 
-.voice-orb:after {
+.voice-orb::after {
   inset: -29px;
 
   opacity: 0.15;
@@ -908,18 +918,17 @@
 
   background: #39c5bf;
 
-  animation: voiceBars 0.9s ease-in-out infinite alternate;
+  animation:
+    voiceBars 0.9s ease-in-out infinite alternate;
 }
 
 .voice-orb span:nth-child(2) {
   height: 40px;
-
   animation-delay: 0.15s;
 }
 
 .voice-orb span:nth-child(3) {
   height: 22px;
-
   animation-delay: 0.3s;
 }
 
@@ -941,7 +950,7 @@
 
   color: #6d8783;
 
-  font-size: 11px;
+  font-size: 12px;
 
   line-height: 1.7;
 }
@@ -993,9 +1002,10 @@
   }
 }
 
+
 /* =========================================================
    MOBILE
-   ========================================================= */
+========================================================= */
 
 @media (max-width: 600px) {
   .ai-dock {
@@ -1023,7 +1033,7 @@
       9px
       10px;
 
-    font-size: 8px;
+    font-size: 12px;
   }
 
   .ai-overlay {
@@ -1078,9 +1088,10 @@
   }
 }
 
+
 /* =========================================================
    SMALL MOBILE
-   ========================================================= */
+========================================================= */
 
 @media (max-width: 380px) {
   .ai-dock {
@@ -1103,21 +1114,22 @@
 
   .booking-progress span {
     padding:
-      7px
+      8px
       5px;
 
-    font-size: 7px;
+    font-size: 12px;
   }
 
   .booking-dates button,
   .booking-times button {
-    font-size: 8px;
+    font-size: 12px;
   }
 }
 
+
 /* =========================================================
    REDUCED MOTION
-   ========================================================= */
+========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
   .ai-dock,
@@ -1126,8 +1138,8 @@
   .ai-bubble,
   .booking-success,
   .voice-orb,
-  .voice-orb:before,
-  .voice-orb:after,
+  .voice-orb::before,
+  .voice-orb::after,
   .voice-orb span,
   .voice-wave i {
     animation: none !important;

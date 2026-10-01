@@ -1,6 +1,12 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { ArrowUpRight, Bot, Menu, X, Phone } from "lucide-react";
+import {
+  ArrowUpRight,
+  Bot,
+  Menu,
+  X,
+  Phone,
+} from "lucide-react";
 import "./Navbar.css";
 
 const links = [
@@ -40,30 +46,37 @@ export default function Navbar() {
 
   return (
     <>
-      {/* ================= UTILITY BAR ================= */}
+      {/* TOP UTILITY BAR */}
 
       <div className="utility-bar">
         <div className="utility-left">
-          <span className="utility-dot"></span>
-          <span>Indiranagar · Bengaluru</span>
+          <span className="utility-dot" />
+          <span>Rajajinagar, Bengaluru</span>
         </div>
 
         <div className="utility-center">
-          Specialist Dental Care · New Patient Consultations Available
+          Vasu Aesthetics and Dental Care
         </div>
 
-        <a href="tel:+918041234567" className="utility-phone">
-          <Phone size={11} />
-          <span>+91 80 4123 4567</span>
+        <a
+          href="tel:+918431788571"
+          className="utility-phone"
+        >
+          <Phone size={13} />
+          <span>+91 84317 88571</span>
         </a>
       </div>
 
-      {/* ================= NAVBAR ================= */}
+      {/* NAVBAR */}
 
-      <header className={`navbar ${scrolled ? "navbar-scrolled" : ""}`}>
+      <header
+        className={`navbar ${
+          scrolled ? "navbar-scrolled" : ""
+        }`}
+      >
         <div className="nav-inner">
 
-          {/* LOGO */}
+          {/* BRAND */}
 
           <Link
             to="/"
@@ -71,12 +84,12 @@ export default function Navbar() {
             onClick={() => setOpen(false)}
           >
             <span className="brand-mark">
-              O
+              V
             </span>
 
             <span className="brand-name">
-              OAK & IVORY
-              <small>DENTAL</small>
+              VASU AESTHETICS
+              <small>DENTAL CARE</small>
             </span>
           </Link>
 
@@ -98,37 +111,37 @@ export default function Navbar() {
             ))}
           </nav>
 
-          {/* ACTIONS */}
+          {/* DESKTOP ACTIONS */}
 
           <div className="nav-actions">
 
             <Link
-              className="ivy-nav-btn"
               to="/ivy"
+              className="ivy-nav-btn"
             >
               <span className="ivy-icon">
-                <Bot size={13} />
+                <Bot size={14} />
               </span>
 
-              Talk to Ivy
+              <span>Talk to Ivy</span>
             </Link>
 
             <Link
-              className="appointment-nav-btn"
               to="/appointment"
+              className="appointment-nav-btn"
             >
               <span className="appointment-text">
                 Book Appointment
               </span>
 
               <span className="appointment-arrow">
-                <ArrowUpRight size={14} />
+                <ArrowUpRight size={15} />
               </span>
             </Link>
 
           </div>
 
-          {/* MOBILE BUTTON */}
+          {/* MOBILE MENU BUTTON */}
 
           <button
             type="button"
@@ -149,27 +162,25 @@ export default function Navbar() {
               <Menu size={20} />
             )}
           </button>
-
         </div>
 
-        {/* ================= MOBILE NAV ================= */}
+        {/* MOBILE NAVIGATION */}
 
         <div
           className={`mobile-nav ${
             open ? "mobile-nav-open" : ""
           }`}
         >
-
           <div className="mobile-nav-header">
-            <div>
-              <span>OAK & IVORY</span>
+            <div className="mobile-brand">
+              <span>VASU AESTHETICS</span>
               <small>DENTAL CARE</small>
             </div>
 
-            <span className="mobile-status">
-              <i></i>
-              Open today
-            </span>
+            <div className="mobile-location">
+              <i />
+              Rajajinagar, Bengaluru
+            </div>
           </div>
 
           <div className="mobile-nav-links">
@@ -185,7 +196,7 @@ export default function Navbar() {
                 }
               >
                 <span>{label}</span>
-                <ArrowUpRight size={14} />
+                <ArrowUpRight size={15} />
               </NavLink>
             ))}
           </div>
@@ -197,14 +208,18 @@ export default function Navbar() {
               className="mobile-ivy"
               onClick={() => setOpen(false)}
             >
-              <span>
-                <Bot size={16} />
+              <span className="mobile-ivy-icon">
+                <Bot size={17} />
               </span>
 
               <div>
                 <b>Talk to Ivy</b>
-                <small>AI receptionist · Available 24/7</small>
+                <small>
+                  Your digital dental assistant
+                </small>
               </div>
+
+              <ArrowUpRight size={15} />
             </Link>
 
             <Link
@@ -215,21 +230,15 @@ export default function Navbar() {
               <span>Book an Appointment</span>
               <ArrowUpRight size={17} />
             </Link>
-
           </div>
 
           <div className="mobile-contact">
-            <Phone size={13} />
+            <Phone size={14} />
 
-            <a href="tel:+918041234567">
-              +91 80 4123 4567
+            <a href="tel:+918431788571">
+              +91 84317 88571
             </a>
-
-            <span>
-              · 9 AM – 7 PM
-            </span>
           </div>
-
         </div>
       </header>
     </>

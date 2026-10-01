@@ -1,0 +1,931 @@
+.cosmetic-page {
+  --cosmetic-primary: #28bcb6;
+  --cosmetic-primary-dark: #075b57;
+  --cosmetic-deep: #064e4b;
+  --cosmetic-heading: #123d39;
+  --cosmetic-text: #647b77;
+  --cosmetic-soft: #e7f8f6;
+  --cosmetic-line: #d9ebe8;
+  --cosmetic-white: #ffffff;
+  background: #ffffff;
+  color: var(--cosmetic-heading);
+  overflow: hidden;
+}
+
+.cosmetic-page * {
+  box-sizing: border-box;
+}
+
+.cosmetic-page img {
+  display: block;
+  width: 100%;
+}
+
+.cosmetic-page a {
+  text-decoration: none;
+}
+
+/* HERO */
+
+.cosmetic-hero {
+  position: relative;
+  background:
+    radial-gradient(
+      circle at 78% 35%,
+      rgba(40, 188, 182, 0.15),
+      transparent 32%
+    ),
+    linear-gradient(135deg, #f7fcfb 0%, #e8f8f6 100%);
+  padding: 20px 6%;
+}
+
+.cosmetic-hero-glow {
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  right: 5%;
+  top: 5%;
+  background: rgba(40, 188, 182, 0.08);
+  filter: blur(5px);
+  pointer-events: none;
+}
+
+.cosmetic-hero-inner {
+  width: min(1200px, 100%);
+  min-height: 560px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.92fr 1.08fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.cosmetic-hero-content {
+  position: relative;
+  z-index: 2;
+  animation: cosmeticReveal 0.8s ease both;
+}
+
+.cosmetic-kicker,
+.cosmetic-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--cosmetic-primary-dark);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+.cosmetic-kicker i,
+.cosmetic-eyebrow i {
+  width: 26px;
+  height: 2px;
+  display: inline-block;
+  background: var(--cosmetic-primary);
+}
+
+.cosmetic-hero h1 {
+  max-width: 650px;
+  margin: 18px 0 14px;
+  font-size: clamp(42px, 5.3vw, 72px);
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+  color: var(--cosmetic-heading);
+}
+
+.cosmetic-hero h1 em,
+.cosmetic-intro h2 em,
+.cosmetic-treatments h2 em,
+.cosmetic-principles h2 em,
+.cosmetic-story h2 em,
+.cosmetic-final h2 em {
+  color: var(--cosmetic-primary-dark);
+  font-style: normal;
+}
+
+.cosmetic-hero-content > p {
+  max-width: 590px;
+  margin: 0;
+  color: var(--cosmetic-text);
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.cosmetic-hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.cosmetic-primary-btn,
+.cosmetic-final-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 48px;
+  padding: 8px 10px 8px 20px;
+  border-radius: 50px;
+  background: var(--cosmetic-primary-dark);
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 800;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.cosmetic-primary-btn span {
+  width: 31px;
+  height: 31px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--cosmetic-primary);
+}
+
+.cosmetic-primary-btn:hover,
+.cosmetic-final-btn:hover {
+  transform: translateY(-3px);
+  background: var(--cosmetic-deep);
+}
+
+.cosmetic-scroll-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--cosmetic-heading);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.cosmetic-scroll-link svg {
+  transition: transform 0.25s ease;
+}
+
+.cosmetic-scroll-link:hover svg {
+  transform: translate(3px, -3px);
+}
+
+.cosmetic-hero-points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.cosmetic-hero-points span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--cosmetic-text);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.cosmetic-hero-points svg {
+  color: var(--cosmetic-primary-dark);
+}
+
+.cosmetic-hero-visual {
+  position: relative;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: cosmeticVisualReveal 0.9s 0.1s ease both;
+}
+
+.cosmetic-hero-image {
+  width: min(480px, 82%);
+  height: 480px;
+  border-radius: 240px 240px 24px 24px;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 28px 60px rgba(6, 78, 75, 0.18);
+}
+
+.cosmetic-hero-image img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.cosmetic-image-ring {
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  border: 1px solid rgba(7, 91, 87, 0.22);
+  border-radius: 50%;
+  right: 2%;
+  top: 50%;
+  transform: translateY(-50%);
+  animation: cosmeticOrbit 12s linear infinite;
+}
+
+.cosmetic-floating-card {
+  position: absolute;
+  z-index: 4;
+  left: 0;
+  bottom: 52px;
+  width: 235px;
+  padding: 13px;
+  border: 1px solid rgba(217, 235, 232, 0.9);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  box-shadow: 0 18px 45px rgba(6, 78, 75, 0.14);
+  animation: cosmeticFloat 4s ease-in-out infinite;
+}
+
+.cosmetic-floating-card > span {
+  width: 37px;
+  height: 37px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--cosmetic-soft);
+  color: var(--cosmetic-primary-dark);
+}
+
+.cosmetic-floating-card strong,
+.cosmetic-floating-card small {
+  display: block;
+}
+
+.cosmetic-floating-card strong {
+  font-size: 12px;
+  color: var(--cosmetic-heading);
+}
+
+.cosmetic-floating-card small {
+  margin-top: 4px;
+  color: var(--cosmetic-text);
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.cosmetic-number-card {
+  position: absolute;
+  right: 2%;
+  top: 58px;
+  z-index: 4;
+  width: 110px;
+  padding: 13px;
+  border-radius: 16px;
+  background: var(--cosmetic-deep);
+  color: #ffffff;
+  box-shadow: 0 18px 40px rgba(6, 78, 75, 0.2);
+}
+
+.cosmetic-number-card strong,
+.cosmetic-number-card span {
+  display: block;
+}
+
+.cosmetic-number-card strong {
+  font-size: 30px;
+  line-height: 1;
+}
+
+.cosmetic-number-card span {
+  margin-top: 5px;
+  color: #bdebe8;
+  font-size: 12px;
+  line-height: 1.3;
+}
+
+/* INTRO */
+
+.cosmetic-intro {
+  padding: 20px 6%;
+  background: #ffffff;
+}
+
+.cosmetic-intro-inner {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 0.8fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.cosmetic-intro-heading h2,
+.cosmetic-section-heading h2,
+.cosmetic-principles-heading h2,
+.cosmetic-story-content h2 {
+  margin: 12px 0 0;
+  font-size: clamp(30px, 4vw, 50px);
+  line-height: 1.04;
+  letter-spacing: -0.035em;
+}
+
+.cosmetic-intro-copy p {
+  margin: 0 0 16px;
+  color: var(--cosmetic-text);
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.cosmetic-outline-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--cosmetic-primary-dark);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.cosmetic-outline-btn svg {
+  transition: transform 0.25s ease;
+}
+
+.cosmetic-outline-btn:hover svg {
+  transform: translate(3px, -3px);
+}
+
+/* TREATMENTS */
+
+.cosmetic-treatments {
+  padding: 20px 6%;
+  background: #f7fcfb;
+}
+
+.cosmetic-section-heading {
+  width: min(1200px, 100%);
+  margin: 0 auto 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  align-items: end;
+}
+
+.cosmetic-section-heading > div {
+  max-width: 700px;
+}
+
+.cosmetic-section-heading > p {
+  max-width: 310px;
+  margin: 0;
+  color: var(--cosmetic-text);
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.cosmetic-treatment-grid {
+  width: min(1200px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.cosmetic-treatment-card {
+  background: #ffffff;
+  border: 1px solid var(--cosmetic-line);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.cosmetic-treatment-card:nth-child(4),
+.cosmetic-treatment-card:nth-child(5) {
+  grid-column: span 1;
+}
+
+.cosmetic-treatment-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 22px 55px rgba(6, 78, 75, 0.12);
+}
+
+.cosmetic-card-image {
+  position: relative;
+  height: 230px;
+  overflow: hidden;
+}
+
+.cosmetic-card-image img {
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.cosmetic-treatment-card:hover .cosmetic-card-image img {
+  transform: scale(1.06);
+}
+
+.cosmetic-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 40%,
+    rgba(6, 78, 75, 0.38)
+  );
+}
+
+.cosmetic-card-number {
+  position: absolute;
+  top: 13px;
+  left: 13px;
+  z-index: 2;
+  min-width: 39px;
+  height: 30px;
+  padding: 0 8px;
+  border-radius: 20px;
+  display: grid;
+  place-items: center;
+  background: rgba(255, 255, 255, 0.94);
+  color: var(--cosmetic-primary-dark);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.cosmetic-card-content {
+  padding: 18px;
+}
+
+.cosmetic-card-label {
+  color: var(--cosmetic-primary);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+}
+
+.cosmetic-card-content h3 {
+  margin: 7px 0 7px;
+  color: var(--cosmetic-heading);
+  font-size: 21px;
+}
+
+.cosmetic-card-content p {
+  min-height: 68px;
+  margin: 0 0 13px;
+  color: var(--cosmetic-text);
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.cosmetic-card-content a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--cosmetic-primary-dark);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+/* PRINCIPLES */
+
+.cosmetic-principles {
+  padding: 20px 6%;
+  background: var(--cosmetic-deep);
+  color: #ffffff;
+}
+
+.cosmetic-principles-inner {
+  width: min(1200px, 100%);
+  margin: 0 auto;
+}
+
+.cosmetic-eyebrow.light {
+  color: #9ce8e3;
+}
+
+.cosmetic-principles-heading {
+  max-width: 680px;
+}
+
+.cosmetic-principles-heading h2 {
+  color: #ffffff;
+}
+
+.cosmetic-principles-heading h2 em {
+  color: #8ce7e1;
+}
+
+.cosmetic-principles-heading p {
+  max-width: 590px;
+  margin: 12px 0 0;
+  color: #b9d8d5;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.cosmetic-principles-grid {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.cosmetic-principle-card {
+  min-height: 205px;
+  padding: 18px;
+  border: 1px solid rgba(217, 235, 232, 0.16);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.045);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.cosmetic-principle-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.cosmetic-principle-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cosmetic-principle-top > span {
+  color: #80dcd7;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.cosmetic-principle-top > div {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: rgba(40, 188, 182, 0.15);
+  color: #8ce7e1;
+}
+
+.cosmetic-principle-card h3 {
+  margin: 30px 0 7px;
+  font-size: 18px;
+}
+
+.cosmetic-principle-card p {
+  margin: 0;
+  color: #b9d8d5;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+/* STORY */
+
+.cosmetic-story {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+  padding: 20px 6%;
+  display: grid;
+  grid-template-columns: 0.95fr 1fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.cosmetic-story-image {
+  position: relative;
+  min-height: 470px;
+  border-radius: 22px;
+  overflow: visible;
+}
+
+.cosmetic-story-image img {
+  height: 470px;
+  object-fit: cover;
+  border-radius: 22px;
+}
+
+.cosmetic-story-badge {
+  position: absolute;
+  right: -25px;
+  bottom: 25px;
+  width: 145px;
+  min-height: 95px;
+  padding: 14px;
+  border-radius: 16px;
+  background: var(--cosmetic-primary-dark);
+  color: #ffffff;
+  box-shadow: 0 18px 45px rgba(6, 78, 75, 0.2);
+}
+
+.cosmetic-story-badge strong,
+.cosmetic-story-badge span {
+  display: block;
+}
+
+.cosmetic-story-badge strong {
+  font-size: 26px;
+  letter-spacing: 0.08em;
+}
+
+.cosmetic-story-badge span {
+  margin-top: 5px;
+  color: #bce9e6;
+  font-size: 12px;
+  line-height: 1.3;
+}
+
+.cosmetic-story-content > p {
+  margin: 14px 0 0;
+  color: var(--cosmetic-text);
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+.cosmetic-check-list {
+  margin: 18px 0;
+  display: grid;
+  gap: 10px;
+}
+
+.cosmetic-check-list div {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--cosmetic-heading);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.cosmetic-check-list svg {
+  flex-shrink: 0;
+  color: var(--cosmetic-primary-dark);
+}
+
+/* FINAL */
+
+.cosmetic-final {
+  padding: 20px 6%;
+  background: var(--cosmetic-primary-dark);
+  color: #ffffff;
+}
+
+.cosmetic-final-inner {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.cosmetic-final h2 {
+  max-width: 650px;
+  margin: 10px 0 0;
+  font-size: clamp(32px, 4vw, 52px);
+  line-height: 1;
+  letter-spacing: -0.035em;
+}
+
+.cosmetic-final h2 em {
+  color: #8ce7e1;
+  font-style: normal;
+}
+
+.cosmetic-final p {
+  margin: 10px 0 0;
+  color: #b9d8d5;
+  font-size: 14px;
+}
+
+.cosmetic-final-btn {
+  flex-shrink: 0;
+  background: #ffffff;
+  color: var(--cosmetic-primary-dark);
+}
+
+.cosmetic-final-btn:hover {
+  background: #e7f8f6;
+}
+
+/* ANIMATIONS */
+
+@keyframes cosmeticReveal {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cosmeticVisualReveal {
+  from {
+    opacity: 0;
+    transform: translateX(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes cosmeticFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes cosmeticOrbit {
+  from {
+    transform: translateY(-50%) rotate(0deg);
+  }
+
+  to {
+    transform: translateY(-50%) rotate(360deg);
+  }
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+  .cosmetic-hero-inner {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    min-height: auto;
+  }
+
+  .cosmetic-hero-content {
+    text-align: center;
+  }
+
+  .cosmetic-hero h1,
+  .cosmetic-hero-content > p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cosmetic-hero-actions,
+  .cosmetic-hero-points {
+    justify-content: center;
+  }
+
+  .cosmetic-hero-visual {
+    min-height: 450px;
+  }
+
+  .cosmetic-intro-inner,
+  .cosmetic-story {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .cosmetic-section-heading {
+    align-items: start;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .cosmetic-treatment-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cosmetic-principles-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cosmetic-final-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 700px) {
+  .cosmetic-hero,
+  .cosmetic-intro,
+  .cosmetic-treatments,
+  .cosmetic-principles,
+  .cosmetic-story,
+  .cosmetic-final {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .cosmetic-hero h1 {
+    font-size: 42px;
+  }
+
+  .cosmetic-hero-visual {
+    min-height: 390px;
+  }
+
+  .cosmetic-hero-image {
+    height: 370px;
+    width: 82%;
+  }
+
+  .cosmetic-image-ring {
+    width: 400px;
+    height: 400px;
+  }
+
+  .cosmetic-floating-card {
+    left: 0;
+    bottom: 25px;
+  }
+
+  .cosmetic-number-card {
+    right: 0;
+    top: 25px;
+  }
+
+  .cosmetic-treatment-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cosmetic-story-image {
+    min-height: 360px;
+  }
+
+  .cosmetic-story-image img {
+    height: 360px;
+  }
+
+  .cosmetic-story-badge {
+    right: 12px;
+    bottom: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cosmetic-hero h1 {
+    font-size: 36px;
+  }
+
+  .cosmetic-hero-content > p {
+    font-size: 14px;
+  }
+
+  .cosmetic-hero-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .cosmetic-primary-btn,
+  .cosmetic-scroll-link {
+    justify-content: center;
+  }
+
+  .cosmetic-hero-points {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cosmetic-hero-visual {
+    min-height: 330px;
+  }
+
+  .cosmetic-hero-image {
+    width: 88%;
+    height: 315px;
+  }
+
+  .cosmetic-image-ring {
+    width: 330px;
+    height: 330px;
+  }
+
+  .cosmetic-floating-card {
+    width: 205px;
+    left: 0;
+  }
+
+  .cosmetic-number-card {
+    width: 95px;
+  }
+
+  .cosmetic-card-image {
+    height: 215px;
+  }
+
+  .cosmetic-story-image img {
+    height: 330px;
+  }
+
+  .cosmetic-story-badge {
+    width: 130px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cosmetic-page *,
+  .cosmetic-page *::before,
+  .cosmetic-page *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

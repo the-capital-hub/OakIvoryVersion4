@@ -4,33 +4,8 @@ import "../shared.css";
 import "./Team.css";
 
 const people = [
-  {
-    name: "Dr. Ananya Rao",
-    role: "Founder & Lead Dentist",
-    specialty: "Periodontics & Preventive Care",
-    image:
-      "https://images.pexels.com/photos/5452293/pexels-photo-5452293.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    experience: "15+ years",
-    slug: "ananya-rao",
-  },
-  {
-    name: "Dr. Rohan Mehta",
-    role: "Associate Dentist",
-    specialty: "Implant & General Dentistry",
-    image:
-      "https://images.pexels.com/photos/5214958/pexels-photo-5214958.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    experience: "10+ years",
-    slug: "rohan-mehta",
-  },
-  {
-    name: "Dr. Meera Shah",
-    role: "Cosmetic & Restorative Dentist",
-    specialty: "Cosmetic & Restorative Care",
-    image:
-      "https://images.pexels.com/photos/5327585/pexels-photo-5327585.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    experience: "8+ years",
-    slug: "meera-shah",
-  },
+  { name: "Dr. Rajkamal S.", role: "Dental Surgeon", specialty: "BDS, FGD, FCE", image: "https://images.pexels.com/photos/5452293/pexels-photo-5452293.jpeg?auto=compress&cs=tinysrgb&w=1200", experience: "BDS, FGD, FCE", slug: "rajkamal-s" },
+  { name: "Dr. Abdul Rahim", role: "Director & Head", specialty: "BDS · Candy Advanced Dental Care", image: "https://images.pexels.com/photos/5214958/pexels-photo-5214958.jpeg?auto=compress&cs=tinysrgb&w=1200", experience: "BDS", slug: "abdul-rahim" },
 ];
 
 const patientTypes = [
@@ -114,7 +89,7 @@ export default function Team() {
             <div className="team-hero-image">
               <img
                 src="https://images.pexels.com/photos/3764014/pexels-photo-3764014.jpeg?auto=compress&cs=tinysrgb&w=1200"
-                alt="Oak and Ivory dental team"
+                alt="Vasu Aesthetics & Dental Care team"
               />
             </div>
 

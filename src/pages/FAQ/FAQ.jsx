@@ -2,7 +2,7 @@
 import { useState } from "react";
 import "../shared.css";
 const qs=[
-["Are you accepting new patients?","Yes. Oak & Ivory Dental welcomes new patients."],
+["Are you accepting new patients?","Yes. Vasu Aesthetics & Dental Care welcomes new patients."],
 ["How can I book an appointment?","You can book through the website, call the clinic, message on WhatsApp or speak with Ivy, our AI receptionist."],
 ["Do you offer emergency dental treatment?","Yes. Contact us if you're experiencing an urgent dental concern so our team can assess the situation and guide you appropriately."],
 ["Do you offer teeth whitening?","Yes. We provide professional teeth-whitening options following an appropriate dental assessment."],
