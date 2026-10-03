@@ -400,7 +400,7 @@ export default function Services() {
 
                 </div>
 
-                <div className="care-card-body">
+                <div className="care-card-body" style={{color:"28bcb6"}}>
 
                   <h3>{area.title}</h3>
 
