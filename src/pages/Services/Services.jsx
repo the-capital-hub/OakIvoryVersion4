@@ -271,7 +271,6 @@ export default function Services() {
 
               <div className="hero-card-footer">
                 <span>PERSONALISED CARE</span>
-                <span>01</span>
               </div>
 
             </div>

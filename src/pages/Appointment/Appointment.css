@@ -1472,6 +1472,7 @@
   }
 
   .appointment-hero-card {
+    background-color:rgba(255, 255, 255, 0.621);
     left: 0;
     bottom: 2%;
     max-width: 245px;

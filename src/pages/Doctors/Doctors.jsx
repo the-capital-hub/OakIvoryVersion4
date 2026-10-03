@@ -18,7 +18,7 @@ const doctors = [
     qualification: "BDS, FGD, FCE",
     phone: "8431788571",
     image:
-      "https://images.pexels.com/photos/5452293/pexels-photo-5452293.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "https://images.pexels.com/photos/37272297/pexels-photo-37272297.jpeg",
   },
   {
     name: "Dr. Abdul Rahim",
@@ -27,7 +27,7 @@ const doctors = [
     description: "Director and Head of Candy Advanced Dental Care",
     phone: "9900176558",
     image:
-      "https://images.pexels.com/photos/5214958/pexels-photo-5214958.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "https://images.pexels.com/photos/28516280/pexels-photo-28516280.jpeg",
   },
 ];
 

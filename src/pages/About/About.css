@@ -705,6 +705,13 @@
   font-size: 21px;
   font-weight: 800;
 }
+.about-doctor-mark img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
 
 .about-doctor-main {
   position: relative;
@@ -1017,6 +1024,7 @@
   }
 
   .about-hero-stamp {
+    display: none;
     width: 88px;
     height: 88px;
     top: 25px;

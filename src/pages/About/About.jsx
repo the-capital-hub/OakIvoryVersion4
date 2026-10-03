@@ -26,12 +26,16 @@ const doctors = [
     qualification: "BDS, FGD, FCE",
     phone: "8431788571",
     role: "Dental Care",
+    image:
+      "https://images.pexels.com/photos/37272297/pexels-photo-37272297.jpeg",
   },
   {
     name: "Dr. Abdul Rahim",
     qualification: "BDS",
     phone: "9900176558",
     role: "Director and Head of Candy Advanced Dental Care",
+    image:
+      "https://images.pexels.com/photos/28516280/pexels-photo-28516280.jpeg",
   },
 ];
 
@@ -317,6 +321,9 @@ export default function About() {
                   </span>
 
                   <span className="about-doctor-mark">
+                    <img src={doctor.image} alt="" />
+                    
+
                     {doctor.name.charAt(3)}
                   </span>
                 </div>

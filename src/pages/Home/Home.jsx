@@ -200,10 +200,7 @@ export default function Home() {
               </span>
             </div>
 
-            <div className="vh-hero-stamp">
-              <strong>VASU</strong>
-              <span>DENTAL CARE</span>
-            </div>
+            
 
           </div>
 

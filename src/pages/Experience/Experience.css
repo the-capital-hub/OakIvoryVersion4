@@ -979,6 +979,7 @@
   }
 
   .experience-hero-note {
+    display: none;
     left: 0;
     bottom: 15px;
     width: 220px;
