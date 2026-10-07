@@ -10,23 +10,27 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import "./Home.css";
+import abdulImage from '../../assets/image/Dr.Abdul.png'
+import rajkamal from "../../assets/image/Dr.Rajkamal.jpg"
+import clinic3 from "../../assets/image/clinic3.png"
+import clinic4 from "../../assets/image/clinic4.png"
+import image2 from "../../assets/image/image2.png"
 
 const images = {
   hero:
-    "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=1400&q=85",
+    clinic4,
 
   treatment:
-    "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=1200&q=85",
+    image2,
 
   doctorOne:
-    "https://images.unsplash.com/photo-1550831107-1553da8c8464?auto=format&fit=crop&w=900&q=85",
+    rajkamal,
 
   doctorTwo:
-    "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=900&q=85",
+    abdulImage,
 
   experience:
-    "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=85",
-};
+clinic3};
 
 const treatments = [
   {

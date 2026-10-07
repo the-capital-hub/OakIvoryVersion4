@@ -10,14 +10,16 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import "./About.css";
+import abdulImage from '../../assets/image/Dr.Abdul.png'
+import rajkamal from "../../assets/image/Dr.Rajkamal.jpg"
+import image2 from "../../assets/image/image2.png"
+import clinic4 from "../../assets/image/clinic4.png"
+import image1 from "../../assets/image/image1.png"
 
 const images = {
-  hero:
-    "https://images.pexels.com/photos/3845983/pexels-photo-3845983.jpeg?auto=compress&cs=tinysrgb&w=1400",
-  story:
-    "https://images.pexels.com/photos/3762453/pexels-photo-3762453.jpeg?auto=compress&cs=tinysrgb&w=1200",
-  care:
-    "https://images.pexels.com/photos/5355903/pexels-photo-5355903.jpeg?auto=compress&cs=tinysrgb&w=1200",
+  hero: clinic4,
+  story: image2,
+  care: image1
 };
 
 const doctors = [
@@ -27,7 +29,7 @@ const doctors = [
     phone: "8431788571",
     role: "Dental Care",
     image:
-      "https://images.pexels.com/photos/37272297/pexels-photo-37272297.jpeg",
+      rajkamal,
   },
   {
     name: "Dr. Abdul Rahim",
@@ -35,7 +37,7 @@ const doctors = [
     phone: "9900176558",
     role: "Director and Head of Candy Advanced Dental Care",
     image:
-      "https://images.pexels.com/photos/28516280/pexels-photo-28516280.jpeg",
+      abdulImage,
   },
 ];
 

@@ -11,6 +11,8 @@ import {
 import { Link } from "react-router-dom";
 import "../shared.css";
 import "./Experience.css";
+import clinic3 from "../../assets/image/clinic3.png"
+import clinic4 from "../../assets/image/clinic4.png"
 
 const journeySteps = [
   {
@@ -118,7 +120,7 @@ export default function Experience() {
 
             <div className="experience-hero-frame">
               <img
-                src="https://images.pexels.com/photos/3845983/pexels-photo-3845983.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                src={clinic3}
                 alt="Patient receiving dental care"
               />
             </div>
@@ -227,7 +229,7 @@ export default function Experience() {
         <div className="experience-visit-visual">
 
           <img
-            src="https://images.pexels.com/photos/6627465/pexels-photo-6627465.jpeg?auto=compress&cs=tinysrgb&w=1200"
+            src={clinic4}
             alt="Dental consultation"
             loading="lazy"
           />

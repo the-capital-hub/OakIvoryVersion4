@@ -10,6 +10,9 @@ import {
 import { Link } from "react-router-dom";
 import "../shared.css";
 import "./Doctors.css";
+import abdulImage from '../../assets/image/Dr.Abdul.png'
+import rajkamal from "../../assets/image/Dr.Rajkamal.jpg"
+import clinic4 from "../../assets/image/clinic4.png"
 
 const doctors = [
   {
@@ -17,8 +20,7 @@ const doctors = [
     role: "Dental Surgeon",
     qualification: "BDS, FGD, FCE",
     phone: "8431788571",
-    image:
-      "https://images.pexels.com/photos/37272297/pexels-photo-37272297.jpeg",
+    image: rajkamal
   },
   {
     name: "Dr. Abdul Rahim",
@@ -27,7 +29,7 @@ const doctors = [
     description: "Director and Head of Candy Advanced Dental Care",
     phone: "9900176558",
     image:
-      "https://images.pexels.com/photos/28516280/pexels-photo-28516280.jpeg",
+      abdulImage,
   },
 ];
 
@@ -304,7 +306,7 @@ export default function Doctors() {
         <div className="philosophy-visual">
 
           <img
-            src="https://images.pexels.com/photos/3845983/pexels-photo-3845983.jpeg?auto=compress&cs=tinysrgb&w=1200"
+            src={clinic4}
             alt="Patient receiving dental care"
             loading="lazy"
           />

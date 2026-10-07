@@ -12,6 +12,7 @@ import {
 import { Link } from "react-router-dom";
 import "../shared.css";
 import "./Appointment.css";
+import clinic2 from "../../assets/image/clinic2.png"
 
 const services = [
   {
@@ -218,7 +219,7 @@ export default function Appointment() {
             <div className="appointment-hero-image">
 
               <img
-                src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=1200&q=85"
+                src={clinic2}
                 alt="Dental consultation at Vasu Aesthetics and Dental Care"
               />
 

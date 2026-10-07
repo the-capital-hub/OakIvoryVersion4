@@ -2,10 +2,27 @@ import { ArrowUpRight, CheckCircle2, GraduationCap } from "lucide-react";
 import { Link } from "react-router-dom";
 import "../shared.css";
 import "./Team.css";
-
+import abdulImage from '../../assets/image/Dr.Abdul.png'
+import rajkamal from "../../assets/image/Dr.Rajkamal.jpg"
 const people = [
-  { name: "Dr. Rajkamal S.", role: "Dental Surgeon", specialty: "BDS, FGD, FCE", image: "https://images.pexels.com/photos/5452293/pexels-photo-5452293.jpeg?auto=compress&cs=tinysrgb&w=1200", experience: "BDS, FGD, FCE", slug: "rajkamal-s" },
-  { name: "Dr. Abdul Rahim", role: "Director & Head", specialty: "BDS · Candy Advanced Dental Care", image: "https://images.pexels.com/photos/5214958/pexels-photo-5214958.jpeg?auto=compress&cs=tinysrgb&w=1200", experience: "BDS", slug: "abdul-rahim" },
+  {
+    name: "Dr. Rajkamal S.",
+    role: "Dental Surgeon",
+    specialty: "BDS, FGD, FCE",
+    image:
+      rajkamal,
+    experience: "BDS, FGD, FCE",
+    slug: "rajkamal-s",
+  },
+  {
+    name: "Dr. Abdul Rahim",
+    role: "Director & Head",
+    specialty: "BDS · Candy Advanced Dental Care",
+    image:
+     abdulImage,
+    experience: "BDS",
+    slug: "abdul-rahim",
+  },
 ];
 
 const patientTypes = [
@@ -42,31 +59,24 @@ export default function Team() {
             </span>
 
             <h1>
-              Meet the people behind{" "}
-              <em>your care.</em>
+              Meet the people behind <em>your care.</em>
             </h1>
 
             <p>
-              Experienced clinicians, thoughtful communication and
-              modern dental care — brought together to make every
-              patient feel informed and comfortable.
+              Experienced clinicians, thoughtful communication and modern dental
+              care — brought together to make every patient feel informed and
+              comfortable.
             </p>
 
             <div className="team-hero-actions">
-              <Link
-                to="/appointment"
-                className="team-primary-btn"
-              >
+              <Link to="/appointment" className="team-primary-btn">
                 Book an Appointment
                 <span>
                   <ArrowUpRight size={15} />
                 </span>
               </Link>
 
-              <Link
-                to="/contact"
-                className="team-text-btn"
-              >
+              <Link to="/contact" className="team-text-btn">
                 Talk to our team
                 <ArrowUpRight size={14} />
               </Link>
@@ -100,15 +110,12 @@ export default function Team() {
 
               <div>
                 <strong>A team you can trust</strong>
-                <small>
-                  Experience, expertise & empathy
-                </small>
+                <small>Experience, expertise & empathy</small>
               </div>
             </div>
           </div>
         </div>
       </section>
-
 
       {/* =====================================================
           PATIENT TYPES
@@ -123,27 +130,21 @@ export default function Team() {
             </span>
 
             <h2>
-              Care designed around{" "}
-              <em>your needs.</em>
+              Care designed around <em>your needs.</em>
             </h2>
           </div>
 
           <p>
-            Whether you are visiting for prevention, treatment
-            or a complete smile transformation, our team starts
-            by understanding what matters to you.
+            Whether you are visiting for prevention, treatment or a complete
+            smile transformation, our team starts by understanding what matters
+            to you.
           </p>
         </div>
 
         <div className="team-patient-grid">
           {patientTypes.map((item) => (
-            <article
-              className="team-patient-card"
-              key={item.number}
-            >
-              <span className="team-patient-number">
-                {item.number}
-              </span>
+            <article className="team-patient-card" key={item.number}>
+              <span className="team-patient-number">{item.number}</span>
 
               <h3>{item.title}</h3>
 
@@ -158,7 +159,6 @@ export default function Team() {
         </div>
       </section>
 
-
       {/* =====================================================
           DOCTORS
       ===================================================== */}
@@ -171,32 +171,22 @@ export default function Team() {
           </span>
 
           <h2>
-            Expertise with a{" "}
-            <em>human approach.</em>
+            Expertise with a <em>human approach.</em>
           </h2>
 
           <p>
-            Get to know the clinicians who will guide your care
-            from your first consultation to long-term follow-up.
+            Get to know the clinicians who will guide your care from your first
+            consultation to long-term follow-up.
           </p>
         </div>
 
         <div className="team-doctors-grid">
           {people.map((person, index) => (
-            <article
-              className="team-doctor-card"
-              key={person.name}
-            >
+            <article className="team-doctor-card" key={person.name}>
               <div className="team-doctor-image">
-                <img
-                  src={person.image}
-                  alt={person.name}
-                  loading="lazy"
-                />
+                <img src={person.image} alt={person.name} loading="lazy" />
 
-                <span className="team-doctor-number">
-                  0{index + 1}
-                </span>
+                <span className="team-doctor-number">0{index + 1}</span>
 
                 <div className="team-doctor-overlay">
                   <Link to={`/team/${person.slug}`}>
@@ -210,9 +200,7 @@ export default function Team() {
                 <div>
                   <h3>{person.name}</h3>
 
-                  <span className="team-doctor-role">
-                    {person.role}
-                  </span>
+                  <span className="team-doctor-role">{person.role}</span>
 
                   <p>{person.specialty}</p>
                 </div>
@@ -233,7 +221,6 @@ export default function Team() {
           ))}
         </div>
       </section>
-
 
       {/* =====================================================
           CARE APPROACH
@@ -265,15 +252,13 @@ export default function Team() {
             </span>
 
             <h2>
-              Great dentistry starts with{" "}
-              <em>great conversations.</em>
+              Great dentistry starts with <em>great conversations.</em>
             </h2>
 
             <p>
-              We don't believe in rushing patients through a
-              treatment plan. Our clinicians take time to listen,
-              explain your options and make sure you understand
-              the next step.
+              We don't believe in rushing patients through a treatment plan. Our
+              clinicians take time to listen, explain your options and make sure
+              you understand the next step.
             </p>
 
             <div className="team-approach-points">
@@ -298,17 +283,13 @@ export default function Team() {
               </div>
             </div>
 
-            <Link
-              to="/appointment"
-              className="team-approach-btn"
-            >
+            <Link to="/appointment" className="team-approach-btn">
               Meet with a dentist
               <ArrowUpRight size={15} />
             </Link>
           </div>
         </div>
       </section>
-
 
       {/* =====================================================
           FINAL CTA
@@ -322,29 +303,22 @@ export default function Team() {
           </span>
 
           <h2>
-            Ready to meet your{" "}
-            <em>care team?</em>
+            Ready to meet your <em>care team?</em>
           </h2>
 
           <p>
-            Book a consultation and let our team help you
-            understand the right next step for your smile.
+            Book a consultation and let our team help you understand the right
+            next step for your smile.
           </p>
         </div>
 
         <div className="team-final-actions">
-          <Link
-            to="/appointment"
-            className="team-final-primary"
-          >
+          <Link to="/appointment" className="team-final-primary">
             Schedule Appointment
             <ArrowUpRight size={16} />
           </Link>
 
-          <Link
-            to="/contact"
-            className="team-final-secondary"
-          >
+          <Link to="/contact" className="team-final-secondary">
             Contact our team
           </Link>
         </div>
