@@ -278,7 +278,7 @@ export default function Doctors() {
           <div className="doctors-care-grid">
 
             {carePoints.map(({ icon: Icon, title, text }, index) => (
-              <article className="care-card" key={title}>
+              <article className="care-card" key={title} style={{color:"white"}}>
 
                 <div className="care-card-top">
                   <span>0{index + 1}</span>
@@ -288,9 +288,9 @@ export default function Doctors() {
                   </div>
                 </div>
 
-                <h3>{title}</h3>
+                <h3 style={{color:"white"}}>{title}</h3>
 
-                <p>{text}</p>
+                <p style={{color:"white"}}>{text}</p>
 
               </article>
             ))}

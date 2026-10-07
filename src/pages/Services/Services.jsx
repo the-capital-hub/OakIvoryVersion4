@@ -174,11 +174,11 @@ export default function Services() {
 
             <div className="services-label">
               <i />
-              VASU AESTHETICS AND DENTAL CARE
+              VASU AESTHETICS AND DENTAL CARE &nbsp;
             </div>
 
             <div className="hero-kicker">
-              <span>14</span>
+              <span> 14</span>
               Dental services
             </div>
 
