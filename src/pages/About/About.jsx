@@ -143,11 +143,7 @@ export default function About() {
               />
             </div>
 
-            <div className="about-hero-stamp">
-              <strong>VASU</strong>
-              <span>AESTHETICS</span>
-              <small>AND DENTAL CARE</small>
-            </div>
+           
 
             <div className="about-hero-note">
               <span>
@@ -337,11 +333,7 @@ export default function About() {
 
                   <strong>{doctor.qualification}</strong>
 
-                  {index === 1 && (
-                    <p>
-                      Director and Head of Candy Advanced Dental Care
-                    </p>
-                  )}
+                  {index === 1 && (<p></p>)}
                 </div>
 
                 <a
