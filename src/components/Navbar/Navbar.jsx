@@ -8,7 +8,7 @@ import {
   Phone,
 } from "lucide-react";
 import "./Navbar.css";
-
+import logo1 from '../../assets/image/logo1.png'
 const links = [
   ["Home", "/"],
   ["About", "/about"],
@@ -78,20 +78,19 @@ export default function Navbar() {
 
           {/* BRAND */}
 
-          <Link
-            to="/"
-            className="brand"
-            onClick={() => setOpen(false)}
-          >
-            <span className="brand-mark">
-              V
-            </span>
+          
+<Link
+  to="/"
+  className="brand"
+  onClick={() => setOpen(false)}
+>
+  <img
+    src={logo1}
+    alt="Vasu Aesthetics and Dental Care"
+    className="brand-logo"
+  />
+</Link>
 
-            <span className="brand-name">
-              VASU AESTHETICS
-              <small>DENTAL CARE</small>
-            </span>
-          </Link>
 
           {/* DESKTOP NAVIGATION */}
 

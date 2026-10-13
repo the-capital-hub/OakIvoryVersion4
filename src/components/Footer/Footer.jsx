@@ -12,7 +12,7 @@ import {
 } from "react-icons/fa";
 
 import "./Footer.css";
-
+import logo from '../../assets/image/logo.png'
 const exploreLinks = [
   ["Home", "/"],
   ["About Us", "/about"],
@@ -40,14 +40,15 @@ export default function Footer() {
         {/* BRAND */}
         <div className="footer-brand">
 
-          <Link to="/" className="footer-brand-link">
-            <span className="footer-logo">V</span>
+          
+<Link to="/" className="footer-brand-link">
+  <img
+    src={logo}
+    alt="Vasu Aesthetics and Dental Care"
+    className="footer-logo-image"
+  />
+</Link>
 
-            <div className="footer-brand-name">
-              <strong>VASU AESTHETICS</strong>
-              <small>DENTAL CARE</small>
-            </div>
-          </Link>
 
           <p>
             Complete dental care with personalised treatment,
