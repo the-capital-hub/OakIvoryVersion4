@@ -17,7 +17,7 @@ import clinic4 from "../../assets/image/clinic4.png"
 const doctors = [
   {
     name: "Dr. Rajkamal S.",
-    role: "Dental Surgeon",
+    role: "Founder | Dental Surgeon",
     qualification: "BDS, FGD, FCE",
     phone: "8431788571",
     image: rajkamal

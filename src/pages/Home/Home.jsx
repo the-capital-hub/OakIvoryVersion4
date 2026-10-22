@@ -90,7 +90,10 @@ const doctors = [
   {
     name: "Dr. Rajkamal S.",
     qualification: "BDS, FGD, FCE",
-    role: "Dental Care",
+    role: "Founder",
+    role1 :"Dental Surgeon",
+
+    
     phone: "+91 84317 88571",
     image: images.doctorOne,
   },
@@ -98,6 +101,7 @@ const doctors = [
     name: "Dr. Abdul Rahim",
     qualification: "BDS",
     role: "Director and Head ",
+    role1: "Candy Advanced Dental Care",
     phone: "+91 99001 76558",
     image: images.doctorTwo,
   },
@@ -507,7 +511,7 @@ export default function Home() {
                   <div>
 
                     <small>{doctor.role}</small>
-                    <small>Candy Advanced Dental Care</small>
+                    <small>{doctor.role1}</small>
 
                     <h3>{doctor.name}</h3>
 
