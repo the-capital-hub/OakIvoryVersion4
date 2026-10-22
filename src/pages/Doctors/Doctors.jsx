@@ -26,7 +26,7 @@ const doctors = [
     name: "Dr. Abdul Rahim",
     role: "Director and Head",
     qualification: "BDS",
-    description: "Director and Head of Candy Advanced Dental Care",
+    description: "Director and Head ",
     phone: "9900176558",
     image:
       abdulImage,
@@ -221,7 +221,9 @@ export default function Doctors() {
 
                 {doctor.description && (
                   <p className="doctor-description">
-                    {doctor.description}
+                    {doctor.description} <br/>
+                    Candy Advanced Dental Care
+
                   </p>
                 )}
 

@@ -97,7 +97,7 @@ const doctors = [
   {
     name: "Dr. Abdul Rahim",
     qualification: "BDS",
-    role: "Director and Head of Candy Advanced Dental Care",
+    role: "Director and Head ",
     phone: "+91 99001 76558",
     image: images.doctorTwo,
   },
@@ -507,6 +507,7 @@ export default function Home() {
                   <div>
 
                     <small>{doctor.role}</small>
+                    <small>Candy Advanced Dental Care</small>
 
                     <h3>{doctor.name}</h3>
 
