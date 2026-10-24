@@ -89,6 +89,7 @@ const principles = [
 const doctors = [
   {
     name: "Dr. Rajkamal S.",
+    founder : "Vasu Aesthetics and Dental Care",
     qualification: "BDS, FGD, FCE",
     role: "Founder",
     role1 :"Dental Surgeon",
@@ -514,6 +515,7 @@ export default function Home() {
                     <small>{doctor.role1}</small>
 
                     <h3>{doctor.name}</h3>
+                    <h5 style={{marginTop:"2px"}}>{doctor.founder}</h5>
 
                     <p>{doctor.qualification}</p>
 

@@ -17,6 +17,8 @@ import clinic4 from "../../assets/image/clinic4.png"
 const doctors = [
   {
     name: "Dr. Rajkamal S.",
+    founder : "Vasu Aesthetics and Dental Care",
+
     role: "Founder | Dental Surgeon",
     qualification: "BDS, FGD, FCE",
     phone: "8431788571",
@@ -209,6 +211,7 @@ export default function Doctors() {
                 </span>
 
                 <h3>{doctor.name}</h3>
+                <h5 style={{marginTop:"2px"}}>{doctor.founder}</h5>
 
                 <strong className="doctor-role">
                   {doctor.role}
